@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- Meta, title, CSS, favicons, etc. -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>提款密码修改</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="asserts/styles/vendor.min.css">
+    
+    
+    	<link rel="stylesheet" href="asserts/styles/main.css">
+    
+
+    
+
+    
+
+    <link rel="shortcut icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+</head>
+
+
+
+
+<body class=" ">
+    <div id="loader-wrapper">
+    <div id="loader"></div>        
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+    <!-- Docs master nav -->
+    <header id="header" class="page-topbar">
+    <!-- start header nav-->
+    <div class="navbar-fixed">
+        <nav class="cyan">
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <li class="no-hover" id="toggleNav">
+                        <a href="#" data-activates="slide-out" class="menu-sidebar-collapse btn-floating btn-flat btn-medium waves-effect waves-light cyan tooltipped" href="#!" data-position="bottom" data-delay="0" data-tooltip="导航切换"><i class="mdi-navigation-menu"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <h1 class="logo-wrapper">
+                            <a href="index.html" class="brand-logo darken-1">
+                            <span class="logo-text">湖南海航乐游</span>
+                            </a>
+                        </h1>
+                    </li>
+                </ul>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen tooltipped" data-tooltip="全屏"><i class="mdi-action-settings-overscan"></i></a>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-switch">
+                            <i class="mdi-social-person"><span>用户名</span></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-switch' class='dropdown-content'>
+                            <li><a href="#!">门店用户</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">供应商用户</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-setting">
+                            <i class="mdi-action-settings"></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-setting' class='dropdown-content'>
+                            <li><a href="#!">修改密码</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">个人资料</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="waves-effect waves-block waves-light tooltipped" data-tooltip="退出">
+                            <i class="mdi-action-settings-power"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- end header nav-->
+</header>
+
+    <!-- Page content of course! -->
+    <div id="main">
+        <div class="wrapper">
+            
+                <aside id="left-sidebar-nav">
+    <div id="slide-out" class="z-depth-1 leftside-navigation">
+        <!-- <div class="clearfix toggle-wrapper">
+            <button id="toggleNav" class="btn-floating waves-effect waves-light pink accent-2 right"><i class="material-icons">lock_open</i></button>
+        </div> -->
+        <ul id="main-menu">
+            
+                <li class=" has-sub    active ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-maps-directions-bus"></i>
+                        </div> 
+                        <span class="nav-text">线路管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" has-sub  ">
+                                    <a href="#">
+                                        <span class="nav-text">普通线路列表</span>
+                                    </a>
+                                    
+                                        <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">普通线路列表</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">单团单议列表</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">线路分发</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">基本收支</span>
+                                                </a>
+                                            </li>
+                                        
+                                        </ul>
+                                    
+                                </li>
+                            
+                                <li class=" active">
+                                    <a href="#">
+                                        <span class="nav-text">单团单议列表</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路分发</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">基本收支</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">分项报价</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-view-list"></i>
+                        </div> 
+                        <span class="nav-text">订单管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路订单</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">游客信息录入</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">单个利润</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">报价书</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-payment"></i>
+                        </div> 
+                        <span class="nav-text">财务管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路订单</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">游客信息录入</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">单个利润</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">报价书</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-editor-border-color"></i>
+                        </div> 
+                        <span class="nav-text">基本信息维护</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">客户单位</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">酒店信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">餐馆信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">景区门票</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">车队信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-settings"></i>
+                        </div> 
+                        <span class="nav-text">系统设置</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">忘记密码</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">收款账户管理</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">登录密码修改</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</aside>
+
+            
+            <section id="content" class="hh-min-width">
+                <div class="breadcrumbs-wrapper">
+    <div class="container">
+        <div class="row no-margin">
+            <div class="col s12">
+                <h5 class="breadcrumbs-title">提款密码修改</h5>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">控制面板</a>
+                    </li>
+                    <li class="active">提款密码修改</li>
+                </ol>
+                <div class="mini-charts">
+                    <div class="mini-charts-item pink lighten-2">
+                        <div class="count">
+                            余额
+                            <h2>￥987,459,459</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="container">
+                    <div class="card">
+    
+    <div class="card-heading">
+    <h4>提款密码修改</h4>
+    <ul class="actions">
+        
+        
+        
+        
+        
+        
+        <li>
+            <a class="waves-effect waves-block waves-light collapse-btn card-a" href="javascript:void(0);">
+                <i class="mdi-hardware-keyboard-arrow-down"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="card-content">
+        <div class="row hh-add-edit">
+            
+            
+            <dl class="col s12">
+                <dt><b>预留手机号码</b></dt>
+                <dd>
+                    
+                        <div class="col s3"><input class="" type="text"></div>
+                    
+
+                    
+                </dd>
+            </dl>
+            
+            <dl class="col s12">
+                <dt><b>手机验证码</b></dt>
+                <dd>
+                    
+                        <div class="col s3"><input class="" type="text"></div><div class="col s9"><a class="waves-effect waves-light btn btn-small cyan" href="#">获取验证码</a></div>
+                    
+
+                    
+                </dd>
+            </dl>
+            
+            <dl class="col s12">
+                <dt><b>新密码</b></dt>
+                <dd>
+                    
+                        <div class="col s3"><input class="" type="password"></div>
+                    
+
+                    
+                </dd>
+            </dl>
+            
+            <dl class="col s12">
+                <dt><b>确认密码</b></dt>
+                <dd>
+                    
+                        <div class="col s3"><input class="" type="password"></div>
+                    
+
+                    
+                </dd>
+            </dl>
+            
+            <dl class="col s12">
+                <dt class="background-none"></dt>
+                <dd>
+                    <a class="waves-effect waves-light btn pink lighten-2" href="#">保存</a>
+                    <a class="waves-effect waves-light btn blue-grey lighten-2" href="#">取消</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+    <script type="text/javascript" src=" asserts/scripts/vendor.js "></script>
+
+
+
+
+	<script type="text/javascript" src=" asserts/scripts/main.js "></script>
+
+
+
+
+<script type="text/javascript">
+$(function() {
+	
+
+});
+</script>
+
+</body>
+
+</html>

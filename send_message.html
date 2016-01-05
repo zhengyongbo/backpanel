@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- Meta, title, CSS, favicons, etc. -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>短信发送</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="asserts/styles/vendor.min.css">
+    
+    
+    	<link rel="stylesheet" href="asserts/styles/main.css">
+    
+
+    
+
+    
+
+    <link rel="shortcut icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+</head>
+
+
+
+
+<body class=" ">
+    <div id="loader-wrapper">
+    <div id="loader"></div>        
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+    <!-- Docs master nav -->
+    <header id="header" class="page-topbar">
+    <!-- start header nav-->
+    <div class="navbar-fixed">
+        <nav class="cyan">
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <li class="no-hover" id="toggleNav">
+                        <a href="#" data-activates="slide-out" class="menu-sidebar-collapse btn-floating btn-flat btn-medium waves-effect waves-light cyan tooltipped" href="#!" data-position="bottom" data-delay="0" data-tooltip="导航切换"><i class="mdi-navigation-menu"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <h1 class="logo-wrapper">
+                            <a href="index.html" class="brand-logo darken-1">
+                            <span class="logo-text">湖南海航乐游</span>
+                            </a>
+                        </h1>
+                    </li>
+                </ul>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen tooltipped" data-tooltip="全屏"><i class="mdi-action-settings-overscan"></i></a>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-switch">
+                            <i class="mdi-social-person"><span>用户名</span></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-switch' class='dropdown-content'>
+                            <li><a href="#!">门店用户</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">供应商用户</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-setting">
+                            <i class="mdi-action-settings"></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-setting' class='dropdown-content'>
+                            <li><a href="#!">修改密码</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">个人资料</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="waves-effect waves-block waves-light tooltipped" data-tooltip="退出">
+                            <i class="mdi-action-settings-power"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- end header nav-->
+</header>
+
+    <!-- Page content of course! -->
+    <div id="main">
+        <div class="wrapper">
+            
+                <aside id="left-sidebar-nav">
+    <div id="slide-out" class="z-depth-1 leftside-navigation">
+        <!-- <div class="clearfix toggle-wrapper">
+            <button id="toggleNav" class="btn-floating waves-effect waves-light pink accent-2 right"><i class="material-icons">lock_open</i></button>
+        </div> -->
+        <ul id="main-menu">
+            
+                <li class=" has-sub    active ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-maps-directions-bus"></i>
+                        </div> 
+                        <span class="nav-text">线路管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" has-sub  ">
+                                    <a href="#">
+                                        <span class="nav-text">普通线路列表</span>
+                                    </a>
+                                    
+                                        <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">普通线路列表</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">单团单议列表</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">线路分发</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">基本收支</span>
+                                                </a>
+                                            </li>
+                                        
+                                        </ul>
+                                    
+                                </li>
+                            
+                                <li class=" active">
+                                    <a href="#">
+                                        <span class="nav-text">单团单议列表</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路分发</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">基本收支</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">分项报价</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-view-list"></i>
+                        </div> 
+                        <span class="nav-text">订单管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路订单</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">游客信息录入</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">单个利润</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">报价书</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-payment"></i>
+                        </div> 
+                        <span class="nav-text">财务管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路订单</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">游客信息录入</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">单个利润</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">报价书</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-editor-border-color"></i>
+                        </div> 
+                        <span class="nav-text">基本信息维护</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">客户单位</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">酒店信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">餐馆信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">景区门票</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">车队信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-settings"></i>
+                        </div> 
+                        <span class="nav-text">系统设置</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">忘记密码</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">收款账户管理</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">登录密码修改</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</aside>
+
+            
+            <section id="content" class="hh-min-width">
+                <div class="breadcrumbs-wrapper">
+    <div class="container">
+        <div class="row no-margin">
+            <div class="col s12">
+                <h5 class="breadcrumbs-title">短信发送</h5>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">控制面板</a>
+                    </li>
+                    <li class="active">短信发送</li>
+                </ol>
+                <div class="mini-charts">
+                    <div class="mini-charts-item pink lighten-2">
+                        <div class="count">
+                            余额
+                            <h2>￥987,459,459</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="container">
+                    
+<!-- 员工列表 开始 -->
+<div class="card table-form hh-send-message">
+	
+	<!-- 栏目名称 开始 -->
+    
+    <div class="card-heading">
+    <h4>短信发送</h4>
+    <ul class="actions">
+        
+        
+        
+        
+        
+        
+            <li>
+                <a class="waves-effect waves-block waves-light card-a" href="javascript:void(0);">
+                    <i class="mdi-av-replay"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a class='waves-effect waves-block waves-light card-a' href='#'>
+                    <i class="mdi-file-file-download "></i>
+                </a>
+            </li>
+        
+        <li>
+            <a class="waves-effect waves-block waves-light collapse-btn card-a" href="javascript:void(0);">
+                <i class="mdi-hardware-keyboard-arrow-down"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <!-- 栏目名称 结束 -->
+
+    <div class="card-content">
+
+        <!-- 查找员工 开始 -->
+	    <div class="find-staff clearfix">
+		
+	    	<div class="mdi-action-search title">查找员工</div>
+	    	
+	    		<div class="left"><i>姓名</i><input class="w100" type="text"></div>
+	    	
+	    		<div class="left"><i>职务</i><div class="hh-select select-wrapper"><select name="" class="chosen-select" data-placeholder="请选择职务"><option value="" disabled selected>请选择</option><option value="1">请选择请选择</option><option value="2">请选择请选择</option></select></div></div>
+	    	
+	    		<div class="left"><i>手机</i><input class="w150" type="text"></div>
+	    	
+	    		<div class="left"><a class="waves-effect waves-light btn btn-small pink lighten-2" href="#">查询</a><a class="waves-effect waves-light btn btn-small cyan" href="#">导出EXCEL</a></div>
+	    	
+	    </div>
+	    <!-- 查找员工 结束 -->
+
+	    <!-- 员工展示 开始 -->
+	    	
+		    <table class="highlight hh-table-bordered">
+		        <thead>
+		            <tr>
+		            	<th><input class="filled-in" type="checkbox" id="cb-all"><label for="cb-all"></label></th>
+		                
+		                <th>姓名</th>
+		                
+		                <th>性别</th>
+		                
+		                <th>手机</th>
+		                
+		                <th>职务</th>
+		                
+		                <th>入职时间</th>
+		                
+		            </tr>
+
+		        </thead>
+		        <tbody>
+		            
+		            <tr>
+		            	<td><input class="filled-in" type="checkbox" id="checkbox-1"><label for="checkbox-1"></label></td>
+		                
+		                <td>郑勇波</td>
+		                
+		                <td>男</td>
+		                
+		                <td>13812345678</td>
+		                
+		                <td>职务职务职务职务</td>
+		                
+		                <td>2015-04-02</td>
+		                
+		            </tr>
+		            
+		            <tr>
+		            	<td><input class="filled-in" type="checkbox" id="checkbox-2"><label for="checkbox-2"></label></td>
+		                
+		                <td>郑勇波</td>
+		                
+		                <td>男</td>
+		                
+		                <td>13812345678</td>
+		                
+		                <td>职务职务职务职务</td>
+		                
+		                <td>2015-04-02</td>
+		                
+		            </tr>
+		            
+		            <tr>
+		            	<td><input class="filled-in" type="checkbox" id="checkbox-3"><label for="checkbox-3"></label></td>
+		                
+		                <td>郑勇波</td>
+		                
+		                <td>男</td>
+		                
+		                <td>13812345678</td>
+		                
+		                <td>职务职务职务职务</td>
+		                
+		                <td>2015-04-02</td>
+		                
+		            </tr>
+		            
+		            <tr>
+		            	<td><input class="filled-in" type="checkbox" id="checkbox-4"><label for="checkbox-4"></label></td>
+		                
+		                <td>郑勇波</td>
+		                
+		                <td>男</td>
+		                
+		                <td>13812345678</td>
+		                
+		                <td>职务职务职务职务</td>
+		                
+		                <td>2015-04-02</td>
+		                
+		            </tr>
+		            
+		            <tr>
+		            	<td><input class="filled-in" type="checkbox" id="checkbox-5"><label for="checkbox-5"></label></td>
+		                
+		                <td>郑勇波</td>
+		                
+		                <td>男</td>
+		                
+		                <td>13812345678</td>
+		                
+		                <td>职务职务职务职务</td>
+		                
+		                <td>2015-04-02</td>
+		                
+		            </tr>
+		            
+		            <tr>
+		            	<td><input class="filled-in" type="checkbox" id="checkbox-6"><label for="checkbox-6"></label></td>
+		                
+		                <td>郑勇波</td>
+		                
+		                <td>男</td>
+		                
+		                <td>13812345678</td>
+		                
+		                <td>职务职务职务职务</td>
+		                
+		                <td>2015-04-02</td>
+		                
+		            </tr>
+		            
+		            <tr>
+		            	<td><input class="filled-in" type="checkbox" id="checkbox-7"><label for="checkbox-7"></label></td>
+		                
+		                <td>郑勇波</td>
+		                
+		                <td>男</td>
+		                
+		                <td>13812345678</td>
+		                
+		                <td>职务职务职务职务</td>
+		                
+		                <td>2015-04-02</td>
+		                
+		            </tr>
+		            
+		            <tr>
+		            	<td><input class="filled-in" type="checkbox" id="checkbox-8"><label for="checkbox-8"></label></td>
+		                
+		                <td>郑勇波</td>
+		                
+		                <td>男</td>
+		                
+		                <td>13812345678</td>
+		                
+		                <td>职务职务职务职务</td>
+		                
+		                <td>2015-04-02</td>
+		                
+		            </tr>
+		            
+		            <tr>
+		            	<td><input class="filled-in" type="checkbox" id="checkbox-9"><label for="checkbox-9"></label></td>
+		                
+		                <td>郑勇波</td>
+		                
+		                <td>男</td>
+		                
+		                <td>13812345678</td>
+		                
+		                <td>职务职务职务职务</td>
+		                
+		                <td>2015-04-02</td>
+		                
+		            </tr>
+		            
+		        </tbody>
+		    </table>
+		    <!-- 翻页 开始 -->
+		    <div class="pag-wrap  left-align ">
+    
+</div>
+		    <!-- 翻页 结束 -->
+		<!-- 员工展示 结束 -->
+    </div>
+    
+
+</div>
+<!-- 员工列表 结束 -->
+
+<!-- 发送短信 开始 -->
+	
+<div class="card-panel hh-card-panel w-h-small holdbox">
+	<i class="mdi-content-markunread"></i>发送短信
+</div>
+<div class="card-panel hh-card-panel w-h-big sendbox">
+	<div class="row no-margin">
+		<div class="col s3">
+			<div class="hh-ptb-10"><b>已选接收人</b></div>
+			<ul class="collection">
+				<li class="collection-item"><div>郑勇波郑勇波郑勇波郑勇波郑勇波<a href="#!" class="secondary-content"><i class="mdi-navigation-close"></i></a></div></li>
+				<li class="collection-item"><div>郑勇波<a href="#!" class="secondary-content"><i class="mdi-navigation-close"></i></a></div></li>
+				<li class="collection-item"><div>郑勇波<a href="#!" class="secondary-content"><i class="mdi-navigation-close"></i></a></div></li>
+				<li class="collection-item"><div>郑勇波<a href="#!" class="secondary-content"><i class="mdi-navigation-close"></i></a></div></li>
+				<li class="collection-item"><div>郑勇波<a href="#!" class="secondary-content"><i class="mdi-navigation-close"></i></a></div></li>
+				<li class="collection-item"><div>郑勇波<a href="#!" class="secondary-content"><i class="mdi-navigation-close"></i></a></div></li>
+				<li class="collection-item"><div>郑勇波<a href="#!" class="secondary-content"><i class="mdi-navigation-close"></i></a></div></li>
+				<li class="collection-item"><div>郑勇波<a href="#!" class="secondary-content"><i class="mdi-navigation-close"></i></a></div></li>
+			</ul>
+		</div>
+		<div class="col s9">
+			<i class="mdi-navigation-close hh-font-size-24 hide-box-btn hh-btn"></i>
+			<div class="hh-pt-10 hh-mb-5">当前短信长度为38字（含签名），将分为1条短信发送。</div>
+			<div class="hh-ptb-10"><textarea id="textarea1" class="hh-textarea" placeholder="请遵守国家相关法律法规，不得发送任何色情、政治、危害国家安全和损害社会他人正当权益的短信。（每条短信内容不要超过64个字）"></textarea></div>
+			<div class="text-right"><a class="waves-effect waves-light btn btn-small pink lighten-1" href="#">发送</a></div>
+		</div>
+	</div>
+	
+</div>
+<!-- 发送短信 结束 -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <script type="text/javascript" src=" asserts/scripts/vendor.js "></script>
+
+
+
+
+	<script type="text/javascript" src=" asserts/scripts/main.js "></script>
+
+
+
+
+<script type="text/javascript">
+$(function() {
+	
+
+		var sendbox = $('.sendbox');
+		$('.holdbox , .hide-box-btn').click(function(){
+			sendbox.slideToggle();
+		});
+
+		$("#cb-all").click(function(){
+    		var $this = $(this);
+    		var cbs = $this.closest('thead').siblings('tbody').find('input[type=checkbox]');
+    		cbs.prop('checked',$this.prop('checked'));
+    	});
+
+    	$('.sendbox .collection').perfectScrollbar();
+    	var signAdded = false;
+    	var sign = "\n--签名信息：郑勇波";
+    	// $('#textarea1').on("keyup",function(){
+    	// 	var $this = $(this);
+    	// 	if($this.val() == "" ){
+    	// 		signAdded = false;
+    	// 	}
+
+    	// 	if(!signAdded){
+    	// 		$this.val($this.val() + sign);
+    	// 		signAdded = true;
+    	// 	}
+    	// });
+
+    	$('#textarea1').on("focus",function(){
+    		var $this = $(this);
+    		if($this.val().trim() == "" ){
+    			$this.val($this.val() + sign);
+    		}
+    	});
+
+	
+
+});
+</script>
+
+</body>
+
+</html>

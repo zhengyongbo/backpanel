@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- Meta, title, CSS, favicons, etc. -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>查询列表模板</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="asserts/styles/vendor.min.css">
+    
+    
+    	<link rel="stylesheet" href="asserts/styles/main.css">
+    
+
+    
+
+    
+
+    <link rel="shortcut icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+</head>
+
+
+
+
+<body class=" ">
+    <div id="loader-wrapper">
+    <div id="loader"></div>        
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+    <!-- Docs master nav -->
+    <header id="header" class="page-topbar">
+    <!-- start header nav-->
+    <div class="navbar-fixed">
+        <nav class="cyan">
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <li class="no-hover" id="toggleNav">
+                        <a href="#" data-activates="slide-out" class="menu-sidebar-collapse btn-floating btn-flat btn-medium waves-effect waves-light cyan tooltipped" href="#!" data-position="bottom" data-delay="0" data-tooltip="导航切换"><i class="mdi-navigation-menu"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <h1 class="logo-wrapper">
+                            <a href="index.html" class="brand-logo darken-1">
+                            <span class="logo-text">湖南海航乐游</span>
+                            </a>
+                        </h1>
+                    </li>
+                </ul>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen tooltipped" data-tooltip="全屏"><i class="mdi-action-settings-overscan"></i></a>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-switch">
+                            <i class="mdi-social-person"><span>用户名</span></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-switch' class='dropdown-content'>
+                            <li><a href="#!">门店用户</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">供应商用户</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-setting">
+                            <i class="mdi-action-settings"></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-setting' class='dropdown-content'>
+                            <li><a href="#!">修改密码</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">个人资料</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="waves-effect waves-block waves-light tooltipped" data-tooltip="退出">
+                            <i class="mdi-action-settings-power"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- end header nav-->
+</header>
+
+    <!-- Page content of course! -->
+    <div id="main">
+        <div class="wrapper">
+            
+                <aside id="left-sidebar-nav">
+    <div id="slide-out" class="z-depth-1 leftside-navigation">
+        <!-- <div class="clearfix toggle-wrapper">
+            <button id="toggleNav" class="btn-floating waves-effect waves-light pink accent-2 right"><i class="material-icons">lock_open</i></button>
+        </div> -->
+        <ul id="main-menu">
+            
+                <li class=" has-sub    active ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-maps-directions-bus"></i>
+                        </div> 
+                        <span class="nav-text">线路管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" has-sub  ">
+                                    <a href="#">
+                                        <span class="nav-text">普通线路列表</span>
+                                    </a>
+                                    
+                                        <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">普通线路列表</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">单团单议列表</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">线路分发</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">基本收支</span>
+                                                </a>
+                                            </li>
+                                        
+                                        </ul>
+                                    
+                                </li>
+                            
+                                <li class=" active">
+                                    <a href="#">
+                                        <span class="nav-text">单团单议列表</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路分发</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">基本收支</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">分项报价</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-view-list"></i>
+                        </div> 
+                        <span class="nav-text">订单管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路订单</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">游客信息录入</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">单个利润</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">报价书</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-payment"></i>
+                        </div> 
+                        <span class="nav-text">财务管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路订单</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">游客信息录入</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">单个利润</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">报价书</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-editor-border-color"></i>
+                        </div> 
+                        <span class="nav-text">基本信息维护</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">客户单位</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">酒店信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">餐馆信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">景区门票</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">车队信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-settings"></i>
+                        </div> 
+                        <span class="nav-text">系统设置</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">忘记密码</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">收款账户管理</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">登录密码修改</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</aside>
+
+            
+            <section id="content" class="hh-min-width">
+                <div class="breadcrumbs-wrapper">
+    <div class="container">
+        <div class="row no-margin">
+            <div class="col s12">
+                <h5 class="breadcrumbs-title">查询列表模板</h5>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">控制面板</a>
+                    </li>
+                    <li class="active">查询列表模板</li>
+                </ol>
+                <div class="mini-charts">
+                    <div class="mini-charts-item pink lighten-2">
+                        <div class="count">
+                            余额
+                            <h2>￥987,459,459</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="container">
+                    <!-- 查询条件 开始 -->
+<form class="card search-form hh-search-form">
+	
+	
+	<div class="card-heading">
+    <h4>查询条件</h4>
+    <ul class="actions">
+        
+        
+        
+        
+        
+        
+            <li>
+                <a class="waves-effect waves-block waves-light card-a" href="javascript:void(0);">
+                    <i class="mdi-av-replay"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a class='waves-effect waves-block waves-light card-a' href='#'>
+                    <i class="mdi-file-file-download "></i>
+                </a>
+            </li>
+        
+        <li>
+            <a class="waves-effect waves-block waves-light collapse-btn card-a" href="javascript:void(0);">
+                <i class="mdi-hardware-keyboard-arrow-down"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="card-content">
+        <div class="row">	
+			
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4  ">
+				    
+						
+	        					<input  id="input1" type="text" placeholder="订单编号" class="  ">
+							
+					
+						<label for="1">订单编号</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4  ">
+				    
+						
+	        					<input  id="input2" type="text" placeholder="门店" class="  ">
+							
+					
+						<label for="2">门店</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4  ">
+				    
+						
+	        					<input  id="input3" type="text" placeholder="线路名称" class="  ">
+							
+					
+						<label for="3">线路名称</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4   col-span ">
+				    
+						
+	        					<input  id="input4" type="text" placeholder="最小应收金额" class="   left   ">
+							
+					
+						
+	        					<input  id="input4" type="text" placeholder="最大应收金额" class="   right   ">
+							
+					
+						<label for="4">应收金额</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4   col-span ">
+				    
+						
+	        					<input  id="input5" type="text" placeholder="开始预定日期" class=" datepicker    left   ">
+							
+					
+						
+	        					<input  id="input5" type="text" placeholder="结束预定日期" class=" datepicker    right   ">
+							
+					
+						<label for="5">预定日期</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4  ">
+				    
+						
+								<div class="hh-select  ">
+									<select name="" class="chosen-select browser-default"  data-placeholder="请选择">
+									    <option value="" disabled selected>请选择</option>
+										<option value="1">北京北京</option>
+									    <option value="2">长沙长沙</option>
+									    <option value="3">上海上海</option>
+									</select>
+								</div>
+							
+					
+						<label for="6">目的地</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4   col-span ">
+				    
+						
+	        					<input  id="input7" type="text" placeholder="开始出游日期" class=" datepicker    left   ">
+							
+					
+						
+	        					<input  id="input7" type="text" placeholder="结束出游日期" class=" datepicker    right   ">
+							
+					
+						<label for="7">出游日期</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4   col-span ">
+				    
+						
+								<div class="hh-select  select-wrapper  left   ">
+									<select name="" class="chosen-select browser-default"  data-placeholder="请选择">
+									    <option value="" disabled selected>请选择</option>
+										<option value="1">北京北京</option>
+									    <option value="2">长沙长沙</option>
+									    <option value="3">上海上海</option>
+									</select>
+								</div>
+							
+					
+						
+								<div class="hh-select  select-wrapper  right   ">
+									<select name="" class="chosen-select browser-default"  data-placeholder="请选择">
+									    <option value="" disabled selected>请选择</option>
+										<option value="1">北京北京</option>
+									    <option value="2">长沙长沙</option>
+									    <option value="3">上海上海</option>
+									</select>
+								</div>
+							
+					
+						<label for="8">目的地</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s12 hh-h3rem  ">
+				    
+						
+								<div class="hh-checkbox clearfix">
+									
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-1">
+									<label for="radio-1">退款成功</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-2">
+									<label for="radio-2">退款中</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-3">
+									<label for="radio-3">已取消</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-4">
+									<label for="radio-4">待确认</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-5">
+									<label for="radio-5">待付款</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-6">
+									<label for="radio-6">已付款</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-7">
+									<label for="radio-7">已出团</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-8">
+									<label for="radio-8">已回团</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-9">
+									<label for="radio-9">已清算</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-10">
+									<label for="radio-10">已完成</label>
+									
+								</div>
+						
+					
+						<label for="9">使用状态</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s12 hh-h3rem  ">
+				    
+						
+								<div class="hh-checkbox clearfix">
+									
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-1">
+									<label for="checkbox-1">退款成功</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-2">
+									<label for="checkbox-2">退款中</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-3">
+									<label for="checkbox-3">已取消</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-4">
+									<label for="checkbox-4">待确认</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-5">
+									<label for="checkbox-5">待付款</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-6">
+									<label for="checkbox-6">已付款</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-7">
+									<label for="checkbox-7">已出团</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-8">
+									<label for="checkbox-8">已回团</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-9">
+									<label for="checkbox-9">已清算</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-10">
+									<label for="checkbox-10">已完成</label>
+									
+								</div>
+						
+					
+						<label for="10">使用状态</label>
+				</div>
+			
+        </div>
+
+        <div class="card-action">
+        	<a class="waves-effect waves-light btn pink lighten-2" href="#">查询</a>
+	        <a class="waves-effect waves-light btn blue-grey lighten-2" href="#">重置</a>
+	    </div>
+    </div>
+</form>
+<!-- 查询条件 结束 -->
+
+<!-- 文字信息 开始 -->
+<div class="card hh-text-info">
+    <div class="card-content clearfix">
+    
+    	<p class="hh-pl-60">
+    		<b class="hh-ml--60">总计：</b>
+
+    		
+    			<i>人数：<span>14828</span></i>
+    		
+    			<i>结算金额：<span>15142117</span></i>
+    		
+    			<i>已付金额：<span>15141965</span></i>
+    		
+    			<i>已结金额：<span>11262874.2</span></i>
+    		
+    			<i>申请金额：<span>3824304</span></i>
+    		
+    			<i>已扣金额：<span>11290.32</span></i>
+    		
+    			<i>待扣金额：<span>7792.48</span></i>
+    		
+    			<i>申请金额：<span>3824304</span></i>
+    		
+    			<i>已扣金额：<span>11290.32</span></i>
+    		
+    			<i>待扣金额：<span>7792.48</span></i>
+    		
+
+    	</p>
+    </div>
+</div>
+<!-- 文字信息 结束 -->
+
+<!-- 订单列表 开始 -->
+
+
+<div class="card table-form" id="table-from1">
+    
+    <div class="card-heading">
+    <h4>订单列表</h4>
+    <ul class="actions">
+        
+        
+        
+            <li class="hh-operate">
+                <a class="waves-effect waves-light btn cyan" href="javascript:void(0);"><i class="mdi-content-add"></i>添加线路</a>
+            </li>
+        
+        
+        
+        
+            <li>
+                <a class="waves-effect waves-block waves-light card-a" href="javascript:void(0);">
+                    <i class="mdi-av-replay"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a class='waves-effect waves-block waves-light card-a' href='#'>
+                    <i class="mdi-file-file-download "></i>
+                </a>
+            </li>
+        
+        <li>
+            <a class="waves-effect waves-block waves-light collapse-btn card-a" href="javascript:void(0);">
+                <i class="mdi-hardware-keyboard-arrow-down"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="card-content">
+        <table class="highlight hh-table-bordered ">
+    <thead>
+        <tr>
+            
+            <th  >订单号</th>
+            
+            <th  >线路名称</th>
+            
+            <th  >门店</th>
+            
+            <th  >预订人</th>
+            
+            <th  >游客人数</th>
+            
+            <th  >应收金额</th>
+            
+            <th  >实收金额</th>
+            
+            <th  >预订时间</th>
+            
+            <th  >出游日期</th>
+            
+            <th  >付款方式</th>
+            
+            <th  >使用状态</th>
+            
+            <th class="width-130" >管理操作</th>
+            
+        </tr>
+    </thead>
+
+    <tbody >
+        
+            
+                
+                <tr>
+                    
+                    
+                    <td ><a class="modal-trigger" href="#modal1">6207</a>
+                    
+                    </td>
+                    
+                    <td class="text-left"><a class="modal-trigger" href="#modal1">山南测试线路1001</a>
+                    
+                    </td>
+                    
+                    <td class="shopname text-left"><small class="pink lighten-1 hh-small">实时</small>测试门店山南2店
+                    
+                    </td>
+                    
+                    <td class="preorder">嘻嘻嘻
+                    
+                    </td>
+                    
+                    <td >10
+                    
+                    </td>
+                    
+                    <td >3000.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >预付
+                    
+                    </td>
+                    
+                    <td >待付款
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-1">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-1' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="#modal1"  class="modal-trigger">查看详情</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    
+                    <td ><a class="modal-trigger" href="#modal1">6207</a>
+                    
+                    </td>
+                    
+                    <td class="text-left"><a class="modal-trigger" href="#modal1">山南测试线路1001</a>
+                    
+                    </td>
+                    
+                    <td class="shopname text-left"><small class="pink lighten-1 hh-small">实时</small>测试门店山南2店
+                    
+                    </td>
+                    
+                    <td class="preorder">嘻嘻嘻
+                    
+                    </td>
+                    
+                    <td >10
+                    
+                    </td>
+                    
+                    <td >3000.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >预付
+                    
+                    </td>
+                    
+                    <td >待付款
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-2">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-2' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="#modal1"  class="modal-trigger">查看详情</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    
+                    <td ><a class="modal-trigger" href="#modal1">6207</a>
+                    
+                    </td>
+                    
+                    <td class="text-left"><a class="modal-trigger" href="#modal1">山南测试线路1001</a>
+                    
+                    </td>
+                    
+                    <td class="shopname text-left"><small class="pink lighten-1 hh-small">实时</small>测试门店山南2店
+                    
+                    </td>
+                    
+                    <td class="preorder">嘻嘻嘻
+                    
+                    </td>
+                    
+                    <td >10
+                    
+                    </td>
+                    
+                    <td >3000.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >预付
+                    
+                    </td>
+                    
+                    <td >待付款
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-3">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-3' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="#modal1"  class="modal-trigger">查看详情</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    
+                    <td ><a class="modal-trigger" href="#modal1">6207</a>
+                    
+                    </td>
+                    
+                    <td class="text-left"><a class="modal-trigger" href="#modal1">山南测试线路1001</a>
+                    
+                    </td>
+                    
+                    <td class="shopname text-left"><small class="pink lighten-1 hh-small">实时</small>测试门店山南2店
+                    
+                    </td>
+                    
+                    <td class="preorder">嘻嘻嘻
+                    
+                    </td>
+                    
+                    <td >10
+                    
+                    </td>
+                    
+                    <td >3000.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >预付
+                    
+                    </td>
+                    
+                    <td >待付款
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-4">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-4' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="#modal1"  class="modal-trigger">查看详情</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    
+                    <td ><a class="modal-trigger" href="#modal1">6207</a>
+                    
+                    </td>
+                    
+                    <td class="text-left"><a class="modal-trigger" href="#modal1">山南测试线路1001</a>
+                    
+                    </td>
+                    
+                    <td class="shopname text-left"><small class="pink lighten-1 hh-small">实时</small>测试门店山南2店
+                    
+                    </td>
+                    
+                    <td class="preorder">嘻嘻嘻
+                    
+                    </td>
+                    
+                    <td >10
+                    
+                    </td>
+                    
+                    <td >3000.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >预付
+                    
+                    </td>
+                    
+                    <td >待付款
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-5">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-5' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="#modal1"  class="modal-trigger">查看详情</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    
+                    <td ><a class="modal-trigger" href="#modal1">6207</a>
+                    
+                    </td>
+                    
+                    <td class="text-left"><a class="modal-trigger" href="#modal1">山南测试线路1001</a>
+                    
+                    </td>
+                    
+                    <td class="shopname text-left"><small class="pink lighten-1 hh-small">实时</small>测试门店山南2店
+                    
+                    </td>
+                    
+                    <td class="preorder">嘻嘻嘻
+                    
+                    </td>
+                    
+                    <td >10
+                    
+                    </td>
+                    
+                    <td >3000.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >预付
+                    
+                    </td>
+                    
+                    <td >待付款
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-6">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-6' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="#modal1"  class="modal-trigger">查看详情</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    
+                    <td ><a class="modal-trigger" href="#modal1">6207</a>
+                    
+                    </td>
+                    
+                    <td class="text-left"><a class="modal-trigger" href="#modal1">山南测试线路1001</a>
+                    
+                    </td>
+                    
+                    <td class="shopname text-left"><small class="pink lighten-1 hh-small">实时</small>测试门店山南2店
+                    
+                    </td>
+                    
+                    <td class="preorder">嘻嘻嘻
+                    
+                    </td>
+                    
+                    <td >10
+                    
+                    </td>
+                    
+                    <td >3000.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >预付
+                    
+                    </td>
+                    
+                    <td >待付款
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-7">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-7' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="#modal1"  class="modal-trigger">查看详情</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    
+                    <td ><a class="modal-trigger" href="#modal1">6207</a>
+                    
+                    </td>
+                    
+                    <td class="text-left"><a class="modal-trigger" href="#modal1">山南测试线路1001</a>
+                    
+                    </td>
+                    
+                    <td class="shopname text-left"><small class="pink lighten-1 hh-small">实时</small>测试门店山南2店
+                    
+                    </td>
+                    
+                    <td class="preorder">嘻嘻嘻
+                    
+                    </td>
+                    
+                    <td >10
+                    
+                    </td>
+                    
+                    <td >3000.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >2015-05-21
+                    
+                    </td>
+                    
+                    <td >预付
+                    
+                    </td>
+                    
+                    <td >待付款
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-8">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-8' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="#modal1"  class="modal-trigger">查看详情</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+
+            
+        
+    </tbody>
+</table>
+
+
+    <!-- 翻页 开始 -->
+    <div class="pag-wrap  right-align ">
+    
+</div>
+    <!-- 翻页 结束 -->
+
+    </div>
+</div>
+
+
+<!-- 弹窗-线路详情 开始 -->
+<div id="modal1" class="modal modal-fixed-footer hh-pop-up hh-edit-order hh-height">
+    <div class="modal-content">
+        <!-- 内容主体 开始-->
+        
+        <ul class="modal-actions">
+            <li>
+                <a class="modal-expand" title="全屏"><i class="mdi-navigation-fullscreen"></i></a>
+            </li>
+            <li>
+                <a class="modal-close" title="关闭"><i class="mdi-content-clear"></i></a>
+            </li>
+        </ul>
+        <h5 class="cyan-text text-darken-2">线路名称线路名称线路名称线路名称 
+        </h5>
+        <div class="hh-main">
+            <div class="row hh-single-show">
+                <!-- 主要信息 开始-->
+                
+                <dl class="col  s12 ">
+                    <dt><b>线路名称</b></dt>
+                    <dd>线路名称线路名称线路名称线路名称 - （需提前2天报名）</dd>
+                </dl>
+                
+                <dl class="col  s12 ">
+                    <dt><b>往返交通</b></dt>
+                    <dd>新增线路</dd>
+                </dl>
+                
+                <dl class="col s6 ">
+                    <dt><b>行程天数</b></dt>
+                    <dd>3</dd>
+                </dl>
+                
+                <dl class="col s6 ">
+                    <dt><b>起步价格</b></dt>
+                    <dd>1111.00元</dd>
+                </dl>
+                
+                <dl class="col s6 ">
+                    <dt><b>出发城市</b></dt>
+                    <dd>长沙市</dd>
+                </dl>
+                
+                <dl class="col s6 ">
+                    <dt><b>目的地</b></dt>
+                    <dd>南宁市</dd>
+                </dl>
+                
+                <dl class="col  s12 ">
+                    <dt><b>线路类型</b></dt>
+                    <dd>国内旅游</dd>
+                </dl>
+                
+                <dl class="col  s12 ">
+                    <dt><b>线路主题</b></dt>
+                    <dd>山水游 山水游 山水游 山水游 山水游 山水游</dd>
+                </dl>
+                
+                <dl class="col  s12 ">
+                    <dt><b>线路关键词</b></dt>
+                    <dd>山水游 山水游 山水游 山水游 山水游 山水游</dd>
+                </dl>
+                
+                <dl class="col  s12 ">
+                    <dt><b>处理方式</b></dt>
+                    <dd>自动处理</dd>
+                </dl>
+                
+                <dl class="col  s12 ">
+                    <dt><b>推荐理由</b></dt>
+                    <dd>新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路</dd>
+                </dl>
+                
+                <dl class="col  s12 ">
+                    <dt><b>上车地点</b></dt>
+                    <dd>12:30 - 新增线路 -新增线路新增线路新增线路</dd>
+                </dl>
+                
+                <dl class="col  s12 ">
+                    <dt><b>费用说明</b></dt>
+                    <dd>新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路</dd>
+                </dl>
+                
+                <dl class="col  s12 ">
+                    <dt><b>游客须知</b></dt>
+                    <dd>新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路</dd>
+                </dl>
+                
+                <dl class="col  s12 ">
+                    <dt><b>温馨提示</b></dt>
+                    <dd>新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路</dd>
+                </dl>
+                
+                <dl class="col  s12 ">
+                    <dt><b>门店须知</b></dt>
+                    <dd>新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路新增线路</dd>
+                </dl>
+                
+                <!-- 主要信息 结束-->
+                <!-- 行程安排 开始-->
+                
+                <div class="clearfix hh-border-b">
+                    <h6><b>行程安排</b></h6></div>
+                
+                <dl class="col s12">
+                    <dt><b>第 1 天</b></dt>
+                    <dd><ul><li class="scenery"><b class="go">行程：</b>长沙<i class="mdi-maps-flight"></i><i class="mdi-maps-directions-subway"></i><i class="mdi-maps-directions-bus"></i><i class="fa fa-ship"></i>株洲</li><li><b class="food">用餐：</b>早餐：含 午餐：含 晚餐：含</li><li><b class="stay">住宿：</b>asfdsadf</li><li><b class="stay">景区：</b>大龙湖（游艇）</li></ul><div class="dayDesc clearfix"><div class="theme"><b>09:00</b></div><div class="reset clearfix">fdsafdsa </div></div></dd>
+                </dl>
+                
+                <dl class="col s12">
+                    <dt><b>第 2 天</b></dt>
+                    <dd><ul><li class="scenery"><b class="go">行程：</b>长沙<i class="mdi-maps-flight"></i><i class="mdi-maps-directions-subway"></i><i class="mdi-maps-directions-bus"></i><i class="fa fa-ship"></i>株洲</li><li><b class="food">用餐：</b>早餐：含 午餐：含 晚餐：含</li><li><b class="stay">住宿：</b>asfdsadf</li><li><b class="stay">景区：</b>大龙湖（游艇）</li></ul><div class="dayDesc clearfix"><div class="theme"><b>09:00</b></div><div class="reset clearfix">fdsafdsa </div></div></dd>
+                </dl>
+                
+                <dl class="col s12">
+                    <dt><b>第 3 天</b></dt>
+                    <dd><ul><li class="scenery"><b class="go">行程：</b>长沙<i class="mdi-maps-flight"></i><i class="mdi-maps-directions-subway"></i><i class="mdi-maps-directions-bus"></i><i class="fa fa-ship"></i>株洲</li><li><b class="food">用餐：</b>早餐：含 午餐：含 晚餐：含</li><li><b class="stay">住宿：</b>asfdsadf</li><li><b class="stay">景区：</b>大龙湖（游艇）</li></ul><div class="dayDesc clearfix"><div class="theme"><b>09:00</b></div><div class="reset clearfix">fdsafdsa </div></div></dd>
+                </dl>
+                
+                <!-- 行程安排 结束-->
+                <!-- 价格设定 开始-->
+                <div class="clearfix hh-border-b">
+                    <h6><b>价格设定</b></h6>
+                </div>
+                
+                <table class="highlight hh-table-bordered">
+                    <thead>
+                        <tr>
+                            
+                            <th>日期</th>
+                            
+                            <th>成人零售价</th>
+                            
+                            <th>儿童零售价</th>
+                            
+                            <th>成人结算价</th>
+                            
+                            <th>儿童结算价</th>
+                            
+                            <th>单房差</th>
+                            
+                            <th>库存人数</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td>2015-09-12</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td>2015-09-12</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td>2015-09-12</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td>2015-09-12</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td>2015-09-12</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td>2015-09-12</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td>2015-09-12</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td>2015-09-12</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td>2015-09-12</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                            <td>11111</td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <!-- 价格设定 结束-->
+            </div>
+        </div>
+        <!-- 内容主体 结束-->
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn btn-small blue-grey lighten-2 ">关闭</a>
+    </div>
+</div>
+
+<!-- 弹窗-线路详情 结束 -->
+
+
+
+
+<!-- 订单列表 结束 -->
+
+                </div>
+            </section>
+        </div>
+    </div>
+    <script type="text/javascript" src=" asserts/scripts/vendor.js "></script>
+
+
+
+
+	<script type="text/javascript" src=" asserts/scripts/main.js "></script>
+
+
+
+
+<script type="text/javascript">
+$(function() {
+	
+
+		var generateData = function(number) {
+	        var result = [];
+
+	        for (var i = 1; i < number + 1; i++) {
+	            result.push(i);
+	        }
+	        return result;
+
+	    };
+
+	    if ($('.pag-wrap').length) {
+	        $('.pag-wrap').pagination({
+	            dataSource: generateData(50),
+	            pageSize: 10,
+	            showGoInput: true,
+	            showGoButton: true,
+	            header:'<div class="pagination-info">共<%= totalNumber %>条记录，<%= currentPage %>/<%= totalPage %>页</div>',
+	            formatGoButton:"<button class='waves-effect waves-light btn btn-small cyan J-paginationjs-go-button'>Go</button>",
+	            callback: function(data, pagination) {
+	                // template method of yourself
+	                // var html = template(data);
+	                // dataContainer.html(html);
+	            }
+	        });
+	    }
+
+	
+
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,2859 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- Meta, title, CSS, favicons, etc. -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>门店-订单列表</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="asserts/styles/vendor.min.css">
+    
+    
+    	<link rel="stylesheet" href="asserts/styles/main.css">
+    
+
+    
+
+    
+
+    <link rel="shortcut icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+</head>
+
+
+
+
+<body class=" ">
+    <div id="loader-wrapper">
+    <div id="loader"></div>        
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+    <!-- Docs master nav -->
+    <header id="header" class="page-topbar">
+    <!-- start header nav-->
+    <div class="navbar-fixed">
+        <nav class="cyan">
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <li class="no-hover" id="toggleNav">
+                        <a href="#" data-activates="slide-out" class="menu-sidebar-collapse btn-floating btn-flat btn-medium waves-effect waves-light cyan tooltipped" href="#!" data-position="bottom" data-delay="0" data-tooltip="导航切换"><i class="mdi-navigation-menu"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <h1 class="logo-wrapper">
+                            <a href="index.html" class="brand-logo darken-1">
+                            <span class="logo-text">湖南海航乐游</span>
+                            </a>
+                        </h1>
+                    </li>
+                </ul>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen tooltipped" data-tooltip="全屏"><i class="mdi-action-settings-overscan"></i></a>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-switch">
+                            <i class="mdi-social-person"><span>用户名</span></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-switch' class='dropdown-content'>
+                            <li><a href="#!">门店用户</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">供应商用户</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-setting">
+                            <i class="mdi-action-settings"></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-setting' class='dropdown-content'>
+                            <li><a href="#!">修改密码</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">个人资料</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="waves-effect waves-block waves-light tooltipped" data-tooltip="退出">
+                            <i class="mdi-action-settings-power"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- end header nav-->
+</header>
+
+    <!-- Page content of course! -->
+    <div id="main">
+        <div class="wrapper">
+            
+                <aside id="left-sidebar-nav">
+    <div id="slide-out" class="z-depth-1 leftside-navigation">
+        <!-- <div class="clearfix toggle-wrapper">
+            <button id="toggleNav" class="btn-floating waves-effect waves-light pink accent-2 right"><i class="material-icons">lock_open</i></button>
+        </div> -->
+        <ul id="main-menu">
+            
+                <li class=" has-sub    active ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-maps-directions-bus"></i>
+                        </div> 
+                        <span class="nav-text">线路管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" has-sub  ">
+                                    <a href="#">
+                                        <span class="nav-text">普通线路列表</span>
+                                    </a>
+                                    
+                                        <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">普通线路列表</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">单团单议列表</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">线路分发</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">基本收支</span>
+                                                </a>
+                                            </li>
+                                        
+                                        </ul>
+                                    
+                                </li>
+                            
+                                <li class=" active">
+                                    <a href="#">
+                                        <span class="nav-text">单团单议列表</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路分发</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">基本收支</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">分项报价</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-view-list"></i>
+                        </div> 
+                        <span class="nav-text">订单管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路订单</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">游客信息录入</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">单个利润</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">报价书</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-payment"></i>
+                        </div> 
+                        <span class="nav-text">财务管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路订单</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">游客信息录入</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">单个利润</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">报价书</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-editor-border-color"></i>
+                        </div> 
+                        <span class="nav-text">基本信息维护</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">客户单位</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">酒店信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">餐馆信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">景区门票</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">车队信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-settings"></i>
+                        </div> 
+                        <span class="nav-text">系统设置</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">忘记密码</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">收款账户管理</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">登录密码修改</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</aside>
+
+            
+            <section id="content" class="hh-min-width">
+                <div class="breadcrumbs-wrapper">
+    <div class="container">
+        <div class="row no-margin">
+            <div class="col s12">
+                <h5 class="breadcrumbs-title">门店-订单列表</h5>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">控制面板</a>
+                    </li>
+                    <li class="active">门店-订单列表</li>
+                </ol>
+                <div class="mini-charts">
+                    <div class="mini-charts-item pink lighten-2">
+                        <div class="count">
+                            余额
+                            <h2>￥987,459,459</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="container">
+                    <!-- 查询条件 开始 -->
+<form class="card search-form hh-search-form">
+	
+	
+	<div class="card-heading">
+    <h4>查询条件</h4>
+    <ul class="actions">
+        
+        
+        
+        
+        
+        
+            <li>
+                <a class="waves-effect waves-block waves-light card-a" href="javascript:void(0);">
+                    <i class="mdi-av-replay"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a class='waves-effect waves-block waves-light card-a' href='#'>
+                    <i class="mdi-file-file-download "></i>
+                </a>
+            </li>
+        
+        <li>
+            <a class="waves-effect waves-block waves-light collapse-btn card-a" href="javascript:void(0);">
+                <i class="mdi-hardware-keyboard-arrow-down"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="card-content">
+        <div class="row">	
+			
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4  ">
+				    
+						
+	        					<input  id="input1" type="text" placeholder="订单编号" class="  ">
+							
+					
+						<label for="1">订单编号</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4  ">
+				    
+						
+	        					<input  id="input2" type="text" placeholder="门店" class="  ">
+							
+					
+						<label for="2">门店</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4  ">
+				    
+						
+	        					<input  id="input3" type="text" placeholder="线路名称" class="  ">
+							
+					
+						<label for="3">线路名称</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4   col-span ">
+				    
+						
+	        					<input  id="input4" type="text" placeholder="最小应收金额" class="   left   ">
+							
+					
+						
+	        					<input  id="input4" type="text" placeholder="最大应收金额" class="   right   ">
+							
+					
+						<label for="4">应收金额</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4   col-span ">
+				    
+						
+	        					<input  id="input5" type="text" placeholder="开始预定日期" class=" datepicker    left   ">
+							
+					
+						
+	        					<input  id="input5" type="text" placeholder="结束预定日期" class=" datepicker    right   ">
+							
+					
+						<label for="5">预定日期</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4  ">
+				    
+						
+								<div class="hh-select  ">
+									<select name="" class="chosen-select browser-default"  data-placeholder="请选择">
+									    <option value="" disabled selected>请选择</option>
+										<option value="1">北京北京</option>
+									    <option value="2">长沙长沙</option>
+									    <option value="3">上海上海</option>
+									</select>
+								</div>
+							
+					
+						<label for="6">目的地</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4   col-span ">
+				    
+						
+	        					<input  id="input7" type="text" placeholder="开始出游日期" class=" datepicker    left   ">
+							
+					
+						
+	        					<input  id="input7" type="text" placeholder="结束出游日期" class=" datepicker    right   ">
+							
+					
+						<label for="7">出游日期</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s6 m4   col-span ">
+				    
+						
+								<div class="hh-select  select-wrapper  left   ">
+									<select name="" class="chosen-select browser-default"  data-placeholder="请选择">
+									    <option value="" disabled selected>请选择</option>
+										<option value="1">北京北京</option>
+									    <option value="2">长沙长沙</option>
+									    <option value="3">上海上海</option>
+									</select>
+								</div>
+							
+					
+						
+								<div class="hh-select  select-wrapper  right   ">
+									<select name="" class="chosen-select browser-default"  data-placeholder="请选择">
+									    <option value="" disabled selected>请选择</option>
+										<option value="1">北京北京</option>
+									    <option value="2">长沙长沙</option>
+									    <option value="3">上海上海</option>
+									</select>
+								</div>
+							
+					
+						<label for="8">目的地</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s12 hh-h3rem  ">
+				    
+						
+								<div class="hh-checkbox clearfix">
+									
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-1">
+									<label for="radio-1">退款成功</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-2">
+									<label for="radio-2">退款中</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-3">
+									<label for="radio-3">已取消</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-4">
+									<label for="radio-4">待确认</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-5">
+									<label for="radio-5">待付款</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-6">
+									<label for="radio-6">已付款</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-7">
+									<label for="radio-7">已出团</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-8">
+									<label for="radio-8">已回团</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-9">
+									<label for="radio-9">已清算</label>
+									
+									<input  class="with-gap"  type="radio"  name="rd-group1"  id="radio-10">
+									<label for="radio-10">已完成</label>
+									
+								</div>
+						
+					
+						<label for="9">使用状态</label>
+				</div>
+			
+			   
+			   
+
+				<div class="input-field col  s12 hh-h3rem  ">
+				    
+						
+								<div class="hh-checkbox clearfix">
+									
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-1">
+									<label for="checkbox-1">退款成功</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-2">
+									<label for="checkbox-2">退款中</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-3">
+									<label for="checkbox-3">已取消</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-4">
+									<label for="checkbox-4">待确认</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-5">
+									<label for="checkbox-5">待付款</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-6">
+									<label for="checkbox-6">已付款</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-7">
+									<label for="checkbox-7">已出团</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-8">
+									<label for="checkbox-8">已回团</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-9">
+									<label for="checkbox-9">已清算</label>
+									
+									<input  class="filled-in"  type="checkbox"  id="checkbox-10">
+									<label for="checkbox-10">已完成</label>
+									
+								</div>
+						
+					
+						<label for="10">使用状态</label>
+				</div>
+			
+        </div>
+
+        <div class="card-action">
+        	<a class="waves-effect waves-light btn pink lighten-2" href="#">查询</a>
+	        <a class="waves-effect waves-light btn blue-grey lighten-2" href="#">重置</a>
+	    </div>
+    </div>
+</form>
+<!-- 查询条件 结束 -->
+
+<!-- 订单列表 开始 -->
+
+
+<div class="card table-form" id="table-from1">
+    
+    <div class="card-heading">
+    <h4>订单列表</h4>
+    <ul class="actions">
+        
+        
+        
+            <li class="hh-operate">
+                <a class="waves-effect waves-light btn cyan" href="javascript:void(0);"><i class="mdi-content-add"></i>添加线路</a>
+            </li>
+        
+        
+        
+        
+            <li>
+                <a class="waves-effect waves-block waves-light card-a" href="javascript:void(0);">
+                    <i class="mdi-av-replay"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a class='waves-effect waves-block waves-light card-a' href='#'>
+                    <i class="mdi-file-file-download "></i>
+                </a>
+            </li>
+        
+        <li>
+            <a class="waves-effect waves-block waves-light collapse-btn card-a" href="javascript:void(0);">
+                <i class="mdi-hardware-keyboard-arrow-down"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="card-content">
+        <table class="highlight hh-table-bordered ">
+    <thead>
+        <tr>
+            
+            <th  >订单编号/产品线路</th>
+            
+            <th  >合同号</th>
+            
+            <th  >供应商</th>
+            
+            <th  >行程天数</th>
+            
+            <th  >人数</th>
+            
+            <th  >状态</th>
+            
+            <th  >订单金额</th>
+            
+            <th  >应付金额</th>
+            
+            <th  >已付金额</th>
+            
+            <th  >未付金额</th>
+            
+            <th class="width-130" >管理操作</th>
+            
+        </tr>
+    </thead>
+
+    <tbody >
+        
+            
+                
+                <tr>
+                    
+                    
+                    <td class="text-left width-230"><p>国内测试线路</p><p><i>线路编号：</i>XL20150801000001</p><p><i>发团/回团日期：</i><br>2015-08-21/2015-08-24</p>
+                    
+                    </td>
+                    
+                    <td >3763
+                    
+                    </td>
+                    
+                    <td class="text-left width-230"><p>XXX供应商【简称】</p><p>【全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称】</p>
+                    
+                    </td>
+                    
+                    <td >3
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>大人：</i>内容</p><p><i>小孩：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>订单状态：</i>内容</p><p><i>结算状态：</i>内容内容</p><p><i>发票：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>线路：</i>内容</p><p><i>保险：</i>内容内容</p><p><i>总计：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-1">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-1' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="md_order_details.html"  class="">查看详情</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test4"  class="open-modal-btn">变更订单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test5"  class="open-modal-btn">修改名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test7"  class="open-modal-btn">订单取消</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test2"  class="open-modal-btn">导出名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test3"  class="open-modal-btn">支付</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  class="">评价</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="print_stroke.html"  class="">打印行程</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    
+                    <td class="text-left width-230"><p>国内测试线路</p><p><i>线路编号：</i>XL20150801000001</p><p><i>发团/回团日期：</i><br>2015-08-21/2015-08-24</p>
+                    
+                    </td>
+                    
+                    <td >3763
+                    
+                    </td>
+                    
+                    <td class="text-left width-230"><p>XXX供应商【简称】</p><p>【全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称】</p>
+                    
+                    </td>
+                    
+                    <td >3
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>大人：</i>内容</p><p><i>小孩：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>订单状态：</i>内容</p><p><i>结算状态：</i>内容内容</p><p><i>发票：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>线路：</i>内容</p><p><i>保险：</i>内容内容</p><p><i>总计：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-2">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-2' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="md_order_details.html"  class="">查看详情</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test4"  class="open-modal-btn">变更订单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test5"  class="open-modal-btn">修改名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test7"  class="open-modal-btn">订单取消</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test2"  class="open-modal-btn">导出名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test3"  class="open-modal-btn">支付</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  class="">评价</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="print_stroke.html"  class="">打印行程</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    
+                    <td class="text-left width-230"><p>国内测试线路</p><p><i>线路编号：</i>XL20150801000001</p><p><i>发团/回团日期：</i><br>2015-08-21/2015-08-24</p>
+                    
+                    </td>
+                    
+                    <td >3763
+                    
+                    </td>
+                    
+                    <td class="text-left width-230"><p>XXX供应商【简称】</p><p>【全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称】</p>
+                    
+                    </td>
+                    
+                    <td >3
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>大人：</i>内容</p><p><i>小孩：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>订单状态：</i>内容</p><p><i>结算状态：</i>内容内容</p><p><i>发票：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>线路：</i>内容</p><p><i>保险：</i>内容内容</p><p><i>总计：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-3">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-3' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="md_order_details.html"  class="">查看详情</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test4"  class="open-modal-btn">变更订单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test5"  class="open-modal-btn">修改名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test7"  class="open-modal-btn">订单取消</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test2"  class="open-modal-btn">导出名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test3"  class="open-modal-btn">支付</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  class="">评价</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="print_stroke.html"  class="">打印行程</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    
+                    <td class="text-left width-230"><p>国内测试线路</p><p><i>线路编号：</i>XL20150801000001</p><p><i>发团/回团日期：</i><br>2015-08-21/2015-08-24</p>
+                    
+                    </td>
+                    
+                    <td >3763
+                    
+                    </td>
+                    
+                    <td class="text-left width-230"><p>XXX供应商【简称】</p><p>【全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称】</p>
+                    
+                    </td>
+                    
+                    <td >3
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>大人：</i>内容</p><p><i>小孩：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>订单状态：</i>内容</p><p><i>结算状态：</i>内容内容</p><p><i>发票：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>线路：</i>内容</p><p><i>保险：</i>内容内容</p><p><i>总计：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-4">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-4' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="md_order_details.html"  class="">查看详情</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test4"  class="open-modal-btn">变更订单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test5"  class="open-modal-btn">修改名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test7"  class="open-modal-btn">订单取消</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test2"  class="open-modal-btn">导出名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test3"  class="open-modal-btn">支付</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  class="">评价</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="print_stroke.html"  class="">打印行程</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    
+                    <td class="text-left width-230"><p>国内测试线路</p><p><i>线路编号：</i>XL20150801000001</p><p><i>发团/回团日期：</i><br>2015-08-21/2015-08-24</p>
+                    
+                    </td>
+                    
+                    <td >3763
+                    
+                    </td>
+                    
+                    <td class="text-left width-230"><p>XXX供应商【简称】</p><p>【全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称】</p>
+                    
+                    </td>
+                    
+                    <td >3
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>大人：</i>内容</p><p><i>小孩：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>订单状态：</i>内容</p><p><i>结算状态：</i>内容内容</p><p><i>发票：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>线路：</i>内容</p><p><i>保险：</i>内容内容</p><p><i>总计：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-5">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-5' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="md_order_details.html"  class="">查看详情</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test4"  class="open-modal-btn">变更订单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test5"  class="open-modal-btn">修改名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test7"  class="open-modal-btn">订单取消</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test2"  class="open-modal-btn">导出名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test3"  class="open-modal-btn">支付</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  class="">评价</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="print_stroke.html"  class="">打印行程</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    
+                    <td class="text-left width-230"><p>国内测试线路</p><p><i>线路编号：</i>XL20150801000001</p><p><i>发团/回团日期：</i><br>2015-08-21/2015-08-24</p>
+                    
+                    </td>
+                    
+                    <td >3763
+                    
+                    </td>
+                    
+                    <td class="text-left width-230"><p>XXX供应商【简称】</p><p>【全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称】</p>
+                    
+                    </td>
+                    
+                    <td >3
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>大人：</i>内容</p><p><i>小孩：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>订单状态：</i>内容</p><p><i>结算状态：</i>内容内容</p><p><i>发票：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>线路：</i>内容</p><p><i>保险：</i>内容内容</p><p><i>总计：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-6">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-6' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="md_order_details.html"  class="">查看详情</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test4"  class="open-modal-btn">变更订单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test5"  class="open-modal-btn">修改名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test7"  class="open-modal-btn">订单取消</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test2"  class="open-modal-btn">导出名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test3"  class="open-modal-btn">支付</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  class="">评价</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="print_stroke.html"  class="">打印行程</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    
+                    <td class="text-left width-230"><p>国内测试线路</p><p><i>线路编号：</i>XL20150801000001</p><p><i>发团/回团日期：</i><br>2015-08-21/2015-08-24</p>
+                    
+                    </td>
+                    
+                    <td >3763
+                    
+                    </td>
+                    
+                    <td class="text-left width-230"><p>XXX供应商【简称】</p><p>【全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称】</p>
+                    
+                    </td>
+                    
+                    <td >3
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>大人：</i>内容</p><p><i>小孩：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>订单状态：</i>内容</p><p><i>结算状态：</i>内容内容</p><p><i>发票：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>线路：</i>内容</p><p><i>保险：</i>内容内容</p><p><i>总计：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-7">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-7' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="md_order_details.html"  class="">查看详情</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test4"  class="open-modal-btn">变更订单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test5"  class="open-modal-btn">修改名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test7"  class="open-modal-btn">订单取消</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test2"  class="open-modal-btn">导出名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test3"  class="open-modal-btn">支付</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  class="">评价</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="print_stroke.html"  class="">打印行程</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    
+                    <td class="text-left width-230"><p>国内测试线路</p><p><i>线路编号：</i>XL20150801000001</p><p><i>发团/回团日期：</i><br>2015-08-21/2015-08-24</p>
+                    
+                    </td>
+                    
+                    <td >3763
+                    
+                    </td>
+                    
+                    <td class="text-left width-230"><p>XXX供应商【简称】</p><p>【全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称全称】</p>
+                    
+                    </td>
+                    
+                    <td >3
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>大人：</i>内容</p><p><i>小孩：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>订单状态：</i>内容</p><p><i>结算状态：</i>内容内容</p><p><i>发票：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td class="text-left"><p><i>线路：</i>内容</p><p><i>保险：</i>内容内容</p><p><i>总计：</i>内容内容</p>
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >1500.0
+                    
+                    </td>
+                    
+                    <td >
+                    
+                        <button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true" data-activates="hh-dropdown-8">管理操作<i class="mdi-navigation-arrow-drop-down right"></i></button>
+                        <ul id='hh-dropdown-8' class='dropdown-content'>
+                            
+                                <li>
+                                   <a href="md_order_details.html"  class="">查看详情</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test4"  class="open-modal-btn">变更订单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test5"  class="open-modal-btn">修改名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test7"  class="open-modal-btn">订单取消</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test2"  class="open-modal-btn">导出名单</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  data-tag="test3"  class="open-modal-btn">支付</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="#modal2"  class="">评价</a>
+                                </li>
+
+                                
+                                    <li class="divider"></li>
+                                
+                            
+                                <li>
+                                   <a href="print_stroke.html"  class="">打印行程</a>
+                                </li>
+
+                                
+                            
+                        </ul>
+                        
+                    </td>
+                    
+                </tr>
+                
+
+            
+        
+    </tbody>
+</table>
+
+
+    <!-- 翻页 开始 -->
+    <div class="pag-wrap  right-align ">
+    
+</div>
+    <!-- 翻页 结束 -->
+
+    </div>
+</div>
+
+
+
+
+
+<!-- 弹窗-线路详情 开始 -->
+<div id="modal2" class="modal modal-fixed-footer hh-pop-up hh-edit-order hh-height">
+    <div class="modal-content">
+        <!-- 内容主体 开始-->
+        <h5 class="cyan-text text-darken-2">订单变更
+        <ul class="modal-actions">
+            <li>
+                <a class="modal-expand close-btn" title="全屏"><i class="mdi-navigation-fullscreen"></i></a>
+            </li>
+            <li>
+                <a class="modal-close" title="关闭"><i class="mdi-content-clear"></i></a>
+            </li>
+        </ul>
+		
+        </h5> 
+        
+
+<div class="hh-tabs">
+    <!-- 切换栏目 开始-->
+    <div class="col s12">
+        <ul class="material-tabs ">
+              
+
+              
+                 
+              
+
+             
+                <li class="tab col"><a   href="#test2" >导出名单</a></li>
+                 
+              
+
+             
+                <li class="tab col"><a   href="#test3" >订单支付</a></li>
+                 
+              
+
+             
+                <li class="tab col"><a   href="#test4" >变更订单</a></li>
+                 
+              
+
+             
+                <li class="tab col"><a   href="#test5" >修改名单</a></li>
+                 
+              
+
+             
+                <li class="tab col"><a   href="#test6" >申请授信</a></li>
+                 
+              
+
+             
+                <li class="tab col"><a   href="#test7" >订单取消</a></li>
+                 
+              
+
+             
+                <li class="tab col"><a   href="#test8" >变更记录</a></li>
+                 
+              
+
+             
+                <li class="tab col"><a  id="print-link" href="print_stroke.html" target="_blank" >打印行程</a></li>
+                 
+            
+        </ul>
+    </div>
+</div>
+<!-- 切换栏目 结束-->
+<!-- 切换内容 开始-->
+<div class="hh-main">
+    <div class="row">
+         
+         
+         
+         
+        
+            
+            <div id="test2" class="hh-switch clearfix">
+                
+<div class="row hh-single-show hh-export-list">
+    <div class="clearfix hh-border-b scrollspy">
+        <h6 class="hh-order-title"><i class="mdi-notification-event-note btn-floating cyan lighten-3"></i><b>导出名单</b></h6>
+    </div>
+    
+    <dl class="col s12">
+        <dt><b>订单编号</b></dt>
+        <dd>
+            
+            <i class="text1">DD20150828000001</i>
+            
+            
+        </dd>
+    </dl>
+
+    
+    <dl class="col s12">
+        <dt><b>合同价格</b></dt>
+        <dd>
+            
+                <input type="checkbox" class="filled-in" id="input-2">
+                <label for="input-2"></label>
+                <i class="text1">￥120</i>
+            
+            <span class="left">￥</span><input class="w100" type="text">
+            
+            
+        </dd>
+    </dl>
+
+    
+    <dl class="col s12">
+        <dt><b>合同价格</b></dt>
+        <dd>
+            
+                <input type="checkbox" class="filled-in" id="input-3">
+                <label for="input-3"></label>
+                <i class="text1">CS01110415</i>
+            
+            <div class="hh-select select-wrapper left w200"><select name="" class="chosen-select" data-placeholder="请选择"><option value="" disabled selected>请选择</option><option value="1">CS01110415</option><option value="2">CS01110415</option><option value="3">CS01110415</option></select></div>
+            
+            
+        </dd>
+    </dl>
+
+    
+    <dl class="col s12">
+        <dt><b>游客信息</b></dt>
+        <dd>
+            
+                <input type="checkbox" class="filled-in" id="many-4">
+                <label for="many-4"></label>
+                <span class="deep-orange-text text-accent-3">如果申请通过后，系统将会自动扣除或增加您的系统金额</span>
+            
+            <div class="clearfix hh-ptb-10"><div class="left"><span class="left hh-pt-10">预订人</span><input class="w120" type="text"></div><div class="left"><span class="left hh-pt-10">预订人电话</span><input class="w120" type="text"></div><div class="left"><span class="left hh-pt-10">预订人邮箱</span><input class="w150" type="text"></div></div><div class="hh-mb-10 clearfix"><div class="left hh-pt-2">游客总数：</div><div class="left hh-pt-2">成人：</div><div class="left hh-mt--5 hh-mr-10"><div class="hh-edit-number"><button class="active"><i class="mdi-content-remove"></i></button><input type="text" value="1"><button class="active"><i class="mdi-content-add"></i></button></div></div><div class="left hh-pt-2">儿童：</div><div class="left hh-mt--5 hh-mr-10"><div class="hh-edit-number"><button class="active"><i class="mdi-content-remove"></i></button><input type="text" value="1"><button class="active"><i class="mdi-content-add"></i></button></div></div><div class="left hh-pt-2 hh-pl-10">其未填写信息的游客：</div><div class="left hh-pt-2">成人：</div><i class="text1">3</i><div class="left hh-pt-2">儿童：</div><i class="text1">1</i></div>
+            
+                <table class="highlight hh-table-bordered hh-mt-10">
+                    <thead>
+                        <tr>
+                            
+                            <th >姓名</th>
+                            
+                            <th class="w70">类别</th>
+                            
+                            <th >证件</th>
+                            
+                            <th >手机号码</th>
+                            
+                            <th class="w70">性别</th>
+                            
+                            <th class="w70">管理</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td><input class="" type="text">
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">成人</option><option value="2">儿童</option></select></div>
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w110 left"><select name="" class="chosen-select" data-placeholder="请选择"><option value="" disabled selected>请选择</option><option value="1">请选择请选择</option><option value="2">请选择请选择</option></select></div><input class="left w-count" type="text">
+                            </td>
+                            
+                            <td><input class="" type="text">
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">男</option><option value="2">女</option></select></div>
+                            </td>
+                            
+                            <td><button class="btn waves-effect waves-light blue-grey lighten-2">删除</button>
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td><input class="" type="text">
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">成人</option><option value="2">儿童</option></select></div>
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w110 left"><select name="" class="chosen-select" data-placeholder="请选择"><option value="" disabled selected>请选择</option><option value="1">请选择请选择</option><option value="2">请选择请选择</option></select></div><input class="left w-count" type="text">
+                            </td>
+                            
+                            <td><input class="" type="text">
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">男</option><option value="2">女</option></select></div>
+                            </td>
+                            
+                            <td><button class="btn waves-effect waves-light blue-grey lighten-2">删除</button>
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td><input class="" type="text">
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">成人</option><option value="2">儿童</option></select></div>
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w110 left"><select name="" class="chosen-select" data-placeholder="请选择"><option value="" disabled selected>请选择</option><option value="1">请选择请选择</option><option value="2">请选择请选择</option></select></div><input class="left w-count" type="text">
+                            </td>
+                            
+                            <td><input class="" type="text">
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">男</option><option value="2">女</option></select></div>
+                            </td>
+                            
+                            <td><button class="btn waves-effect waves-light blue-grey lighten-2">删除</button>
+                            </td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <button class="btn waves-effect waves-light cyan">添加新的游客</button>
+            
+            
+        </dd>
+    </dl>
+
+    
+    <dl class="col s12">
+        <dt><b>保险信息</b></dt>
+        <dd>
+            
+            
+            
+            
+                <table class="highlight hh-table-bordered hh-mt-10">
+                    <thead>
+                        <tr>
+                            
+                            <th width="90">选择保险</th>
+                            
+                            <th >保险名称</th>
+                            
+                            <th width="90">保险单价</th>
+                            
+                            <th width="90">承保天数</th>
+                            
+                            <th width="130">保险说明</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td><input type="checkbox" class="filled-in" id="insure"><label for="insure" class="hh-ml-25 hh-mt--5"></label>
+                            </td>
+                            
+                            <td>旅游人生意外保险
+                            </td>
+                            
+                            <td><b class="pink-text text-accent-2">￥8888</b>
+                            </td>
+                            
+                            <td><b class="green-text text-darken-2">100</b>
+                            </td>
+                            
+                            <td><button class="waves-effect waves-light btn btn-small cyan">查看详情</button>
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td><input type="checkbox" class="filled-in" id="insure"><label for="insure" class="hh-ml-25 hh-mt--5"></label>
+                            </td>
+                            
+                            <td>旅游人生意外保险
+                            </td>
+                            
+                            <td><b class="pink-text text-accent-2">￥8888</b>
+                            </td>
+                            
+                            <td><b class="green-text text-darken-2">100</b>
+                            </td>
+                            
+                            <td><button class="waves-effect waves-light btn btn-small cyan">查看详情</button>
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td><input type="checkbox" class="filled-in" id="insure"><label for="insure" class="hh-ml-25 hh-mt--5"></label>
+                            </td>
+                            
+                            <td>旅游人生意外保险
+                            </td>
+                            
+                            <td><b class="pink-text text-accent-2">￥8888</b>
+                            </td>
+                            
+                            <td><b class="green-text text-darken-2">100</b>
+                            </td>
+                            
+                            <td><button class="waves-effect waves-light btn btn-small cyan">查看详情</button>
+                            </td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+        </dd>
+    </dl>
+
+    
+    <dl class="col s12">
+        <dt><b>游客信息</b></dt>
+        <dd>
+            
+            <span class="left">单价：</span><i class="text1">￥4.00</i><span class="left">人数：</span><i class="text1">1</i><span class="left">应付保险：</span><i class="text1">￥4.00</i>
+            
+            
+        </dd>
+    </dl>
+
+    
+    <dl class="col s12">
+        <dt><b>实付保险</b></dt>
+        <dd>
+            
+            <i class="text1">￥4.00</i><p class="clearfix">备注：备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注</p>
+            
+            
+        </dd>
+    </dl>
+
+    
+    <dl class="col s12">
+        <dd class="text-right">
+            <a class="waves-effect waves-light btn pink lighten-2" href="#">提交</a>
+            <a class="waves-effect waves-light btn blue-grey lighten-2" href="#">取消</a>
+        </dd>
+    </dl>
+</div>
+            </div>
+            
+         
+         
+        
+            
+            <div id="test3" class="hh-switch clearfix">
+                
+<div class="row hh-single-show hh-order-pay" id="#id0">
+    <div class="clearfix hh-border-b scrollspy">
+        <h6 class="hh-order-title"><i class="mdi-notification-event-note btn-floating cyan lighten-3"></i><b>付款</b></h6>
+    </div>
+    
+    <dl class="col s6 m4 ">
+        <dt><b>订单总金额</b></dt>
+        <dd><b class="pink-text text-accent-2">5000</b></dd>
+    </dl>
+    
+    <dl class="col s6 m4 ">
+        <dt><b>已付金额</b></dt>
+        <dd><b class="pink-text text-accent-2">0</b></dd>
+    </dl>
+    
+    <dl class="col s6 m4 ">
+        <dt><b>未付余额</b></dt>
+        <dd><b class="pink-text text-accent-2">5000</b></dd>
+    </dl>
+    
+    <dl class="col  s12 ">
+        <dt><b>付款类型</b></dt>
+        <dd><input type="checkbox" class="filled-in" id="order-pay-1"><label for="order-pay-1">预付款</label><input type="checkbox" class="filled-in" id="order-pay-2"><label for="order-pay-2">团款</label></dd>
+    </dl>
+    
+    <dl class="col  s12 ">
+        <dt><b>金额</b></dt>
+        <dd><input class="" type="text"><input class="" type="text"></dd>
+    </dl>
+    
+    <dl class="col s12">
+        <dd class="text-right">
+            <div class="deep-orange-text text-accent-3 hh-pt-10 text-left">注：预付款金额商家可不走清算直接提款，故预付款提交后如涉及有预付款的变更，请与商家联系</div>
+            <a class="waves-effect waves-light btn pink lighten-2" href="#">立刻支付</a>
+        </dd>
+    </dl>
+</div>
+
+            </div>
+            
+         
+         
+        
+            
+            <div id="test4" class="hh-switch clearfix">
+                
+<div class="row hh-single-show hh-export-list">
+    <div class="clearfix hh-border-b scrollspy">
+        <h6 class="hh-order-title"><i class="mdi-notification-event-note btn-floating cyan lighten-3"></i><b>导出名单</b></h6>
+    </div>
+    
+    <dl class="col s12">
+        <dt><b>订单编号</b></dt>
+        <dd>
+            
+            <i class="text1">DD20150828000001</i>
+            
+            
+        </dd>
+    </dl>
+
+    
+    <dl class="col s12">
+        <dt><b>合同价格</b></dt>
+        <dd>
+            
+                <input type="checkbox" class="filled-in" id="input-2">
+                <label for="input-2"></label>
+                <i class="text1">￥120</i>
+            
+            <span class="left">￥</span><input class="w100" type="text">
+            
+            
+        </dd>
+    </dl>
+
+    
+    <dl class="col s12">
+        <dt><b>合同价格</b></dt>
+        <dd>
+            
+                <input type="checkbox" class="filled-in" id="input-3">
+                <label for="input-3"></label>
+                <i class="text1">CS01110415</i>
+            
+            <div class="hh-select select-wrapper left w200"><select name="" class="chosen-select" data-placeholder="请选择"><option value="" disabled selected>请选择</option><option value="1">CS01110415</option><option value="2">CS01110415</option><option value="3">CS01110415</option></select></div>
+            
+            
+        </dd>
+    </dl>
+
+    
+    <dl class="col s12">
+        <dt><b>游客信息</b></dt>
+        <dd>
+            
+                <input type="checkbox" class="filled-in" id="many-4">
+                <label for="many-4"></label>
+                <span class="deep-orange-text text-accent-3">如果申请通过后，系统将会自动扣除或增加您的系统金额</span>
+            
+            <div class="clearfix hh-ptb-10"><div class="left"><span class="left hh-pt-10">预订人</span><input class="w120" type="text"></div><div class="left"><span class="left hh-pt-10">预订人电话</span><input class="w120" type="text"></div><div class="left"><span class="left hh-pt-10">预订人邮箱</span><input class="w150" type="text"></div></div><div class="hh-mb-10 clearfix"><div class="left hh-pt-2">游客总数：</div><div class="left hh-pt-2">成人：</div><div class="left hh-mt--5 hh-mr-10"><div class="hh-edit-number"><button class="active"><i class="mdi-content-remove"></i></button><input type="text" value="1"><button class="active"><i class="mdi-content-add"></i></button></div></div><div class="left hh-pt-2">儿童：</div><div class="left hh-mt--5 hh-mr-10"><div class="hh-edit-number"><button class="active"><i class="mdi-content-remove"></i></button><input type="text" value="1"><button class="active"><i class="mdi-content-add"></i></button></div></div><div class="left hh-pt-2 hh-pl-10">其未填写信息的游客：</div><div class="left hh-pt-2">成人：</div><i class="text1">3</i><div class="left hh-pt-2">儿童：</div><i class="text1">1</i></div>
+            
+                <table class="highlight hh-table-bordered hh-mt-10">
+                    <thead>
+                        <tr>
+                            
+                            <th >姓名</th>
+                            
+                            <th class="w70">类别</th>
+                            
+                            <th >证件</th>
+                            
+                            <th >手机号码</th>
+                            
+                            <th class="w70">性别</th>
+                            
+                            <th class="w70">管理</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td><input class="" type="text">
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">成人</option><option value="2">儿童</option></select></div>
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w110 left"><select name="" class="chosen-select" data-placeholder="请选择"><option value="" disabled selected>请选择</option><option value="1">请选择请选择</option><option value="2">请选择请选择</option></select></div><input class="left w-count" type="text">
+                            </td>
+                            
+                            <td><input class="" type="text">
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">男</option><option value="2">女</option></select></div>
+                            </td>
+                            
+                            <td><button class="btn waves-effect waves-light blue-grey lighten-2">删除</button>
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td><input class="" type="text">
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">成人</option><option value="2">儿童</option></select></div>
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w110 left"><select name="" class="chosen-select" data-placeholder="请选择"><option value="" disabled selected>请选择</option><option value="1">请选择请选择</option><option value="2">请选择请选择</option></select></div><input class="left w-count" type="text">
+                            </td>
+                            
+                            <td><input class="" type="text">
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">男</option><option value="2">女</option></select></div>
+                            </td>
+                            
+                            <td><button class="btn waves-effect waves-light blue-grey lighten-2">删除</button>
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td><input class="" type="text">
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">成人</option><option value="2">儿童</option></select></div>
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w110 left"><select name="" class="chosen-select" data-placeholder="请选择"><option value="" disabled selected>请选择</option><option value="1">请选择请选择</option><option value="2">请选择请选择</option></select></div><input class="left w-count" type="text">
+                            </td>
+                            
+                            <td><input class="" type="text">
+                            </td>
+                            
+                            <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">男</option><option value="2">女</option></select></div>
+                            </td>
+                            
+                            <td><button class="btn waves-effect waves-light blue-grey lighten-2">删除</button>
+                            </td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <button class="btn waves-effect waves-light cyan">添加新的游客</button>
+            
+            
+        </dd>
+    </dl>
+
+    
+    <dl class="col s12">
+        <dt><b>保险信息</b></dt>
+        <dd>
+            
+            
+            
+            
+                <table class="highlight hh-table-bordered hh-mt-10">
+                    <thead>
+                        <tr>
+                            
+                            <th width="90">选择保险</th>
+                            
+                            <th >保险名称</th>
+                            
+                            <th width="90">保险单价</th>
+                            
+                            <th width="90">承保天数</th>
+                            
+                            <th width="130">保险说明</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            <td><input type="checkbox" class="filled-in" id="insure"><label for="insure" class="hh-ml-25 hh-mt--5"></label>
+                            </td>
+                            
+                            <td>旅游人生意外保险
+                            </td>
+                            
+                            <td><b class="pink-text text-accent-2">￥8888</b>
+                            </td>
+                            
+                            <td><b class="green-text text-darken-2">100</b>
+                            </td>
+                            
+                            <td><button class="waves-effect waves-light btn btn-small cyan">查看详情</button>
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td><input type="checkbox" class="filled-in" id="insure"><label for="insure" class="hh-ml-25 hh-mt--5"></label>
+                            </td>
+                            
+                            <td>旅游人生意外保险
+                            </td>
+                            
+                            <td><b class="pink-text text-accent-2">￥8888</b>
+                            </td>
+                            
+                            <td><b class="green-text text-darken-2">100</b>
+                            </td>
+                            
+                            <td><button class="waves-effect waves-light btn btn-small cyan">查看详情</button>
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            
+                            <td><input type="checkbox" class="filled-in" id="insure"><label for="insure" class="hh-ml-25 hh-mt--5"></label>
+                            </td>
+                            
+                            <td>旅游人生意外保险
+                            </td>
+                            
+                            <td><b class="pink-text text-accent-2">￥8888</b>
+                            </td>
+                            
+                            <td><b class="green-text text-darken-2">100</b>
+                            </td>
+                            
+                            <td><button class="waves-effect waves-light btn btn-small cyan">查看详情</button>
+                            </td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            
+        </dd>
+    </dl>
+
+    
+    <dl class="col s12">
+        <dt><b>游客信息</b></dt>
+        <dd>
+            
+            <span class="left">单价：</span><i class="text1">￥4.00</i><span class="left">人数：</span><i class="text1">1</i><span class="left">应付保险：</span><i class="text1">￥4.00</i>
+            
+            
+        </dd>
+    </dl>
+
+    
+    <dl class="col s12">
+        <dt><b>实付保险</b></dt>
+        <dd>
+            
+            <i class="text1">￥4.00</i><p class="clearfix">备注：备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注</p>
+            
+            
+        </dd>
+    </dl>
+
+    
+    <dl class="col s12">
+        <dd class="text-right">
+            <a class="waves-effect waves-light btn pink lighten-2" href="#">提交</a>
+            <a class="waves-effect waves-light btn blue-grey lighten-2" href="#">取消</a>
+        </dd>
+    </dl>
+</div>
+            </div>
+            
+         
+         
+        
+            
+            <div id="test5" class="hh-switch clearfix">
+                
+<div class="row hh-single-show hh-modify-list">
+    <div class="clearfix hh-border-b scrollspy">
+        <h6 class="hh-order-title"><i class="mdi-notification-event-note btn-floating cyan lighten-3"></i><b>修改名单</b></h6>
+    </div>
+    
+    <table class="highlight hh-table-bordered">
+        <thead>
+            <tr>
+                
+                <th ><input class="filled-in" type="checkbox" id="checkbox-1"><label for="checkbox-1"></label></th>
+                
+                <th >姓名</th>
+                
+                <th class="w70">性别</th>
+                
+                <th class="w140-1">证件类型</th>
+                
+                <th >证件号码</th>
+                
+                <th >联系电话</th>
+                
+                <th class="w100">添加时间</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td><input class="filled-in" type="checkbox" id="checkbox-1"><label for="checkbox-1"></label></td>
+                
+                <td>小乔小乔</td>
+                
+                <td>女</td>
+                
+                <td>身份证</td>
+                
+                <td>123456789874563210</td>
+                
+                <td>15312345678</td>
+                
+                <td>201-15-15</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td><input class="filled-in" type="checkbox" id="checkbox-1"><label for="checkbox-1"></label></td>
+                
+                <td>小乔小乔</td>
+                
+                <td>女</td>
+                
+                <td>身份证</td>
+                
+                <td>123456789874563210</td>
+                
+                <td>15312345678</td>
+                
+                <td>201-15-15</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td><input class="filled-in" type="checkbox" id="checkbox-1"><label for="checkbox-1"></label></td>
+                
+                <td>小乔小乔</td>
+                
+                <td>女</td>
+                
+                <td>身份证</td>
+                
+                <td>123456789874563210</td>
+                
+                <td>15312345678</td>
+                
+                <td>201-15-15</td>
+                
+            </tr>
+            
+            <tr>
+                <td class="hh-no-border" colspan="7"></td>
+            </tr>
+            <tr>
+                
+                <td class="grey lighten-4">
+                    
+                </td>
+                
+                <td class="grey lighten-4">
+                    
+                    	<b>姓名</b>
+                    
+                </td>
+                
+                <td class="grey lighten-4">
+                    
+                    	<b>性别</b>
+                    
+                </td>
+                
+                <td class="grey lighten-4">
+                    
+                    	<b>证件类型</b>
+                    
+                </td>
+                
+                <td class="grey lighten-4">
+                    
+                    	<b>证件号码</b>
+                    
+                </td>
+                
+                <td class="grey lighten-4">
+                    
+                    	<b>联系电话</b>
+                    
+                </td>
+                
+                <td class="grey lighten-4">
+                    
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">男</option><option value="2">女</option></select></div></td>
+                
+                <td><div class="select-wrapper hh-select w140 left"><select name="" class="chosen-select" data-placeholder="身份证"><option value="" disabled selected>请选择</option><option value="1">请选择请选择</option><option value="2">请选择请选择</option></select></div></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td></td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">男</option><option value="2">女</option></select></div></td>
+                
+                <td><div class="select-wrapper hh-select w140 left"><select name="" class="chosen-select" data-placeholder="身份证"><option value="" disabled selected>请选择</option><option value="1">请选择请选择</option><option value="2">请选择请选择</option></select></div></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td></td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">男</option><option value="2">女</option></select></div></td>
+                
+                <td><div class="select-wrapper hh-select w140 left"><select name="" class="chosen-select" data-placeholder="身份证"><option value="" disabled selected>请选择</option><option value="1">请选择请选择</option><option value="2">请选择请选择</option></select></div></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td></td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    <div>
+        <a class="waves-effect waves-light btn deep-orange lighten-2" href="#">上传识别</a>
+        <a class="waves-effect waves-light btn light-blue" href="#">补充名单</a>
+        <a class="waves-effect waves-light btn red lighten-2" href="#">下载标准表格模板</a>
+    </div>
+    <div class="text-right hh-ptp-10">
+        <a class="waves-effect waves-light btn pink lighten-2" href="#">提交</a>
+        <a class="waves-effect waves-light btn blue-grey lighten-2" href="#">取消</a>
+    </div>
+</div>
+
+            </div>
+            
+         
+         
+        
+            
+            <div id="test6" class="hh-switch clearfix">
+                
+<div class="row hh-single-show hh-letter" id="#id0">
+    <div class="clearfix hh-border-b scrollspy">
+        <h6 class="hh-order-title"><i class="mdi-notification-event-note btn-floating cyan lighten-3"></i><b>申请授信</b></h6>
+    </div>
+    
+    <dl class="col s12">
+        <dt><b>订单编号</b></dt>
+        <dd><b class="text1">DD20150828000001</b></dd>
+    </dl>
+    
+    <dl class="col s12">
+        <dt><b>友情提示</b></dt>
+        <dd><p>如果已经付款并且团期已经过期，则保险费用不退还，以供应商的审核时间为准。</p><p class="deep-orange-text text-accent-3">已经付款的订单，点击“确认取消”后，将不能对订单做任何操作，供应商审核通过后将不可逆转。未付款的订单，取消后将不可逆转。</p></dd>
+    </dl>
+    
+    <dl class="col s12">
+        <dt><b>申请天数</b></dt>
+        <dd><div class="col s4 m3 l2"><input class="" type="text"></div></dd>
+    </dl>
+    
+    <dl class="col s12">
+        <dt><b>备注</b></dt>
+        <dd><div class="col s8 m7 l6"><textarea id="textarea1" class="materialize-textarea"></textarea></div></dd>
+    </dl>
+    
+    <dl class="col s12">
+        <dd class="text-right">
+            <a class="waves-effect waves-light btn pink lighten-2" href="#">提交</a>
+        </dd>
+    </dl>
+</div>
+
+            </div>
+            
+         
+         
+        
+            
+            <div id="test7" class="hh-switch clearfix">
+                
+<div class="row hh-single-show hh-letter" id="#id0">
+    <div class="clearfix hh-border-b scrollspy">
+        <h6 class="hh-order-title"><i class="mdi-notification-event-note btn-floating cyan lighten-3"></i><b>申请授信</b></h6>
+    </div>
+    
+    <dl class="col s12">
+        <dt><b>订单编号</b></dt>
+        <dd><b class="text1">DD20150828000001</b></dd>
+    </dl>
+    
+    <dl class="col s12">
+        <dt><b>友情提示</b></dt>
+        <dd><p>如果已经付款并且团期已经过期，则保险费用不退还，以供应商的审核时间为准。</p><p class="deep-orange-text text-accent-3">已经付款的订单，点击“确认取消”后，将不能对订单做任何操作，供应商审核通过后将不可逆转。未付款的订单，取消后将不可逆转。</p></dd>
+    </dl>
+    
+    <dl class="col s12">
+        <dt><b>申请天数</b></dt>
+        <dd><div class="col s4 m3 l2"><input class="" type="text"></div></dd>
+    </dl>
+    
+    <dl class="col s12">
+        <dt><b>备注</b></dt>
+        <dd><div class="col s8 m7 l6"><textarea id="textarea1" class="materialize-textarea"></textarea></div></dd>
+    </dl>
+    
+    <dl class="col s12">
+        <dd class="text-right">
+            <a class="waves-effect waves-light btn pink lighten-2" href="#">提交</a>
+        </dd>
+    </dl>
+</div>
+
+            </div>
+            
+         
+         
+        
+            
+            <div id="test8" class="hh-switch clearfix">
+                
+<div class="row hh-single-show hh-modify-list">
+    <div class="clearfix hh-border-b scrollspy">
+        <h6 class="hh-order-title"><i class="mdi-notification-event-note btn-floating cyan lighten-3"></i><b>修改名单</b></h6>
+    </div>
+    
+    <table class="highlight hh-table-bordered">
+        <thead>
+            <tr>
+                
+                <th ><input class="filled-in" type="checkbox" id="checkbox-1"><label for="checkbox-1"></label></th>
+                
+                <th >姓名</th>
+                
+                <th class="w70">性别</th>
+                
+                <th class="w140-1">证件类型</th>
+                
+                <th >证件号码</th>
+                
+                <th >联系电话</th>
+                
+                <th class="w100">添加时间</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td><input class="filled-in" type="checkbox" id="checkbox-1"><label for="checkbox-1"></label></td>
+                
+                <td>小乔小乔</td>
+                
+                <td>女</td>
+                
+                <td>身份证</td>
+                
+                <td>123456789874563210</td>
+                
+                <td>15312345678</td>
+                
+                <td>201-15-15</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td><input class="filled-in" type="checkbox" id="checkbox-1"><label for="checkbox-1"></label></td>
+                
+                <td>小乔小乔</td>
+                
+                <td>女</td>
+                
+                <td>身份证</td>
+                
+                <td>123456789874563210</td>
+                
+                <td>15312345678</td>
+                
+                <td>201-15-15</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td><input class="filled-in" type="checkbox" id="checkbox-1"><label for="checkbox-1"></label></td>
+                
+                <td>小乔小乔</td>
+                
+                <td>女</td>
+                
+                <td>身份证</td>
+                
+                <td>123456789874563210</td>
+                
+                <td>15312345678</td>
+                
+                <td>201-15-15</td>
+                
+            </tr>
+            
+
+            
+            <tr>
+                
+                <td></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">男</option><option value="2">女</option></select></div></td>
+                
+                <td><div class="select-wrapper hh-select w140 left"><select name="" class="chosen-select" data-placeholder="身份证"><option value="" disabled selected>请选择</option><option value="1">请选择请选择</option><option value="2">请选择请选择</option></select></div></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td></td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">男</option><option value="2">女</option></select></div></td>
+                
+                <td><div class="select-wrapper hh-select w140 left"><select name="" class="chosen-select" data-placeholder="身份证"><option value="" disabled selected>请选择</option><option value="1">请选择请选择</option><option value="2">请选择请选择</option></select></div></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td></td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td><div class="select-wrapper hh-select w70"><select name="" class="chosen-select"><option value="1">男</option><option value="2">女</option></select></div></td>
+                
+                <td><div class="select-wrapper hh-select w140 left"><select name="" class="chosen-select" data-placeholder="身份证"><option value="" disabled selected>请选择</option><option value="1">请选择请选择</option><option value="2">请选择请选择</option></select></div></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td><input class="" type="text"></td>
+                
+                <td></td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+            </div>
+            
+         
+         
+        
+            
+
+            
+         
+        
+    </div>
+</div>
+<!-- 切换内容 结束-->
+        <!-- 内容主体 结束-->
+    </div>
+</div>
+
+<!-- 弹窗-线路详情 结束 -->
+
+
+<!-- 订单列表 结束 -->
+
+                </div>
+            </section>
+        </div>
+    </div>
+    <script type="text/javascript" src=" asserts/scripts/vendor.js "></script>
+
+
+
+
+	<script type="text/javascript" src=" asserts/scripts/main.js "></script>
+
+
+
+
+<script type="text/javascript">
+$(function() {
+	
+
+		var generateData = function(number) {
+	        var result = [];
+
+	        for (var i = 1; i < number + 1; i++) {
+	            result.push(i);
+	        }
+	        return result;
+
+	    };
+
+	    if ($('.pag-wrap').length) {
+	        $('.pag-wrap').pagination({
+	            dataSource: generateData(50),
+	            pageSize: 10,
+	            showGoInput: true,
+	            showGoButton: true,
+	            header:'<div class="pagination-info">共<%= totalNumber %>条记录，<%= currentPage %>/<%= totalPage %>页</div>',
+	            formatGoButton:"<button class='waves-effect waves-light btn btn-small cyan J-paginationjs-go-button'>Go</button>",
+	            callback: function(data, pagination) {
+	                // template method of yourself
+	                // var html = template(data);
+	                // dataContainer.html(html);
+	            }
+	        });
+	    }
+
+	
+		$('.open-modal-btn').on('click',function(e){
+			e.preventDefault();
+			$('#modal2').openModal();
+			$('.material-tabs').tabs('select_tab',$(this).data('tag'));
+		});
+	
+
+		var $print_link = $('#print-link');
+		$print_link.unbind('click');
+		$print_link.on('click',function(e){
+			e.stopPropagation();
+		});
+
+
+	
+
+});
+</script>
+
+</body>
+
+</html>

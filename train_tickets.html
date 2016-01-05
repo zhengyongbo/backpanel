@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- Meta, title, CSS, favicons, etc. -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>火车票时刻表查询</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="asserts/styles/vendor.min.css">
+    
+    
+    	<link rel="stylesheet" href="asserts/styles/main.css">
+    
+
+    
+
+    
+
+    <link rel="shortcut icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+</head>
+
+
+
+
+<body class=" ">
+    <div id="loader-wrapper">
+    <div id="loader"></div>        
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+    <!-- Docs master nav -->
+    <header id="header" class="page-topbar">
+    <!-- start header nav-->
+    <div class="navbar-fixed">
+        <nav class="cyan">
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <li class="no-hover" id="toggleNav">
+                        <a href="#" data-activates="slide-out" class="menu-sidebar-collapse btn-floating btn-flat btn-medium waves-effect waves-light cyan tooltipped" href="#!" data-position="bottom" data-delay="0" data-tooltip="导航切换"><i class="mdi-navigation-menu"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <h1 class="logo-wrapper">
+                            <a href="index.html" class="brand-logo darken-1">
+                            <span class="logo-text">湖南海航乐游</span>
+                            </a>
+                        </h1>
+                    </li>
+                </ul>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen tooltipped" data-tooltip="全屏"><i class="mdi-action-settings-overscan"></i></a>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-switch">
+                            <i class="mdi-social-person"><span>用户名</span></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-switch' class='dropdown-content'>
+                            <li><a href="#!">门店用户</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">供应商用户</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-setting">
+                            <i class="mdi-action-settings"></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-setting' class='dropdown-content'>
+                            <li><a href="#!">修改密码</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">个人资料</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="waves-effect waves-block waves-light tooltipped" data-tooltip="退出">
+                            <i class="mdi-action-settings-power"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- end header nav-->
+</header>
+
+    <!-- Page content of course! -->
+    <div id="main">
+        <div class="wrapper">
+            
+                <aside id="left-sidebar-nav">
+    <div id="slide-out" class="z-depth-1 leftside-navigation">
+        <!-- <div class="clearfix toggle-wrapper">
+            <button id="toggleNav" class="btn-floating waves-effect waves-light pink accent-2 right"><i class="material-icons">lock_open</i></button>
+        </div> -->
+        <ul id="main-menu">
+            
+                <li class=" has-sub    active ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-maps-directions-bus"></i>
+                        </div> 
+                        <span class="nav-text">线路管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" has-sub  ">
+                                    <a href="#">
+                                        <span class="nav-text">普通线路列表</span>
+                                    </a>
+                                    
+                                        <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">普通线路列表</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">单团单议列表</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">线路分发</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">基本收支</span>
+                                                </a>
+                                            </li>
+                                        
+                                        </ul>
+                                    
+                                </li>
+                            
+                                <li class=" active">
+                                    <a href="#">
+                                        <span class="nav-text">单团单议列表</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路分发</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">基本收支</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">分项报价</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-view-list"></i>
+                        </div> 
+                        <span class="nav-text">订单管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路订单</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">游客信息录入</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">单个利润</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">报价书</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-payment"></i>
+                        </div> 
+                        <span class="nav-text">财务管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路订单</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">游客信息录入</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">单个利润</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">报价书</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-editor-border-color"></i>
+                        </div> 
+                        <span class="nav-text">基本信息维护</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">客户单位</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">酒店信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">餐馆信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">景区门票</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">车队信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-settings"></i>
+                        </div> 
+                        <span class="nav-text">系统设置</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">忘记密码</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">收款账户管理</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">登录密码修改</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</aside>
+
+            
+            <section id="content" class="hh-min-width">
+                <div class="breadcrumbs-wrapper">
+    <div class="container">
+        <div class="row no-margin">
+            <div class="col s12">
+                <h5 class="breadcrumbs-title">火车票时刻表查询</h5>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">控制面板</a>
+                    </li>
+                    <li class="active">火车票时刻表查询</li>
+                </ol>
+                <div class="mini-charts">
+                    <div class="mini-charts-item pink lighten-2">
+                        <div class="count">
+                            余额
+                            <h2>￥987,459,459</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="container">
+                    <form class="card tt-search-form" id="validate-form">
+     <div class="card-heading">
+    <h4>查询条件</h4>
+    <ul class="actions">
+        
+        
+        
+        
+        
+        
+            <li>
+                <a class="waves-effect waves-block waves-light card-a" href="javascript:void(0);">
+                    <i class="mdi-av-replay"></i>
+                </a>
+            </li>
+            
+            <li>
+                <a class='waves-effect waves-block waves-light card-a' href='#'>
+                    <i class="mdi-file-file-download "></i>
+                </a>
+            </li>
+        
+        <li>
+            <a class="waves-effect waves-block waves-light collapse-btn card-a" href="javascript:void(0);">
+                <i class="mdi-hardware-keyboard-arrow-down"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="card-content">
+        <div class="row no-margin">
+            <div class="col s12 horiz-condition">
+                <input type="text" id="inputStar" placeholder="出发站" class="validate[required]">
+                <a class="waves-effect waves-light btn-floating cyan" id="transBtn"><i class="mdi-action-swap-horiz"></i></a>
+                <input type="text" id="inputDest" placeholder="到达站" class="validate[required]">
+                <input type="text" placeholder="出发日期" id="dsPicker" class="datepicker no-init validate[required]">
+                <a class="waves-effect waves-light btn btn-small pink lighten-2" href="#">搜索列车</a>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="card-panel no-padding tt-info-card" id="tt-info-card" style="opacity: 0;">
+    <div class="pkg_main_inner">
+        <div class="pkg_filter" id="J_Filter">
+            <div id="J_Filters" class="pkg_filter_con" style="display: block;">
+                <div class="pkg_date_select clearfix">
+                    <div class="pkg_date_prev">
+                        <a href="javascript:;" id="J_DatePrev" class="disabled">
+                            <i class="mdi-hardware-keyboard-arrow-left"></i>
+                        </a>
+                    </div>
+                    <div id="J_DateWrap" class="pkg_date_list">
+                        <ul class="clearfix" id="J_DateList" style="left: 0px;">
+                            <!-- <li class="pkg_date_single"><a href="javascript:;" rel="nofollow"><strong>11-25</strong><span>周三</span></a></li>
+                            <li class="pkg_date_single"><a href="javascript:;" rel="nofollow"><strong>11-26</strong><span>周四</span></a></li>
+                            <li class="pkg_date_single"><a href="javascript:;" rel="nofollow"><strong>11-27</strong><span>周五</span></a></li>
+                            <li class="pkg_date_single"><a href="javascript:;" rel="nofollow"><strong>11-28</strong><span>周六</span></a></li>
+                            <li class="pkg_date_single"><a href="javascript:;" rel="nofollow"><strong>11-29</strong><span>周日</span></a></li>
+                            <li class="pkg_date_single"><a href="javascript:;" rel="nofollow"><strong>11-30</strong><span>周一</span></a></li>
+                            <li class="pkg_date_single current"><a href="javascript:;" rel="nofollow"><strong>12-01</strong><span>周二</span></a></li> -->
+                        </ul>
+                    </div>
+                    <div class="pkg_date_next" id="J_DateNext">
+                        <a href="javascript:;" class="hovered">
+                            <i class="mdi-hardware-keyboard-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="pkg_date_calendar">
+                        <a href="javascript:;" rel="nofollow" id="J_PriceCalendar" class="pkg_date_calendar_btn">
+                            <i class="fa fa-calendar"></i>
+                            <p>日历</p>
+                        </a>
+                        <!-- 低价日历 S -->
+                        <div class="pkg_cale" id="J_Calendar"></div>
+                        <!-- 低价日历 E -->
+                        <div class="pkg_cal_mask"><i></i></div>
+                    </div>
+                    <div class="pkg_date_group_mask"><i></i></div>
+                </div>
+                <div id="J_destination" class="">
+                </div>
+                <div class="J_place place">
+                    <h1 style="float: left;">
+                        <em id="J_StartCity">长沙</em>
+                        → <em id="J_EndCity">上海</em>
+                    </h1>
+                    <!--                <div style="float: left; margin-top: 10px;" class="clearfix">-->
+                    <span id="J_StartDate">12月01日</span>
+                    <span>
+                        （共
+                        <em id="J_alltrain">26</em>
+                        个车次）
+                    </span>
+                    <!--                </div>-->
+                </div>
+                <div id="J_FilterItems" class="pkg_filter_item clearfix" style="height: 90px;">
+                    <dl>
+                        <dt class=".pkg_filter_tit">车型</dt>
+                        <dd class="pkg_filter_properties">
+                            <div class="pkg_filter_buxian"><a href="javascript:;" rel="nofollow" filter-value="0" class="checked">不限</a></div>
+                            <div class="pkg_filter_others"><a href="javascript:;" rel="nofollow"><i class="icon"></i>G-高铁</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>K-普快</a></div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class=".pkg_filter_tit">座席</dt>
+                        <dd class="pkg_filter_properties">
+                            <div class="pkg_filter_buxian"><a href="javascript:;" rel="nofollow" filter-value="0" class="checked">不限</a></div>
+                            <div class="pkg_filter_others"><a href="javascript:;" rel="nofollow"><i class="icon"></i>商务座</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>特等座</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>一等座</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>二等座</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>软卧</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>硬卧</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>硬座</a></div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class=".pkg_filter_tit">出发车站</dt>
+                        <dd class="pkg_filter_properties">
+                            <div class="pkg_filter_buxian"><a href="javascript:;" rel="nofollow" filter-value="0" class="checked">不限</a></div>
+                            <div class="pkg_filter_others"><a href="javascript:;" rel="nofollow"><i class="icon"></i>长沙南站</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>长沙站</a></div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class=".pkg_filter_tit">到达车站</dt>
+                        <dd class="pkg_filter_properties">
+                            <div class="pkg_filter_buxian"><a href="javascript:;" rel="nofollow" filter-value="0" class="checked">不限</a></div>
+                            <div class="pkg_filter_others"><a href="javascript:;" rel="nofollow"><i class="icon"></i>上海南站</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>上海虹桥站</a></div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class=".pkg_filter_tit">出发时段</dt>
+                        <dd class="pkg_filter_properties">
+                            <div class="pkg_filter_buxian"><a href="javascript:;" rel="nofollow" filter-value="0" class="checked">不限</a></div>
+                            <div class="pkg_filter_others"><a href="javascript:;" rel="nofollow"><i class="icon"></i>0-6点</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>6-12点</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>12-18点</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>18-24点</a></div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class=".pkg_filter_tit">到达时段</dt>
+                        <dd class="pkg_filter_properties">
+                            <div class="pkg_filter_buxian"><a href="javascript:;" rel="nofollow" filter-value="0" class="checked">不限</a></div>
+                            <div class="pkg_filter_others"><a href="javascript:;" rel="nofollow"><i class="icon"></i>6-12点</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>12-18点</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>18-24点</a></div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class=".pkg_filter_tit">是否始发</dt>
+                        <dd class="pkg_filter_properties">
+                            <div class="pkg_filter_buxian"><a href="javascript:;" rel="nofollow" filter-value="0" class="checked">不限</a></div>
+                            <div class="pkg_filter_others"><a href="javascript:;" rel="nofollow"><i class="icon"></i>始发</a><a href="javascript:;" rel="nofollow"><i class="icon"></i>过路</a></div>
+                        </dd>
+                    </dl><a href="javascript:;" rel="nofollow" class="slidesign" style="display: block;" id="slideDown">更多筛选条件▼</a><a href="javascript:;" rel="nofollow" class="slideup" style="display: none;" id="slideUp">收起▲</a></div>
+                <div id="pkg_filter_selected" class="pkg_filter_item">
+                    <dl class="pkg_filter_selected" style="display: none;">
+                        <dt class="pkg_filter_tit">您已选择</dt>
+                        <dd></dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- <div class="pkg_filter_sort" style="display: block;">
+                <div class="pkg_sort" id="J_Sort"><a href="javascript:;" rel="nofollow" class="pkg_sort_item pkg_sort_item_0 pkg_sort_item_id_0">车次</a><a href="javascript:;" rel="nofollow" class="pkg_sort_item pkg_sort_item_2 pkg_sort_item_id_1 asc">出发时间<i class="icon"></i></a><a href="javascript:;" rel="nofollow" class="pkg_sort_item pkg_sort_item_2 pkg_sort_item_id_3">运行时间<i class="icon"></i></a><a href="javascript:;" rel="nofollow" class="pkg_sort_item pkg_sort_item_2 pkg_sort_item_id_2">到达时间<i class="icon"></i></a><a href="javascript:;" rel="nofollow" class="pkg_sort_item pkg_sort_item_2 pkg_sort_item_id_4">价格<i class="icon"></i></a></div>
+            </div> -->
+        </div>
+        
+    </div>
+</div>
+<div class="card tt-list-card" id="tt-list-card" style="opacity: 0;">
+    
+    <table class="highlight hh-table-bordered ">
+    <thead>
+        <tr>
+            
+            <th  >车次</th>
+            
+            <th  >出发时间</th>
+            
+            <th  >出发车站</th>
+            
+            <th  >到达时间</th>
+            
+            <th  >到达车站</th>
+            
+            <th  >远行时间</th>
+            
+            <th  >价格</th>
+            
+            <th  >余票</th>
+            
+        </tr>
+    </thead>
+
+    <tbody >
+        
+            
+                
+                    <tr>
+                    
+                        <td  ><p class="train-no">k1375</p><a class="md-stop-st" href="javascript:void(0);">经停站 <i class="mdi-hardware-keyboard-arrow-down"></i></a></td>
+                    
+                        <td  ><p class="train-time">00:37</p></td>
+                    
+                        <td  >长沙站</td>
+                    
+                        <td  ><p class="train-time">15:10</p></td>
+                    
+                        <td  >上海南站</td>
+                    
+                        <td  >14小时33分钟</td>
+                    
+                        <td  ><p class="sit-type">硬座:<span class="price">￥148.5</span></p><p class="sit-type">硬卧:<span class="price sold">￥285.5</span></p><p class="sit-type">软卧:<span class="price sold">￥434.0</span></p></td>
+                    
+                        <td  ><a class="waves-effect waves-light btn btn-small btn-hh pink lighten-2">余20张</a><br><a class="btn-no btn-hh grey lighten-3 grey-text text-darken-1">售完</a><br><a class="btn-no btn-hh grey lighten-3 grey-text text-darken-1">售完</a></td>
+                    
+                    </tr>
+                
+                    <tr>
+                    
+                        <td class="no-padding st-list" colspan=8><div class="max-height-200"><table class="no-border"><tbody><tr class="tit"><td>站次</td><td>站名</td><td>到达时间</td><td>开车时间</td><td>停留时间</td></tr><tr class="through_disabled"><td><em>1</em></td><td>长沙南</td><td>----</td><td>13:30</td><td>始发站</td></tr><tr><td><em>9</em></td><td>常州北</td><td>19:07</td><td>19:09</td><td>2分钟</td></tr><tr><td><em>10</em></td><td>无锡东</td><td>19:26</td><td>19:32</td><td>6分钟</td></tr><tr><td><em>11</em></td><td>苏州北</td><td>19:43</td><td>19:45</td><td>2分钟</td></tr><tr><td><em>12</em></td><td>上海虹桥</td><td>20:08</td><td>20:08</td><td>终点站</td></tr></tbody></table></div></td>
+                    
+                    </tr>
+                
+                    <tr>
+                    
+                        <td  ><p class="train-no">G578</p><a class="md-stop-st" href="javascript:void(0);">经停站 <i class="mdi-hardware-keyboard-arrow-down"></i></a></td>
+                    
+                        <td  ><p class="train-time">13:30</p></td>
+                    
+                        <td  >长沙南站</td>
+                    
+                        <td  ><p class="train-time">20:08</p></td>
+                    
+                        <td  >上海虹桥站</td>
+                    
+                        <td  >6小时38分钟</td>
+                    
+                        <td  ><p class="sit-type">二等座:<span class="price">￥467</span></p><p class="sit-type">一等座:<span class="price sold">￥691.5</span></p><p class="sit-type">商务座:<span class="price sold">￥1446.5</span></p></td>
+                    
+                        <td  ><a class="waves-effect waves-light btn btn-small btn-hh pink lighten-2">余120张</a><br><a class="waves-effect waves-light btn btn-small btn-hh pink lighten-2">余20张</a><br><a class="btn-no btn-hh grey lighten-3 grey-text text-darken-1">售完</a></td>
+                    
+                    </tr>
+                
+            
+        
+    </tbody>
+</table>
+
+
+</div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+    <script type="text/javascript" src=" asserts/scripts/vendor.js "></script>
+
+
+
+
+	<script type="text/javascript" src=" asserts/scripts/main.js "></script>
+
+
+
+
+<script type="text/javascript">
+$(function() {
+	
+		var $dsInput = $('#dsPicker').pickadate({
+	        "selectYears": true,
+	        "selectMonths": true,
+	        "min": new Date()
+	    });
+
+	    $('#validate-form').validationEngine();
+
+	    var currDate,firstDate,lastDate,
+        	today = moment(moment().format('YYYY-MM-DD'));
+
+	    $('.horiz-condition a').on('click',function(e){
+	    	e.preventDefault();
+	    	if ($('#validate-form').validationEngine('validate')) {
+		        Materialize.fadeInImage('#tt-info-card');
+		        Materialize.fadeInImage('#tt-list-card');
+		        currDate = moment($('#dsPicker').val())
+		        var diff = currDate.diff(today, 'days');
+
+		        if(diff < 3){
+		        	firstDate = moment(currDate.format('YYYY-MM-DD')).add('days',-diff);
+		        	console.log(firstDate.format('YYYY-MM-DD'));
+		        }else{
+		        	firstDate = moment(currDate.format('YYYY-MM-DD')).add('days',-3);
+		        }
+
+		        lastDate = moment(firstDate.format('YYYY-MM-DD')).add('days',7);
+
+		        generateDateList();
+
+		    }
+	    });
+
+	    function generateDateList(){
+	    	$('#J_DateList').empty();
+	    	for(var i = 1; i<8; i++){
+	    		var moDate = moment(firstDate.format('YYYY-MM-DD')).add('days',i - 1);
+	        	var currClass = "";
+		    	if(moDate.format("YYYY-MM-DD") == currDate.format("YYYY-MM-DD")){
+		    		currClass = "current";
+		    	}
+		    	var li = $('<li class="pkg_date_single '+ currClass +'" data-date="'+ moDate.format('YYYY-MM-DD') +'"></li>').html($('<a href="javascript:;" rel="nofollow"><strong>'+ moDate.format('MM-DD') +'</strong><span>'+ moDate.format('dddd') +'</span></a>'));
+		    	li.on('click',function(){
+		    		var $thisLi = $(this);
+		    		if(!$thisLi.hasClass('current')){
+		    			$thisLi.addClass('current').siblings().removeClass('current');
+		    			$('#dsPicker').val($thisLi.data('date'));
+		    		}
+		    	});
+	        	$('#J_DateList').append(li);
+	        }
+
+	        if(!isBigThanToday()){
+	        	$('#J_DatePrev').addClass('disabled');
+	        }else{
+	        	$('#J_DatePrev').removeClass('disabled');
+	        }
+	    };
+
+	    function isBigThanToday(){
+	    	if(firstDate.diff(today,'days')<=0){
+	    		return false;
+	    	}else{
+	    		return true;
+	    	}
+	    };
+
+	    $('#J_DatePrev').on('click',function(){
+    		if($(this).hasClass('disabled')){
+	    		return false;
+	    	}else{
+	    		firstDate.add('days', -1);
+	    		lastDate.add('days', -1);
+	    		generateDateList();
+	    	}
+	    });
+
+	    $('#J_DateNext').on('click',function(){
+	    	firstDate.add('days', 1);
+    		lastDate.add('days', 1);
+    		generateDateList();
+	    });
+
+
+		$('#transBtn').on('click',function(e){
+			e.preventDefault();
+			var tempValue = $('#inputStar').val();
+			$('#inputStar').val($('#inputDest').val());
+			$('#inputDest').val(tempValue);
+		});
+
+		var $slideDown = $('#slideDown');
+		var $slideUp = $('#slideUp');
+		var filterItems = $('#J_FilterItems');
+		$slideDown.on('click',function(){
+			$slideUp.css('display','block');
+			$slideDown.css('display','none');
+			filterItems.animate({height:"315px"});
+			 return false;
+		});
+		$slideUp.on('click',function(){
+			$slideDown.css('display','block');
+			$slideUp.css('display','none');
+			filterItems.animate({height:"90px"});
+			 return false;
+		});
+
+		$('.pkg_filter_others a').on('click',function(){
+			var $this = $(this);
+			var $ck_siblings = $this.siblings().filter('.checked');
+			var $buxian_btn = $this.parent().prev().find('a');
+			if($ck_siblings.length){
+
+			}else{
+				if($this.hasClass('checked')){
+					$buxian_btn.addClass('checked');
+				}else{
+					$buxian_btn.removeClass('checked');
+				}
+			}
+
+			$this.toggleClass('checked');
+
+		});
+
+		$('.pkg_filter_buxian a').on('click',function(){
+			var $this = $(this);
+			var $other_btn = $this.parent().next().find('a');
+			$other_btn.removeClass('checked');
+			$this.addClass('checked');
+		});
+
+
+	
+
+});
+</script>
+
+</body>
+
+</html>

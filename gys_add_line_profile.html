@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- Meta, title, CSS, favicons, etc. -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>供应商-新增线路-基础资料</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="asserts/styles/vendor.min.css">
+    
+    
+    	<link rel="stylesheet" href="asserts/styles/main.css">
+    
+
+    
+
+    
+
+    <link rel="shortcut icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+</head>
+
+
+
+
+<body class=" ">
+    <div id="loader-wrapper">
+    <div id="loader"></div>        
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+    <!-- Docs master nav -->
+    <header id="header" class="page-topbar">
+    <!-- start header nav-->
+    <div class="navbar-fixed">
+        <nav class="cyan">
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <li class="no-hover" id="toggleNav">
+                        <a href="#" data-activates="slide-out" class="menu-sidebar-collapse btn-floating btn-flat btn-medium waves-effect waves-light cyan tooltipped" href="#!" data-position="bottom" data-delay="0" data-tooltip="导航切换"><i class="mdi-navigation-menu"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <h1 class="logo-wrapper">
+                            <a href="index.html" class="brand-logo darken-1">
+                            <span class="logo-text">湖南海航乐游</span>
+                            </a>
+                        </h1>
+                    </li>
+                </ul>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen tooltipped" data-tooltip="全屏"><i class="mdi-action-settings-overscan"></i></a>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-switch">
+                            <i class="mdi-social-person"><span>用户名</span></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-switch' class='dropdown-content'>
+                            <li><a href="#!">门店用户</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">供应商用户</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-setting">
+                            <i class="mdi-action-settings"></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-setting' class='dropdown-content'>
+                            <li><a href="#!">修改密码</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">个人资料</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="waves-effect waves-block waves-light tooltipped" data-tooltip="退出">
+                            <i class="mdi-action-settings-power"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- end header nav-->
+</header>
+
+    <!-- Page content of course! -->
+    <div id="main">
+        <div class="wrapper">
+            
+                <aside id="left-sidebar-nav">
+    <div id="slide-out" class="z-depth-1 leftside-navigation">
+        <!-- <div class="clearfix toggle-wrapper">
+            <button id="toggleNav" class="btn-floating waves-effect waves-light pink accent-2 right"><i class="material-icons">lock_open</i></button>
+        </div> -->
+        <ul id="main-menu">
+            
+                <li class=" has-sub    active ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-maps-directions-bus"></i>
+                        </div> 
+                        <span class="nav-text">线路管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" has-sub  ">
+                                    <a href="#">
+                                        <span class="nav-text">普通线路列表</span>
+                                    </a>
+                                    
+                                        <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">普通线路列表</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">单团单议列表</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">线路分发</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">基本收支</span>
+                                                </a>
+                                            </li>
+                                        
+                                        </ul>
+                                    
+                                </li>
+                            
+                                <li class=" active">
+                                    <a href="#">
+                                        <span class="nav-text">单团单议列表</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路分发</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">基本收支</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">分项报价</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-view-list"></i>
+                        </div> 
+                        <span class="nav-text">订单管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路订单</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">游客信息录入</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">单个利润</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">报价书</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-payment"></i>
+                        </div> 
+                        <span class="nav-text">财务管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路订单</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">游客信息录入</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">单个利润</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">报价书</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-editor-border-color"></i>
+                        </div> 
+                        <span class="nav-text">基本信息维护</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">客户单位</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">酒店信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">餐馆信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">景区门票</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">车队信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-settings"></i>
+                        </div> 
+                        <span class="nav-text">系统设置</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">忘记密码</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">收款账户管理</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">登录密码修改</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</aside>
+
+            
+            <section id="content" class="hh-min-width">
+                <div class="breadcrumbs-wrapper">
+    <div class="container">
+        <div class="row no-margin">
+            <div class="col s12">
+                <h5 class="breadcrumbs-title">供应商-新增线路-基础资料</h5>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">控制面板</a>
+                    </li>
+                    <li class="active">供应商-新增线路-基础资料</li>
+                </ol>
+                <div class="mini-charts">
+                    <div class="mini-charts-item pink lighten-2">
+                        <div class="count">
+                            余额
+                            <h2>￥987,459,459</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="container">
+                    <!-- 栏目名称 开始 -->
+
+<div class="clearfix w-100">
+    <div class="hh-gys-add-line-step clearfix">
+        
+        <div class="boite  active "><a href="gys_add_line_profile.html">1、基础资料</a></div>
+        
+        <div class="boite "><a href="gys_add_line_route.html">2、行程</a></div>
+        
+        <div class="boite "><a href="gys_add_line_memo.html">3、备注</a></div>
+        
+        <div class="boite "><a href="gys_add_line_price.html">4、价格设置</a></div>
+        
+    </div>
+</div>
+
+<!-- 栏目名称 结束 -->
+<div class="card">
+    <div class="card-content">
+    		
+        <div class="row hh-add-edit">
+        	
+
+    <dl class="col s12">
+        <dt><b>线路名称</b></dt>
+        <dd>
+            
+                <div class="col s8 m6"><input class="" type="text"></div><div class="col s4 m4 hh-pt-5"><input type="checkbox" class="filled-in" id="cb_add_route1" /><label for="cb_add_route1">共享库存</label></div>
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>往返交通</b></dt>
+        <dd>
+            
+                <div class="col s6 m4"><div class="hh-select select-wrapper"><select name="" class="chosen-select" data-placeholder="请选择"><option value="" disabled selected>请选择</option><option value="1">汽车</option><option value="2">火车</option><option value="3">飞机</option></select></div></div>
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>提前预订天数</b></dt>
+        <dd>
+            
+                <div class="col s12 m8">提前<input class="inline-block w-50 hh-mlr-10 center-align" type="text">天预定</div>
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>线路缩略图</b></dt>
+        <dd>
+            
+                
+            
+
+            
+                
+
+
+<div class="dz-wrapper clearfix">
+	<div class="dz-notice">
+		<p>图片格式只能为.jpg,.jpeg,.png</p>
+	</div>
+	<div id="photo-list1" class="dz-photo-list dropzone"></div>
+	<div id="myDropzone" class="dropzone">
+	    <div class="dz-default dz-message">
+	        <div class="dz-btn-wrap">
+	        	<a class="dz-btn" href="javascript:;" title="">
+	        		<i class="mdi-content-add"></i>
+	        	</a>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>行程天数</b></dt>
+        <dd>
+            
+                <div class="col s12 m8"><input class="inline-block w-50 hh-mr-10 center-align" type="text">天</div>
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>出游方式</b></dt>
+        <dd>
+             
+                
+                    <input  name="traval-way" class="with-gap"  id="traval-way-1"  type="radio">
+                    <label for="traval-way-1">跟团游</label>
+                
+                    <input  name="traval-way" class="with-gap"  id="traval-way-2"  type="radio">
+                    <label for="traval-way-2">自由行</label>
+                
+                
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>线路类型</b></dt>
+        <dd>
+             
+                
+                    <input  name="line_type" class="with-gap"  id="line_type-1"  type="radio">
+                    <label for="line_type-1">周边旅游</label>
+                
+                    <input  name="line_type" class="with-gap"  id="line_type-2"  type="radio">
+                    <label for="line_type-2">国内旅游</label>
+                
+                    <input  name="line_type" class="with-gap"  id="line_type-3"  type="radio">
+                    <label for="line_type-3">出境旅游</label>
+                
+                
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>出发地</b></dt>
+        <dd>
+            
+                <div class="col s4 m3"><div class="hh-select select-wrapper"><select name="" class="chosen-select" data-placeholder="请选择"><option value="" disabled selected>请选择</option><option value="1">汽车</option><option value="2">火车</option><option value="3">飞机</option></select></div></div><div class="col s4 m3"><div class="hh-select select-wrapper"><select name="" class="chosen-select" data-placeholder="请选择"><option value="" disabled selected>请选择</option><option value="1">汽车</option><option value="2">火车</option><option value="3">飞机</option></select></div></div>
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>目的地</b></dt>
+        <dd>
+            
+                <div class="col s4 m3"><div class="hh-select select-wrapper"><select name="" class="chosen-select" data-placeholder="请选择"><option value="" disabled selected>请选择</option><option value="1">汽车</option><option value="2">火车</option><option value="3">飞机</option></select></div></div><div class="col s4 m3"><div class="hh-select select-wrapper"><select name="" class="chosen-select" data-placeholder="请选择"><option value="" disabled selected>请选择</option><option value="1">汽车</option><option value="2">火车</option><option value="3">飞机</option></select></div></div>
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>途经地</b></dt>
+        <dd>
+            
+                <div class="col s8 m6"><input class="" type="text"></div><span class="col s12 help-block deep-orange-text text-accent-3">注：各地之间以逗号"，"隔开</span>
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>线路主题</b></dt>
+        <dd>
+             
+                
+                    <input  class="filled-in"  id="line_theme-1"  type="checkbox">
+                    <label for="line_theme-1">古镇游</label>
+                
+                    <input  class="filled-in"  id="line_theme-2"  type="checkbox">
+                    <label for="line_theme-2">山水游</label>
+                
+                    <input  class="filled-in"  id="line_theme-3"  type="checkbox">
+                    <label for="line_theme-3">海岛游</label>
+                
+                    <input  class="filled-in"  id="line_theme-4"  type="checkbox">
+                    <label for="line_theme-4">海岛游</label>
+                
+                    <input  class="filled-in"  id="line_theme-5"  type="checkbox">
+                    <label for="line_theme-5">蜜月游</label>
+                
+                    <input  class="filled-in"  id="line_theme-6"  type="checkbox">
+                    <label for="line_theme-6">蜜月游</label>
+                
+                    <input  class="filled-in"  id="line_theme-7"  type="checkbox">
+                    <label for="line_theme-7">蜜月游</label>
+                
+                    <input  class="filled-in"  id="line_theme-8"  type="checkbox">
+                    <label for="line_theme-8">温泉游</label>
+                
+                
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>处理方式</b></dt>
+        <dd>
+             
+                
+                    <input  name="process_way" class="with-gap"  id="process_way-1"  type="radio">
+                    <label for="process_way-1">自动处理</label>
+                
+                    <input  name="process_way" class="with-gap"  id="process_way-2"  type="radio">
+                    <label for="process_way-2">人工处理</label>
+                
+                <span class="col s12 help-block deep-orange-text text-accent-3">注："人工处理"订单提交后需经后台审核方可在线支付，"自动处理"订单提交后可直接支付，无需后台审核设置！</span>
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>游客类型</b></dt>
+        <dd>
+             
+                
+                    <input  class="filled-in"  id="tourist_type-1"  checked  type="checkbox">
+                    <label for="tourist_type-1">成人</label>
+                
+                    <input  class="filled-in"  id="tourist_type-2"  checked  type="checkbox">
+                    <label for="tourist_type-2">儿童</label>
+                
+                
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>关键字</b></dt>
+        <dd>
+            
+                <div class="col s8 m6"><input type="text" name="mytags" id="tagsinput1"></div><span class="col s12 help-block deep-orange-text text-accent-3">注：各关键字之间以逗号“，”隔开</span>
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>推荐理由</b></dt>
+        <dd>
+            
+                <div class="col s8 m6"><input class="" type="text"></div><div class="col s4 m6"><a class="waves-effect waves-light btn btn-small cyan">添加</a></div><span class="col s12 help-block deep-orange-text text-accent-3">注：请至少选择一个</span>
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>地接信息</b></dt>
+        <dd>
+            
+                <div class="col s6 m4"><div class="hh-select select-wrapper"><select name="" class="chosen-select" data-placeholder="请选择"><option value="" disabled selected>请选择</option><option value="1">地接单位</option><option value="2">地接单位</option><option value="3">地接单位</option></select></div></div>
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>游客名单提交最晚时间</b></dt>
+        <dd>
+            
+                <div class="col s12 m8">发团前<input class="inline-block w-50 hh-mlr-10 center-align" type="text">天</div>
+            
+
+            
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>集合时间及地点</b></dt>
+        <dd>
+            
+                <div class="col s2"><input class="" type="text" placeholder="集合时间"></div><div class="col s4"><input class="" type="text" placeholder="集合地点"></div><div class="col s4 m6"><a class="waves-effect waves-light btn btn-small cyan">添加</a></div>
+            
+
+            
+        </dd>
+    </dl>
+
+<dl class="col s12">
+    <dd class="text-right">
+        <a class="waves-effect waves-light btn pink lighten-2">保存并进入下一步</a> <a class="waves-effect waves-light btn blue-grey lighten-2">重置</a> <a class="waves-effect waves-light btn blue-grey lighten-2">取消</a>
+    </dd>
+</dl>
+
+        </div>
+    </div>
+</div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script type="text/javascript" src=" asserts/scripts/vendor.js "></script>
+
+
+
+
+	<script type="text/javascript" src=" asserts/scripts/main.js "></script>
+
+
+
+
+<script type="text/javascript">
+$(function() {
+	
+
+		$('#myDropzone').dropzone({
+	        url: '/api/common/upload/',
+	        previewsContainer: $('#photo-list1')[0],
+	        maxFiles: 4,
+	        addRemoveLinks: true,
+	        acceptedFiles: "image/*",
+	        init:function(){
+	        	var imgUrl = 'asserts/images/slick-demo.jpg';
+	        	var file = {};
+	        	var preTemplate = "<div class=\"dz-preview dz-image-preview dz-inited-preview\"><div class=\"dz-image\"><img data-dz-thumbnail /></div></div>";
+	        	file.previewElement =  Dropzone.createElement(preTemplate);
+	        	file.previewTemplate = file.previewElement;
+          		this.previewsContainer.appendChild(file.previewElement);
+          		this.createThumbnailFromUrl(file,imgUrl);
+	        },
+	        maxfilesreached: function() {
+	            $('#myDropzone').addClass('hide');
+	        },
+	        reset: function() {
+	            $('#myDropzone').removeClass('hide');
+	        },
+	        error: function(file, errorMessage) {
+
+	            // this.removeFile(file);
+	            alertify.log(errorMessage, "");
+	        },
+	        removedfile: function(a) {
+	        	$('#myDropzone').removeClass('hide');
+	            if (a.status == 'success') {
+	                $("#Cover").val('');
+	            }
+	            var b;
+	            return a.previewElement && null != (b = a.previewElement) && b.parentNode.removeChild(a.previewElement),
+	                this._updateMaxFilesReachedClass()
+	        },
+	        success: function(obj, Response) {
+	            Response = $.parseJSON(Response);
+	            if (Response.code == -1) {
+	                swal("错误!", Response.message, "error");
+	            } else {
+	                $("#Cover").val(Response.message);
+	            }
+	        }
+	    });
+
+	
+		$('#tagsinput1').tagsInput({
+		   width:'auto',
+		   height:'auto',
+		   defaultText:'添加一个关键字'
+		});
+	
+
+});
+</script>
+
+</body>
+
+</html>

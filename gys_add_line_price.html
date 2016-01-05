@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- Meta, title, CSS, favicons, etc. -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>供应商-新增线路-价格设置</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="asserts/styles/vendor.min.css">
+    
+    
+    	<link rel="stylesheet" href="asserts/styles/main.css">
+    
+
+    
+
+    
+
+    <link rel="shortcut icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+</head>
+
+
+
+
+<body class=" ">
+    <div id="loader-wrapper">
+    <div id="loader"></div>        
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+    <!-- Docs master nav -->
+    <header id="header" class="page-topbar">
+    <!-- start header nav-->
+    <div class="navbar-fixed">
+        <nav class="cyan">
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <li class="no-hover" id="toggleNav">
+                        <a href="#" data-activates="slide-out" class="menu-sidebar-collapse btn-floating btn-flat btn-medium waves-effect waves-light cyan tooltipped" href="#!" data-position="bottom" data-delay="0" data-tooltip="导航切换"><i class="mdi-navigation-menu"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <h1 class="logo-wrapper">
+                            <a href="index.html" class="brand-logo darken-1">
+                            <span class="logo-text">湖南海航乐游</span>
+                            </a>
+                        </h1>
+                    </li>
+                </ul>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen tooltipped" data-tooltip="全屏"><i class="mdi-action-settings-overscan"></i></a>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-switch">
+                            <i class="mdi-social-person"><span>用户名</span></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-switch' class='dropdown-content'>
+                            <li><a href="#!">门店用户</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">供应商用户</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-setting">
+                            <i class="mdi-action-settings"></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-setting' class='dropdown-content'>
+                            <li><a href="#!">修改密码</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">个人资料</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="waves-effect waves-block waves-light tooltipped" data-tooltip="退出">
+                            <i class="mdi-action-settings-power"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- end header nav-->
+</header>
+
+    <!-- Page content of course! -->
+    <div id="main">
+        <div class="wrapper">
+            
+                <aside id="left-sidebar-nav">
+    <div id="slide-out" class="z-depth-1 leftside-navigation">
+        <!-- <div class="clearfix toggle-wrapper">
+            <button id="toggleNav" class="btn-floating waves-effect waves-light pink accent-2 right"><i class="material-icons">lock_open</i></button>
+        </div> -->
+        <ul id="main-menu">
+            
+                <li class=" has-sub    active ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-maps-directions-bus"></i>
+                        </div> 
+                        <span class="nav-text">线路管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" has-sub  ">
+                                    <a href="#">
+                                        <span class="nav-text">普通线路列表</span>
+                                    </a>
+                                    
+                                        <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">普通线路列表</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">单团单议列表</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">线路分发</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="#">
+                                                    <span class="nav-text">基本收支</span>
+                                                </a>
+                                            </li>
+                                        
+                                        </ul>
+                                    
+                                </li>
+                            
+                                <li class=" active">
+                                    <a href="#">
+                                        <span class="nav-text">单团单议列表</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路分发</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">基本收支</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">分项报价</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-view-list"></i>
+                        </div> 
+                        <span class="nav-text">订单管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路订单</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">游客信息录入</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">单个利润</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">报价书</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-payment"></i>
+                        </div> 
+                        <span class="nav-text">财务管理</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">线路订单</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">游客信息录入</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">单个利润</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">报价书</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-editor-border-color"></i>
+                        </div> 
+                        <span class="nav-text">基本信息维护</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">客户单位</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">酒店信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">餐馆信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">景区门票</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">车队信息</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                <li class=" has-sub   ">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <i class="mdi-action-settings"></i>
+                        </div> 
+                        <span class="nav-text">系统设置</span>
+                    </a>
+                    
+                        <ul class="sub-menu">
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">忘记密码</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">收款账户管理</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                                <li class=" ">
+                                    <a href="#">
+                                        <span class="nav-text">登录密码修改</span>
+                                    </a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</aside>
+
+            
+            <section id="content" class="hh-min-width">
+                <div class="breadcrumbs-wrapper">
+    <div class="container">
+        <div class="row no-margin">
+            <div class="col s12">
+                <h5 class="breadcrumbs-title">供应商-新增线路-价格设置</h5>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">控制面板</a>
+                    </li>
+                    <li class="active">供应商-新增线路-价格设置</li>
+                </ol>
+                <div class="mini-charts">
+                    <div class="mini-charts-item pink lighten-2">
+                        <div class="count">
+                            余额
+                            <h2>￥987,459,459</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="container">
+                    <!-- 栏目名称 开始 -->
+
+<div class="clearfix w-100">
+    <div class="hh-gys-add-line-step clearfix">
+        
+        <div class="boite "><a href="gys_add_line_profile.html">1、基础资料</a></div>
+        
+        <div class="boite "><a href="gys_add_line_route.html">2、行程</a></div>
+        
+        <div class="boite "><a href="gys_add_line_memo.html">3、备注</a></div>
+        
+        <div class="boite  active "><a href="gys_add_line_price.html">4、价格设置</a></div>
+        
+    </div>
+</div>
+
+<!-- 栏目名称 结束 -->
+<div class="card">
+    <div class="card-content">
+    		
+        <div class="row hh-add-edit">
+        	
+<div class="hh-add-line-price">
+    
+         
+            <dl class="col s12">
+                <dt><b>线路名称</b></dt>
+                <dd>
+                    
+                        <div class="hh-pl-5">线路名称线路名称线路名称线路名称线路名称线路名称线路名称<input type="checkbox" class="filled-in" id="cb_add_price_1" checked="checked" disabled="disabled" /><label class="price-checkbox" for="cb_add_price_1">共享库存</label></div>
+                    
+
+                    
+                </dd>
+            </dl>
+        
+    
+         
+            <dl class="col s12 border-b">
+                <dt><b>套餐信息</b></dt>
+                <dd>
+                    
+                        
+                    
+
+                    
+                        <div class="hh-pl-5 clearfix">
+                            
+                                
+                                    <a class="hh-tag cur d">默认套餐<i class="mdi-editor-mode-edit" title="编辑"></i><i class="mdi-content-clear" title="删除"></i></a>
+                                
+                            
+                                
+                                    <a class="hh-tag none">套餐1<i class="mdi-editor-mode-edit" title="编辑"></i><i class="mdi-content-clear" title="删除"></i></a>
+                                
+                            
+                                
+                                    <a class="hh-tag none">套餐2<i class="mdi-editor-mode-edit" title="编辑"></i><i class="mdi-content-clear" title="删除"></i></a>
+                                
+                            
+                                
+                                    <a class="hh-tag none">套餐3<i class="mdi-editor-mode-edit" title="编辑"></i><i class="mdi-content-clear" title="删除"></i></a>
+                                
+                            
+                                
+                                    <a class="hh-tag none">套餐4<i class="mdi-editor-mode-edit" title="编辑"></i><i class="mdi-content-clear" title="删除"></i></a>
+                                
+                            
+                                
+                                    <a class="hh-tag none">套餐5<i class="mdi-editor-mode-edit" title="编辑"></i><i class="mdi-content-clear" title="删除"></i></a>
+                                
+                            
+                                
+                                    <a class="hh-tag none">套餐6<i class="mdi-editor-mode-edit" title="编辑"></i><i class="mdi-content-clear" title="删除"></i></a>
+                                
+                            
+                                
+                                    <a class="hh-tag none">套餐7<i class="mdi-editor-mode-edit" title="编辑"></i><i class="mdi-content-clear" title="删除"></i></a>
+                                
+                            
+                                
+                                    <a class="hh-tag none">套餐8<i class="mdi-editor-mode-edit" title="编辑"></i><i class="mdi-content-clear" title="删除"></i></a>
+                                
+                            
+                                
+                                    <a class="hh-tag none">套餐9<i class="mdi-editor-mode-edit" title="编辑"></i><i class="mdi-content-clear" title="删除"></i></a>
+                                
+                            
+                                
+                                    <a class="hh-tag none">套餐10<i class="mdi-editor-mode-edit" title="编辑"></i><i class="mdi-content-clear" title="删除"></i></a>
+                                
+                            
+                        </div>
+                        <div><a id="addPackage" class="waves-effect waves-light btn btn-small hh-mlr-5 cyan">添加套餐</a></div>
+                        
+                    
+                </dd>
+            </dl>
+        
+    
+         
+            <dl class="col s12 hh-mt-30 border-b">
+                <dt><b>设置发团时间范围</b></dt>
+                <dd>
+                    
+                        <div class="col s2"><input id="arrive-date" type="text" class="datepicker"></div><div class="left hh-pt-5">-</div><div class="col s2"><input id="arrive-date" type="text" class="datepicker"></div><div class="col s5"><a class="waves-effect waves-light btn btn-small hh-mlr-5 cyan">确定</a><a class="waves-effect waves-light btn btn-small hh-mlr-5 blue-grey lighten-2">清除所选日期</a></div>
+                    
+
+                    
+                </dd>
+            </dl>
+        
+    
+         
+            <div class="col s12 hh-ptb-10 grey lighten-4 no-padding">
+                <div class="hh-plr-10 hh-pb-10  hh-font-size-12 deep-orange-text text-darken-1"><b>注：</b>按住“Shift”键+鼠标左键可选择日期范围</div>
+                
+
+
+  <div class="multi-clndr" id="my-multi-clndr">
+    <script type="text/template" id="template-calendar-months">
+
+      <% _.each(months, function(cal) { %>
+        <div class="col  s6 ">
+          <div class="card-panel no-padding">
+          <div class="clndr-controls">
+            <div class="current-month"><b><%= cal.month.year() %></b> <%= cal.month.format('MMMM') %></div>
+          </div>
+          <table class="clndr-grid">
+          <thead class="days-of-the-week">
+            <tr>
+            <% _.each(daysOfTheWeek, function(day) { %>
+              <th class="header-day"><%= day %></th>
+            <% }); %>
+          </tr>
+          </thead>
+          <tbody class="days">
+            <% _.each(cal.days, function(day,index) { %>
+              <% if((index+1)%7 == 1) { %>
+                <tr>
+              <% } %>
+              <td class="<%= day.classes %>" id="<%= day.id %>"><span class="day-number"><%= day.day %></span>
+              <% if(day.events.length && day.events[0].price ){ %>
+                  <span class="day-price">￥<%= day.events[0].price %> </span>
+                <% } %>
+              </td>
+              <% if((index+1)%7 == 0) { %>
+                </tr>
+              <% } %>
+            <% }); %>
+          </div>
+          </tbody>
+        </table>
+        </div>
+      </div>
+      <% }); %>
+    </script>
+  </div>
+
+
+
+
+            </div>
+        
+    
+         
+            <dl class="col s12">
+                <dt><b>已选择日期</b></dt>
+                <dd>
+                    
+                        <div class="chip">09-03<i class="mdi-navigation-close material-icons"></i></div><div class="chip">10-11<i class="mdi-navigation-close material-icons"></i></div><div class="chip">10-12<i class="mdi-navigation-close material-icons"></i></div><div class="chip">10-10<i class="mdi-navigation-close material-icons"></i></div><div class="chip">10-10<i class="mdi-navigation-close material-icons"></i></div><div class="chip">10-10<i class="mdi-navigation-close material-icons"></i></div><div class="chip">10-10<i class="mdi-navigation-close material-icons"></i></div><div class="chip">10-10<i class="mdi-navigation-close material-icons"></i></div><div class="chip">10-10<i class="mdi-navigation-close material-icons"></i></div><div class="chip">10-10<i class="mdi-navigation-close material-icons"></i></div><div class="chip">10-10<i class="mdi-navigation-close material-icons"></i></div>
+                    
+
+                    
+                </dd>
+            </dl>
+        
+    
+         
+            <dl class="col s12">
+                <dt><b>门市价</b></dt>
+                <dd>
+                    
+                        <div class="col s12">成人<input class="inline-block w-80 hh-mlr-10" type="text"><span class="hh-mr-50">元</span>儿童<input class="inline-block w-80 hh-mlr-10" type="text"><span class="hh-mr-50">元</span>单房差<input class="inline-block w-80 hh-mlr-10" type="text"><span class="hh-mr-50">元</span></div>
+                    
+
+                    
+                </dd>
+            </dl>
+        
+    
+         
+            <dl class="col s12">
+                <dt><b>结算价</b></dt>
+                <dd>
+                    
+                        <div class="col s12">成人<input class="inline-block w-80 hh-mlr-10" type="text"><span class="hh-mr-50">元</span>儿童<input class="inline-block w-80 hh-mlr-10" type="text"><span class="hh-mr-50">元</span>单房差<input class="inline-block w-80 hh-mlr-10" type="text"><span class="hh-mr-50">元</span></div>
+                    
+
+                    
+                </dd>
+            </dl>
+        
+    
+         
+            <dl class="col s6">
+                <dt><b>计划人数</b></dt>
+                <dd>
+                    
+                        <div class="col s12"><div class="hh-edit-number"><button class="active"><i class="mdi-content-remove"></i></button><input type="text" value="1"><button class="active"><i class="mdi-content-add"></i></button></div></div>
+                    
+
+                    
+                </dd>
+            </dl>
+        
+    
+         
+            <dl class="col s12 border-b">
+                <dt><b></b></dt>
+                <dd>
+                    
+                        <a class="waves-effect waves-light btn btn-small hh-mlr-5 cyan">提交</a>
+                    
+
+                    
+                </dd>
+            </dl>
+        
+    
+    <div class="col s12 hh-mt-30 no-padding">
+        <table class="highlight hh-table-bordered">
+            
+            <thead>
+                <tr><th class="hh-font-size-16 text-left" colspan="8">收客价格</th></tr>
+                <tr>
+                    
+                    <th width="70">序号</th>
+                    
+                    <th >出团日期</th>
+                    
+                    <th >门市价<span class="deep-orange-text text-accent-3 hh-font-size-18">*</span></th>
+                    
+                    <th >结算价<span class="deep-orange-text text-accent-3 hh-font-size-18">*</span></th>
+                    
+                    <th >地接价格</th>
+                    
+                    <th >计划人数<span class="deep-orange-text text-accent-3 hh-font-size-18">*</span></th>
+                    
+                    <th width="65">是否收客</th>
+                    
+                    <th width="80">删除</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr  class="amber lighten-5" >
+                    
+                        <td>
+                            <input class="filled-in" type="checkbox" id="cb_add_price_5"><label for="cb_add_price_5">全选</label>
+                        </td>
+                    
+                        <td>
+                            批量设置
+                        </td>
+                    
+                        <td>
+                            <div><span class="letter-spacing-1">成</span>人<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5"><span class="letter-spacing-1">儿</span>童<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5">单房差<input class=" w-72 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <div><span class="letter-spacing-1">成</span>人<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5"><span class="letter-spacing-1">儿</span>童<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5">单房差<input class=" w-72 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <div>成人<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5">儿童<input class="w-72 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <div>计划<input class="inline-block w-50 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            
+                        </td>
+                    
+                        <td>
+                            <a class="waves-effect waves-light btn btn-small blue-grey lighten-2" href="#">删除</a>
+                        </td>
+                    
+                </tr>
+                
+                <tr >
+                    
+                        <td>
+                            <input class="filled-in" type="checkbox" id="cb_add_price_5"><label for="cb_add_price_5">1</label>
+                        </td>
+                    
+                        <td>
+                            2015-10-01<br>周四
+                        </td>
+                    
+                        <td>
+                            <div><span class="letter-spacing-1">成</span>人<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5"><span class="letter-spacing-1">儿</span>童<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5">单房差<input class=" w-72 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <div><span class="letter-spacing-1">成</span>人<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5"><span class="letter-spacing-1">儿</span>童<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5">单房差<input class=" w-72 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <div>成人<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5">儿童<input class="w-72 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <div>计划<input class="w-50 hh-mlr-10" type="text"></div><div class="hh-pt-5">已收<input class="w-50 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <p><input type="checkbox" id="cb-sk-1" class="filled-in"><label for="cb-sk-1"></label></p>
+                        </td>
+                    
+                        <td>
+                            <a class="waves-effect waves-light btn btn-small blue-grey lighten-2" href="#">删除</a>
+                        </td>
+                    
+                </tr>
+                
+                <tr >
+                    
+                        <td>
+                            <input class="filled-in" type="checkbox" id="cb_add_price_5"><label for="cb_add_price_5">2</label>
+                        </td>
+                    
+                        <td>
+                            2015-10-02<br>周五
+                        </td>
+                    
+                        <td>
+                            <div><span class="letter-spacing-1">成</span>人<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5"><span class="letter-spacing-1">儿</span>童<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5">单房差<input class=" w-72 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <div><span class="letter-spacing-1">成</span>人<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5"><span class="letter-spacing-1">儿</span>童<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5">单房差<input class=" w-72 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <div>成人<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5">儿童<input class="w-72 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <div>计划<input class="w-50 hh-mlr-10" type="text"></div><div class="hh-pt-5">已收<input class="w-50 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <p><input type="checkbox" id="cb-sk-1" class="filled-in"><label for="cb-sk-1"></label></p>
+                        </td>
+                    
+                        <td>
+                            <a class="waves-effect waves-light btn btn-small blue-grey lighten-2" href="#">删除</a>
+                        </td>
+                    
+                </tr>
+                
+                <tr >
+                    
+                        <td>
+                            <input class="filled-in" type="checkbox" id="cb_add_price_5"><label for="cb_add_price_5">3</label>
+                        </td>
+                    
+                        <td>
+                            2015-10-03<br>周六
+                        </td>
+                    
+                        <td>
+                            <div><span class="letter-spacing-1">成</span>人<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5"><span class="letter-spacing-1">儿</span>童<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5">单房差<input class=" w-72 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <div><span class="letter-spacing-1">成</span>人<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5"><span class="letter-spacing-1">儿</span>童<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5">单房差<input class=" w-72 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <div>成人<input class="w-72 hh-mlr-10" type="text"></div><div class="hh-pt-5">儿童<input class="w-72 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <div>计划<input class="w-50 hh-mlr-10" type="text"></div><div class="hh-pt-5">已收<input class="w-50 hh-mlr-10" type="text"></div>
+                        </td>
+                    
+                        <td>
+                            <p><input type="checkbox" id="cb-sk-1" class="filled-in"><label for="cb-sk-1"></label></p>
+                        </td>
+                    
+                        <td>
+                            <a class="waves-effect waves-light btn btn-small blue-grey lighten-2" href="#">删除</a>
+                        </td>
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    <dl class="col s12 hh-mt-30">
+        <dt><b>订单取消扣款规则</b></dt>
+        <dd>
+            <div class="clearfix">
+                <input type="checkbox" class="filled-in" id="cb_add_price_3" />
+                <label for="cb_add_price_3">订单取消扣款规则</label>
+            </div>
+            <div class="clearfix hh-pt-10">
+                <div class="col s2">
+                    <div class="hh-select select-wrapper">
+                        <select name="" class="chosen-select" data-placeholder="请选择">
+                            <option value="" disabled selected>请选择</option>
+                            <option value="1">统一捐款</option>
+                            <option value="2">离发团日期区分</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix hh-pt-10">
+                <div class="col s2">
+                    <div class="hh-select select-wrapper">
+                        <select name="" class="chosen-select" data-placeholder="请选择">
+                            <option value="" disabled selected>请选择</option>
+                            <option value="1">按人头</option>
+                            <option value="2">按订单总金额比例</option>
+                            <option value="3">按订单</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <input class="inline-block w-80 hh-mlr-5" type="text">元/人 % 元/单
+                </div>
+            </div>
+            <div class="clearfix hh-pt-10">
+                <div class="left hh-pl-5 hh-pr-95">
+                    发团前<input class="inline-block w-35 hh-mlr-5 center-align" type="text">天以上
+                </div>
+                <div class="col s2">
+                    <div class="hh-select select-wrapper">
+                        <select name="" class="chosen-select" data-placeholder="请选择">
+                            <option value="" disabled selected>请选择</option>
+                            <option value="1">按人头</option>
+                            <option value="2">按订单总金额比例</option>
+                            <option value="3">按订单</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="left hh-pl-5">
+                    <input class="inline-block w-50 hh-mlr-5 center-align" type="text">
+                    <span class="hh-pr-10">元/人 %  元/单</span>
+                    含<input class="inline-block w-35 hh-mlr-5 center-align" type="text">天
+                </div>
+            </div>
+            <div class="clearfix hh-pt-10">
+                <div class="left hh-pl-5 hh-pr-10">
+                    发团前<input class="inline-block w-35 hh-mlr-5 center-align" type="text">天以上
+                    <span class="hh-pl-10">至</span><input class="inline-block w-35 hh-mlr-5 center-align" type="text">天
+                </div>
+                <div class="col s2">
+                    <div class="hh-select select-wrapper">
+                        <select name="" class="chosen-select" data-placeholder="请选择">
+                            <option value="" disabled selected>请选择</option>
+                            <option value="1">按人头</option>
+                            <option value="2">按订单总金额比例</option>
+                            <option value="3">按订单</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="left hh-pl-5">
+                    <input class="inline-block w-50 hh-mlr-5 center-align" type="text">
+                    <span class="hh-pr-10">元/人 %  元/单</span>
+                    含<input class="inline-block w-35 hh-mlr-5 center-align" type="text"><span class="hh-pr-10">天</span>
+                    <a class="waves-effect waves-light btn btn-small hh-mlr-5 cyan">添加</a>
+                </div>
+            </div>
+        </dd>
+    </dl>
+
+    <dl class="col s12">
+        <dt><b>预付款设置</b></dt>
+        <dd>
+            <div class="clearfix">
+                <input type="checkbox" class="filled-in" id="cb_add_price_4" />
+                <label for="cb_add_price_4">预付款设置</label>
+            </div>
+            <div class="clearfix hh-pt-10">
+                <div class="col s2">
+                    <div class="hh-select select-wrapper">
+                        <select name="" class="chosen-select" data-placeholder="请选择">
+                            <option value="" disabled selected>请选择</option>
+                            <option value="1">按比例</option>
+                            <option value="2">固定款（按人头）</option>
+                            <option value="3">固定款（按单）</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="left hh-pl-5">
+                    <input class="inline-block w-50 hh-mlr-5 center-align" type="text">%  元/单
+                </div>
+            </div>
+            <div class="clearfix hh-pt-10">
+                <div class="col s2">
+                    <div class="hh-select select-wrapper">
+                        <select name="" class="chosen-select" data-placeholder="请选择">
+                            <option value="" disabled selected>请选择</option>
+                            <option value="1">按比例</option>
+                            <option value="2">固定款（按人头）</option>
+                            <option value="3">固定款（按单）</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="left hh-pl-5">
+                    成人<input class="inline-block w-50 hh-mlr-5 center-align" type="text">
+                    <span class="hh-pr-10">元/人</span>
+                    儿童<input class="inline-block w-35 hh-mlr-5 center-align" type="text">元/人
+                    <span class="hh-pl-10 deep-orange-text text-accent-3">预付款用于需要客户先付部分款后再确认订单的线路</span>
+                </div>
+            </div>
+        </dd>
+    </dl>
+
+</div>
+
+<dl class="col s12">
+    <dd class="text-right">
+        <a class="waves-effect waves-light btn green lighten-1">上一步</a> <a class="waves-effect waves-light btn pink lighten-2">保存并提交审核</a> <a class="waves-effect waves-light btn red lighten-2">预览</a>
+    </dd>
+</dl>
+        </div>
+    </div>
+</div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script type="text/javascript" src=" asserts/scripts/vendor.js "></script>
+
+
+
+
+	<script type="text/javascript" src=" asserts/scripts/main.js "></script>
+
+
+
+
+<script type="text/javascript">
+$(function() {
+	
+
+    	// PARDON ME while I do a little magic to keep these events relevant for the rest of time...
+	    var currentMonth = moment().format('YYYY-MM');
+	    var nextMonth = moment().add('month', 1).format('YYYY-MM');
+	    var next2Month = moment().add('month', 2).format('YYYY-MM');
+
+	    var events = [{
+	        date: currentMonth + '-' + '10',
+	        title: 'Persian Kitten Auction',
+	        location: 'Center for Beautiful Cats',
+	        price: '400'
+	    }, {
+	        date: currentMonth + '-' + '19',
+	        title: 'Cat Frisbee',
+	        location: 'Jefferson Park',
+	        price: '600'
+	    }, {
+	        date: currentMonth + '-' + '23',
+	        title: 'Kitten Demonstration',
+	        location: 'Center for Beautiful Cats',
+	        price: '500'
+	    }, {
+	        date: nextMonth + '-' + '07',
+	        title: 'Small Cat Photo Session',
+	        location: 'Center for Cat Photography',
+	        price: '350'
+	    }, {
+	        date: nextMonth + '-' + '20',
+	        title: 'Small Cat Photo Session',
+	        location: 'Center for Cat Photography',
+	        price: '350'
+	    }, {
+	        date: next2Month + '-' + '07',
+	        title: 'Small Cat Photo Session',
+	        location: 'Center for Cat Photography',
+	        price: '350'
+	    }, {
+	        date: next2Month + '-' + '15',
+	        title: 'Small Cat Photo Session',
+	        location: 'Center for Cat Photography',
+	        price: '350'
+	    }];
+
+    	 $('#my-multi-clndr').clndr({
+	        template: $('#template-calendar-months').html(),
+	        events: events,
+	        forceSixRows: true,
+	        // multiDayEvents: {
+	        //     startDate: 'startDate',
+	        //     endDate: 'endDate'
+	        // },
+	        lengthOfTime: {
+	            months: 3,
+	            interval: 1
+	        },
+	        constraints: {
+	            startDate: currentMonth + '-' + '05',
+	            endDate: next2Month + '-' + '20'
+	        },
+	        clickEvents: {
+	            click: function(target,ev) {
+	                dayClick(target, ev);
+	            }
+	        }
+	    });
+
+	    function dayClick(target, ev) {
+	        var elem = $(target.element);
+	        if (!elem.hasClass('adjacent-month') && !elem.hasClass('inactive')) {
+	            //如果shift键按下
+	            if (ev && ev.shiftKey) {
+	                var days = elem.closest('.clndr').find('td:not(.adjacent-month)', 'td:not(.inactive)');
+	                console.log(days);
+	                var selectedDays = days.filter('.selected');
+	                if (selectedDays.length) {
+	                    var dayFirstSelected = selectedDays.first();
+	                    days.removeClass('selected');
+	                    //当前只有一个日期被选中
+	                    if (selectedDays.length == 1) {
+	                        var curIndex = days.index(elem);
+	                        var firstIndex = days.index(dayFirstSelected);
+
+	                        var daysRegion = curIndex > firstIndex ? days.slice(firstIndex, curIndex + 1) : days.slice(curIndex, firstIndex + 1);
+	                        daysRegion.addClass('selected');
+	                    } else {
+	                        var curIndex = days.index(elem);
+	                        var dayLastSelected = selectedDays.last();
+	                        var firstIndex = days.index(dayFirstSelected);
+	                        var lastIndex = days.index(dayLastSelected);
+
+	                        if (curIndex < firstIndex) {
+	                            days.slice(curIndex, lastIndex + 1).addClass('selected');
+	                        } else {
+	                            days.slice(firstIndex, curIndex + 1).addClass('selected');
+	                        }
+	                    }
+	                } else {
+	                    elem.toggleClass('selected');
+	                }
+	            } else {
+	                elem.toggleClass('selected');
+	            }
+	        }
+	    }
+
+    
+		// $('.hh-tag .mdi-editor-mode-edit').on('click',function(){
+		// 	// swal({
+		//  //        title: "套餐修改",
+		//  //        type: "input",
+		//  //        showCancelButton: true,
+		//  //        closeOnConfirm: false,
+		//  //        animation: "slide-from-top",
+		//  //        inputValue: $(this).parent().text()
+		//  //    }, function(inputValue) {
+		//  //        if (inputValue === false) return false;
+		//  //        if (inputValue === "") {
+		//  //            swal.showInputError("套餐名不能为空！");
+		//  //            return false
+		//  //        }
+		//  //        swal("保存成功!", "您修改了套餐为: " + inputValue, "success");
+		//  //    });
+		//     swal({
+		//     	title: "套餐修改",
+		//     	text: '<div id="swal-modify-tc"><input class="my-input" type="text" value="'+$(this).parent().text()+'"><input type="checkbox" class="filled-in" id="swal_cb_default"><label class="swal_cb_lable" for="swal_cb_default">默认</label></div>',
+		//     	animation: "slide-from-top",
+		//     	closeOnConfirm: false,
+		//     	showCancelButton: true,
+		//     	html: true
+		//     },function(isConfirm){
+		//     	if(isConfirm){
+		//     		var inputValue = $('#swal-modify-tc .my-input').val();
+		//     		if (inputValue === false) return false;
+		//     		if (inputValue === "") {
+		// 	            swal.showInputError("套餐名不能为空！");
+		// 	            return false
+		// 	        }else{
+		// 		        swal("保存成功!", "您修改了套餐为: " + inputValue, "success");
+		// 		        return true;
+		// 	        }
+		//     	}
+		//     });
+		// });
+
+		$('#addPackage,.hh-tag .mdi-editor-mode-edit').each(function(index,item){
+			var $this = $(this);
+			var title = "新增套餐";
+			if($this.hasClass('mdi-editor-mode-edit')){
+				title = "编辑套餐";
+			}
+			var content = '<div class="hh-mb-10"><input class="my-input" type="text" value=""><input type="checkbox" class="filled-in" id="swal_cb_default'+index +'"><label class="pop_cb_lable" for="swal_cb_default'+index +'">默认</label></div><div class="right-align"><a class="waves-effect waves-light btn btn-small hh-mlr-5 cyan btn-add">添加套餐</a><a class="waves-effect waves-light btn btn-small hh-mlr-5 blue-grey lighten-2 btn-cancel">取消</a></div>';
+			$this.webuiPopover({
+				placement:'bottom',//values: auto,top,right,bottom,left,top-right,top-left,bottom-right,bottom-left,auto-to
+				title:title,//the popover title ,if title is set to empty string,title bar will auto hide
+				content:content,
+				cache:false,
+				dismissible:false
+			}).on('shown.webui.popover',function(e){
+				var webpop = $('#' + $this.data('target'));
+				$('.btn.btn-add',webpop).on('click',function(){
+					var $input = $('.my-input',webpop);
+					var inputValue = $input.val();
+					if (inputValue === "") {
+						var animateCss = 'shake animated';
+			            $input.addClass('border-red').addClass(animateCss).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+					      $(this).removeClass(animateCss).removeClass('border-red');
+					      $input.focus();
+					    });
+			        }else{
+				        // swal("保存成功!", "您修改了套餐为: " + inputValue, "success");
+				        // return true;
+			        }
+				});
+				$('.btn.btn-cancel',webpop).on('click',function(){
+					$this.webuiPopover('hide');
+				});
+			});
+		});
+
+	
+
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,2946 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- Meta, title, CSS, favicons, etc. -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>UI组件及js库文档</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="asserts/styles/vendor.min.css">
+    
+    
+    	<link rel="stylesheet" href="asserts/styles/main.css">
+    
+
+    
+
+    
+            <link rel="stylesheet" href="asserts/styles/ui_components.css">
+        
+            <link rel="stylesheet" href="asserts/styles/jstree.css">
+    
+
+    <link rel="shortcut icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="asserts/images/favicon.ico" type="image/vnd.microsoft.icon">
+</head>
+
+
+
+
+<body class=" full-width  ">
+    <div id="loader-wrapper">
+    <div id="loader"></div>        
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+    <!-- Docs master nav -->
+    <header id="header" class="page-topbar">
+    <!-- start header nav-->
+    <div class="navbar-fixed">
+        <nav class="cyan">
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <li class="no-hover" id="toggleNav">
+                        <a href="#" data-activates="slide-out" class="menu-sidebar-collapse btn-floating btn-flat btn-medium waves-effect waves-light cyan tooltipped" href="#!" data-position="bottom" data-delay="0" data-tooltip="导航切换"><i class="mdi-navigation-menu"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <h1 class="logo-wrapper">
+                            <a href="index.html" class="brand-logo darken-1">
+                            <span class="logo-text">湖南海航乐游</span>
+                            </a>
+                        </h1>
+                    </li>
+                </ul>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen tooltipped" data-tooltip="全屏"><i class="mdi-action-settings-overscan"></i></a>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-switch">
+                            <i class="mdi-social-person"><span>用户名</span></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-switch' class='dropdown-content'>
+                            <li><a href="#!">门店用户</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">供应商用户</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- Dropdown Trigger -->
+                        <a class="dropdown-button waves-effect waves-block waves-light" data-hover='true' data-beloworigin="true" href="#!" data-activates="dropdown-setting">
+                            <i class="mdi-action-settings"></i>
+                        </a>
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown-setting' class='dropdown-content'>
+                            <li><a href="#!">修改密码</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#!">个人资料</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="waves-effect waves-block waves-light tooltipped" data-tooltip="退出">
+                            <i class="mdi-action-settings-power"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- end header nav-->
+</header>
+
+    <!-- Page content of course! -->
+    <div id="main">
+        <div class="wrapper">
+            
+            <section id="content" class="hh-min-width">
+                <div class="breadcrumbs-wrapper">
+    <div class="container">
+        <div class="row no-margin">
+            <div class="col s12">
+                <h5 class="breadcrumbs-title">UI组件及js库文档</h5>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">控制面板</a>
+                    </li>
+                    <li class="active">UI组件及js库文档</li>
+                </ol>
+                <div class="mini-charts">
+                    <div class="mini-charts-item pink lighten-2">
+                        <div class="count">
+                            余额
+                            <h2>￥987,459,459</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="container">
+                    <div class="row">
+    <div class="col s12 m9 l10">
+        <div class="section">
+            <p class="caption">部分组件效果及代码示例</p>
+            	
+            	<div class="row">
+            	
+            		<div id="pickdate" class="section scrollspy col  s12 ">
+            			<div class="card  hh-search-form ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">日期选择控件 pickdate</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="http://amsul.ca/pickadate.js/date/">http://amsul.ca/pickadate.js/date/</a><p>
+	            		    	
+	            				<div class="row">
+    <div class="input-field col s6">
+        <input placeholder="出发日期" id="dsPicker" type="text" class="datepicker no-init">
+        <label for="start-date">出发日期</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="dePicker" placeholder="到达日期" type="text" class="datepicker no-init">
+        <label for="arrive-date">到达日期</label>
+    </div>
+</div>
+
+<pre>
+	<code class="language-html">
+&lt;div class="row">
+    &lt;div class="input-field col s6">
+        &lt;input placeholder="出发日期" id="dsPicker" type="text" class="datepicker no-init">
+        &lt;label for="start-date">出发日期&lt;/label>
+    &lt;/div>
+    &lt;div class="input-field col s6">
+        &lt;input id="dePicker" placeholder="到达日期" type="text" class="datepicker no-init">
+        &lt;label for="arrive-date">到达日期&lt;/label>
+    &lt;/div>
+&lt;/div>
+    </code>
+</pre>
+<pre>
+<code class="language-javascript">
+var $dsInput = $('#dsPicker').pickadate({
+    "selectYears": true,
+    "selectMonths": true,
+    "min": new Date(),
+    onSet: function(value) {
+        dePicker.set('min', new Date(value.select));
+    }
+});
+
+var dsPicker = $dsInput.pickadate('picker');
+
+var $deInput = $('#dePicker').pickadate({
+    "selectYears": true,
+    "selectMonths": true,
+    "min": new Date(),
+    onSet: function(value) {
+        // dsPicker.set('max',new Date(value.select));
+    }
+});
+
+var dePicker = $deInput.pickadate('picker');
+</code>
+</pre>
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="jquery_timepicker" class="section scrollspy col  s12 ">
+            			<div class="card  hh-search-form ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">时间选择控件 jquery timepicker</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="http://jonthornton.github.io/jquery-timepicker/">http://jonthornton.github.io/jquery-timepicker/</a><p>
+	            		    	
+	            				<div class="row">
+    <div class="input-field col s6">
+        <input placeholder="出发时间" id="start-time2" type="text" class="jq-timepicker">
+        <label for="start-time2">出发时间</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="arrive-time2" placeholder="到达时间" type="text" class="jq-timepicker">
+        <label for="arrive-time2">到达时间</label>
+    </div>
+</div>
+<pre>
+    <code class="language-html">
+&lt;div class="row">
+    &lt;div class="input-field col s6">
+        &lt;input placeholder="出发时间" id="start-time2" type="text" class="jq-timepicker">
+        &lt;label for="start-time2">出发时间&lt;/label>
+    &lt;/div>
+    &lt;div class="input-field col s6">
+        &lt;input id="arrive-time2" placeholder="到达时间" type="text" class="jq-timepicker">
+        &lt;label for="arrive-time2">到达时间&lt;/label>
+    &lt;/div>
+&lt;/div>
+    </code>
+</pre>
+<pre>
+<code class="language-javascript">
+$('.jq-timepicker').timepicker({
+    'timeFormat': 'H:i'
+});
+</code>
+</pre>
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="select2" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">下拉菜单select2</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="https://select2.github.io/">https://select2.github.io/</a><p>
+	            		    	
+	            				<div class="row">
+    <div class="col s12">
+        <h6>单选</h6>
+        <select class="select2" data-placeholder="选择省份">
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">广东</option>
+            <option value="4">湖南</option>
+            <option value="5">湖北</option>
+            <option value="6">山东</option>
+        </select>
+
+        <pre>
+        <code class="language-html">
+&lt;select class="select2">&lt;/select>
+        </code>
+        </pre>
+
+        <pre>
+        <code class="language-javascript">
+$('.select2').select2();
+        </code>
+        </pre>
+    </div>
+</div>
+<div class="row">
+
+    <div class="col s12">
+        <h6>多选</h6>
+        <select class="select2" multiple data-placeholder="选择省份">
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">广东</option>
+            <option value="4">湖南</option>
+            <option value="5">湖北</option>
+            <option value="6">山东</option>
+        </select>
+        <pre>
+        <code class="language-html">
+&lt;select class="select2" multiple>&lt;/select>
+        </code>
+        </pre>
+
+        <pre>
+        <code class="language-javascript">
+$('.select2').select2();
+        </code>
+        </pre>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col s12">
+        <h6>多选标签</h6>
+        <select class="select2-tags" multiple data-placeholder="选择省份">
+            <!-- <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">广东</option>
+            <option value="4">湖南</option>
+            <option value="5">湖北</option>
+            <option value="6">山东</option> -->
+        </select>
+        <pre>
+        <code class="language-html">
+&lt;select class="select2-tags" multiple>&lt;/select>
+        </code>
+        </pre>
+
+        <pre>
+        <code class="language-javascript">
+$('.select2-tags').select2({
+    tags:true
+});
+        </code>
+        </pre>
+    </div>
+</div>
+
+
+
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="tags_input" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">标签输入框 tagsinput</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="https://github.com/xoxco/jQuery-Tags-Input">https://github.com/xoxco/jQuery-Tags-Input</a><p>
+	            		    	
+	            				<input type="text" name="mytags" id="tagsinput">
+
+<pre>
+  <code class="language-html">
+&lt;input type="text" name="mytags" id="tagsinput">
+  </code>
+</pre>
+
+<pre>
+  <code class="language-javascript">
+$('#tagsinput').tagsInput({
+   width:'auto',
+   height:'auto',
+   defaultText:'添加一个标签'
+});
+
+//其他方法
+//添加标签
+$('#tagsinput').addTag('foo');
+//移除标签
+$('#tagsinput').removeTag('bar');
+//导入标签列表
+$('#tagsinput').importTags('foo,bar,baz');
+//重置标签
+$('#tagsinput').importTags('');
+  </code>
+</pre>
+
+<input type="text" name="mytags" value="标签1,标签2,标签3,标签4,标签5,标签6" id="tagsinput2">
+
+<pre>
+  <code class="language-html">
+&lt;input type="text" name="mytags" value="标签1,标签2,标签3,标签4,标签5,标签6" id="tagsinput2">
+  </code>
+</pre>
+
+<pre>
+  <code class="language-javascript">
+$('#tagsinput2').tagsInput({
+   width:'auto',
+   height:'auto',
+   defaultText:'添加一个标签'
+});
+  </code>
+</pre>
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="typeahead" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">自动完成 typeahead.js</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="http://twitter.github.io/typeahead.js/examples/">http://twitter.github.io/typeahead.js/examples/</a><p>
+	            		    	
+	            				<div class="row hh-add-edit" id="bloodhound">
+    <dl class="col s12">
+        <dt><b>供应商</b></dt>
+        <dd>
+            <div class="col s8 m6">
+                <input class="typeahead" type="text">
+            </div>
+        </dd>
+    </dl>
+</div>
+
+<pre>
+  <code class="language-html">
+&lt;div class="row hh-add-edit" id="bloodhound">
+    &lt;dl class="col s12">
+        &lt;dt>&lt;b>供应商&lt;/b>&lt;/dt>
+        &lt;dd>
+            &lt;div class="col s8 m6">
+                &lt;input class="typeahead" type="text">
+            &lt;/div>
+        &lt;/dd>
+    &lt;/dl>
+&lt;/div>
+  </code>
+</pre>
+
+<pre>
+  <code class="language-javascript">
+var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+  'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+  'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+  'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+  'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+  'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+  'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+  'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+  'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+];
+
+// constructs the suggestion engine
+var states = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.whitespace,
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  // `states` is an array of state names defined in "The Basics"
+  local: states
+});
+
+$('#bloodhound .typeahead').typeahead({
+  hint: true,
+  highlight: true,
+  minLength: 1
+},
+{
+  name: 'states',
+  source: states
+});
+  </code>
+</pre>
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="multiselect" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">双向多选控件 multiselect</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="http://loudev.com/">http://loudev.com/</a><p>
+	            		    	
+	            				<select class="" id="my-multiselect" multiple="multiple" name="test[]">
+    <optgroup label='湖南省'>
+        <option value="elem_1" selected>长沙市</option>
+        <option value="elem_2" selected>株洲市</option>
+        <option value="elem_3" disabled>湘潭市</option>
+        <option value="elem_4">邵阳市</option>
+        <option value="elem_5">衡阳市</option>
+        <option value="elem_6">常德市</option>
+    </optgroup>
+    <optgroup label='湖北省'>
+        <option value="elem_8" selected>武汉市</option>
+        <option value="elem_9">宜昌市</option>
+        <option value="elem_10">黄石市</option>
+        <option value="elem_11">荆州市</option>
+        <option value="elem_12">荆门市</option>
+        <option value="elem_13">黄冈市</option>
+    </optgroup>
+    <optgroup label='浙江省'>
+        <option value="elem_15">杭州市</option>
+	    <option value="elem_16">宁波市</option>
+	    <option value="elem_17">温州市</option>
+	    <option value="elem_18">嘉兴市</option>
+	    <option value="elem_19">湖州市</option>
+	    <option value="elem_20">绍兴市</option>
+    </optgroup>
+</select>
+
+
+
+<pre>
+	<code class="language-html">
+&lt;select multiple="multiple" class="" id="my-multiselect" name="test[]">
+    &lt;optgroup label='湖南省'>
+        &lt;option value="elem_1" selected>长沙市&lt;/option>
+        &lt;option value="elem_2" selected>株洲市&lt;/option>
+        &lt;option value="elem_3">湘潭市&lt;/option>
+        &lt;option value="elem_4">邵阳市&lt;/option>
+        &lt;option value="elem_5">衡阳市&lt;/option>
+        &lt;option value="elem_6">常德市&lt;/option>
+    &lt;/optgroup>
+    &lt;optgroup label='湖北省'>
+        &lt;option value="elem_8" selected>武汉市&lt;/option>
+        &lt;option value="elem_9">宜昌市&lt;/option>
+        &lt;option value="elem_10">黄石市&lt;/option>
+        &lt;option value="elem_11">荆州市&lt;/option>
+        &lt;option value="elem_12">荆门市&lt;/option>
+        &lt;option value="elem_13">黄冈市&lt;/option>
+    &lt;/optgroup>
+    &lt;optgroup label='浙江省'>
+        &lt;option value="elem_15">杭州市&lt;/option>
+	    &lt;option value="elem_16">宁波市&lt;/option>
+	    &lt;option value="elem_17">温州市&lt;/option>
+	    &lt;option value="elem_18">嘉兴市&lt;/option>
+	    &lt;option value="elem_19">湖州市&lt;/option>
+	    &lt;option value="elem_20">绍兴市&lt;/option>
+    &lt;/optgroup>
+&lt;/select>
+    </code>
+</pre>
+
+<pre>
+	<code class="language-javascript">
+$('#my-multiselect').multiSelect({
+    selectableHeader: "<div class='ms-header clearfix'>可选城市<a class='right selct-all'>全选</a></div>",
+    selectionHeader: "<div class='ms-header clearfix'>已选城市<a class='right deselct-all'>反选</a></div>",
+    afterInit: function(ms) {
+        var that = this,
+            $selectableBtn = that.$selectableUl.prev().find('.selct-all'),
+            $selectionBtn = that.$selectionUl.prev().find('.deselct-all');
+        $selectableBtn.on('click', function(e) {
+            that.select_all();
+        });
+
+        $selectionBtn.on('click', function(e) {
+            that.deselect_all();
+        });
+
+        that.$selectableUl.perfectScrollbar();
+        that.$selectionUl.perfectScrollbar();
+    }
+});
+    </code>
+</pre>
+
+<h6>单选</h6>
+<select class="" id="my-multiselect1" multiple="multiple" name="test[]">
+    <optgroup label='湖南省'>
+        <option value="elem_1">长沙市</option>
+        <option value="elem_2">株洲市</option>
+        <option value="elem_3" disabled>湘潭市</option>
+        <option value="elem_4">邵阳市</option>
+        <option value="elem_5">衡阳市</option>
+        <option value="elem_6">常德市</option>
+    </optgroup>
+    <optgroup label='湖北省'>
+        <option value="elem_8">武汉市</option>
+        <option value="elem_9">宜昌市</option>
+        <option value="elem_10">黄石市</option>
+        <option value="elem_11">荆州市</option>
+        <option value="elem_12">荆门市</option>
+        <option value="elem_13">黄冈市</option>
+    </optgroup>
+    <optgroup label='浙江省'>
+        <option value="elem_15">杭州市</option>
+        <option value="elem_16">宁波市</option>
+        <option value="elem_17">温州市</option>
+        <option value="elem_18">嘉兴市</option>
+        <option value="elem_19">湖州市</option>
+        <option value="elem_20">绍兴市</option>
+    </optgroup>
+</select>
+<pre><code class="language-javascript">
+$('#my-multiselect1').multiSelect({
+    selectableHeader: "<div class='ms-header clearfix'>可选城市</div>",
+    selectionHeader: "<div class='ms-header clearfix'>已选城市</div>",
+    afterInit: function(ms) {
+        var that = this;
+        that.$selectableUl.perfectScrollbar();
+        that.$selectionUl.perfectScrollbar();
+    },
+    afterSelect: function(msValue){
+        var ms = this.$element,
+            values = ms.val();
+        values.splice(values.indexOf(msValue[0]),1);
+        this.deselect(values);
+    }
+});
+</code></pre>
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="umeditor" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">百度编辑框UMeditor</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="http://ueditor.baidu.com/website/umeditor.html">http://ueditor.baidu.com/website/umeditor.html</a><p>
+	            		    	
+	            				<!--style给定宽度可以影响编辑器的最终宽度-->
+<script type="text/plain" id="myEditor" style="width:50%;height:240px;">
+    
+</script>
+
+
+<pre>
+    <code class=" language-html">
+&lt;!--style给定宽度可以影响编辑器的最终宽度-->
+
+&lt;script type="text/plain" id="myEditor" style="width:50%;height:240px;">
+&lt;/script>
+    </code>
+</pre>
+
+<pre>
+	<code class=" language-javascript">
+&lt;script src="src/path/umeditor.min.js">&lt;/script>
+
+//实例化编辑器到id为 container 的 dom 容器上
+var um = UM.getEditor('myEditor');
+
+//设置编辑器内容
+um.ready(function() {
+    um.setContent('<p>hello!</p>');
+});
+
+//追加编辑器内容
+ue.ready(function() {
+    ue.setContent('<p>new text</p>', true);
+});
+
+//获取编辑器html内容
+ue.ready(function() {
+    var html = ue.getContent();
+});
+</code>
+</pre>
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="clndr" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">日历控件 clndr</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="http://kylestetz.github.io/CLNDR/">http://kylestetz.github.io/CLNDR/</a><p>
+	            		    	
+	            				
+
+
+
+<div class="full-clndr clearfix">
+  <script type="text/template" id="full-clndr-template">
+    <div class="clndr-controls">
+      <div class="clndr-previous-button">&lt;</div>
+      <div class="clndr-next-button">&gt;</div>
+      <div class="current-month"><%= month %> <%= year %></div>
+
+    </div>
+    <div class="clndr-grid">
+      <div class="days-of-the-week clearfix">
+        <% _.each(daysOfTheWeek, function(day) { %>
+          <div class="header-day"><%= day %></div>
+        <% }); %>
+      </div>
+      <div class="days">
+        <% _.each(days, function(day) { %>
+          <div class="<%= day.classes %>" id="<%= day.id %>"><span class="day-number"><%= day.day %></span>
+
+          </div>
+        <% }); %>
+      </div>
+    </div>
+    <div class="event-listing">
+      <div class="event-listing-title">EVENTS THIS MONTH</div>
+      <% _.each(eventsThisMonth, function(event) { %>
+          <div class="event-item">
+            <div class="event-item-name"><%= event.title %></div>
+            <div class="event-item-location"><%= event.location %></div>
+          </div>
+        <% }); %>
+    </div>
+  </script>
+</div>
+
+
+
+
+<pre><code class="language-html">
+&lt;div class="full-clndr clearfix">
+  &lt;script type="text/template" id="full-clndr-template">
+    &lt;div class="clndr-controls">
+      &lt;div class="clndr-previous-button">&lt;&lt;/div>
+      &lt;div class="clndr-next-button">&gt;&lt;/div>
+      &lt;div class="current-month">&lt;%= month %> &lt;%= year %>&lt;/div>
+
+    &lt;/div>
+    &lt;div class="clndr-grid">
+      &lt;div class="days-of-the-week clearfix">
+        &lt;% _.each(daysOfTheWeek, function(day) { %>
+          &lt;div class="header-day">&lt;%= day %>&lt;/div>
+        &lt;% }); %>
+      &lt;/div>
+      &lt;div class="days">
+        &lt;% _.each(days, function(day) { %>
+          &lt;div class="&lt;%= day.classes %>" id="&lt;%= day.id %>">&lt;span class="day-number">&lt;%= day.day %>&lt;/span>&lt;/div>
+        &lt;% }); %>
+      &lt;/div>
+    &lt;/div>
+    &lt;div class="event-listing">
+      &lt;div class="event-listing-title">EVENTS THIS MONTH&lt;/div>
+      &lt;% _.each(eventsThisMonth, function(event) { %>
+          &lt;div class="event-item">
+            &lt;div class="event-item-name">&lt;%= event.title %>&lt;/div>
+            &lt;div class="event-item-location">&lt;%= event.location %>&lt;/div>
+          &lt;/div>
+        &lt;% }); %>
+    &lt;/div>
+  &lt;/script>
+&lt;/div>
+</code></pre>
+
+
+ <pre><code class="language-javascript">
+// this will use clndr's default template, which you probably don't want.
+$('#calendar').clndr();
+
+// so instead, pass in your template as a string!
+$('#calendar').clndr({
+  template: $('#calendar-template').html()
+});
+
+// there are a lot of options. the rabbit hole is deep.
+$('#calendar').clndr({
+  template: $('#calendar-template').html(),
+  events: [
+    { date: '2013-09-09', title: 'CLNDR GitHub Page Finished', url: 'http://github.com/kylestetz/CLNDR' }
+  ],
+  clickEvents: {
+    click: function(target) {
+      console.log(target);
+    },
+    onMonthChange: function(month) {
+      console.log('you just went to ' + month.format('MMMM, YYYY'));
+    }
+  },
+  doneRendering: function() {
+    console.log('this would be a fine place to attach custom event handlers.');
+  }
+});
+</code></pre>
+
+
+
+
+
+
+
+
+<div class="my-clndr">
+  <script type="text/template" id="my-clndr-template">
+    <div class="clndr-controls">
+      <div class="clndr-previous-button">&lt;</div>
+      <div class="clndr-next-button">&gt;</div>
+      <div class="current-month"><b><%= year %></b> <%= month %></div>
+
+    </div>
+    <table class="clndr-grid">
+      <thead class="days-of-the-week">
+      	<tr>
+        <% _.each(daysOfTheWeek, function(day) { %>
+          <th class="header-day"><%= day %></th>
+        <% }); %>
+    	</tr>
+      </thead>
+      <tbody class="days">
+        <% _.each(days, function(day,index) { %>
+          <% if((index+1)%7 == 1) { %>
+          	<tr>
+          <% } %>
+          <td class="<%= day.classes %>" id="<%= day.id %>"><span class="day-number"><%= day.day %></span>
+          <% if(day.events.length && day.events[0].price ){ %>
+              <span class="dya-price">￥<%= day.events[0].price %> </span>
+              <% if(day.events[0].isActivity) { %>
+                <span class="day-activity">优惠</span>
+              <% } %>
+            <% } %>
+          </td>
+          <% if((index+1)%7 == 0) { %>
+          	</tr>
+          <% } %>
+        <% }); %>
+      </tbody>
+    </table>
+  </script>
+</div>
+
+
+
+ 
+
+
+<pre><code class="language-html">
+&lt;div class="my-clndr">
+  &lt;script type="text/template" id="my-clndr-template">
+    &lt;div class="clndr-controls">
+      &lt;div class="clndr-previous-button">&lt;&lt;/div>
+      &lt;div class="clndr-next-button">&gt;&lt;/div>
+      &lt;div class="current-month">&lt;%= year %> &lt;%= month %>&lt;/div>
+
+    &lt;/div>
+    &lt;table class="clndr-grid">
+      &lt;thead class="days-of-the-week">
+        &lt;tr>
+        &lt;% _.each(daysOfTheWeek, function(day) { %>
+          &lt;th class="header-day">&lt;%= day %>&lt;/th>
+        &lt;% }); %>
+      &lt;/tr>
+      &lt;/thead>
+      &lt;tbody class="days">
+        &lt;% _.each(days, function(day,index) { %>
+          &lt;% if((index+1)%7 == 1) { %>
+            &lt;tr>
+          &lt;% } %>
+          &lt;td class="&lt;%= day.classes %>" id="&lt;%= day.id %>">&lt;span class="day-number">&lt;%= day.day %>&lt;/span>
+          &lt;% if(day.events.length && day.events[0].price ){ %>
+              &lt;span class="dya-price">￥&lt;%= day.events[0].price %> &lt;/span>
+            &lt;% } %>
+          &lt;/td>
+          &lt;% if((index+1)%7 == 0) { %>
+            &lt;/tr>
+          &lt;% } %>
+        &lt;% }); %>
+      &lt;/tbody>
+    &lt;/table>
+  &lt;/script>
+&lt;/div>
+</code></pre>
+
+<pre>
+<code class="language-javascript">
+  $('.my-clndr').clndr({
+      template: $('#my-clndr-template').html(),
+      events: events,
+      forceSixRows: true
+  });
+</code>
+</pre>
+
+
+
+
+  <div class="multi-clndr" id="my-multi-clndr">
+    <script type="text/template" id="template-calendar-months">
+
+      <% _.each(months, function(cal) { %>
+        <div class="col  s4 ">
+          <div class="card-panel no-padding">
+          <div class="clndr-controls">
+            <div class="current-month"><b><%= cal.month.year() %></b> <%= cal.month.format('MMMM') %></div>
+          </div>
+          <table class="clndr-grid">
+          <thead class="days-of-the-week">
+            <tr>
+            <% _.each(daysOfTheWeek, function(day) { %>
+              <th class="header-day"><%= day %></th>
+            <% }); %>
+          </tr>
+          </thead>
+          <tbody class="days">
+            <% _.each(cal.days, function(day,index) { %>
+              <% if((index+1)%7 == 1) { %>
+                <tr>
+              <% } %>
+              <td class="<%= day.classes %>" id="<%= day.id %>"><span class="day-number"><%= day.day %></span>
+              <% if(day.events.length && day.events[0].price ){ %>
+                  <span class="day-price">￥<%= day.events[0].price %> </span>
+                <% } %>
+              </td>
+              <% if((index+1)%7 == 0) { %>
+                </tr>
+              <% } %>
+            <% }); %>
+          </div>
+          </tbody>
+        </table>
+        </div>
+      </div>
+      <% }); %>
+    </script>
+  </div>
+
+
+
+
+
+<pre><code class="language-html">
+&lt;div class="multi-clndr row" id="my-multi-clndr">
+  &lt;script type="text/template" id="template-calendar-months">
+    &lt;% _.each(months, function(cal) { %>
+      &lt;div class="col s4">
+      &lt;div class="clndr-controls">
+        &lt;div class="current-month">&lt;b>&lt;%= cal.month.year() %>&lt;/b> &lt;%= cal.month.format('MMMM') %>&lt;/div>
+      &lt;/div>
+      &lt;table class="clndr-grid">
+      &lt;thead class="days-of-the-week">
+        &lt;tr>
+        &lt;% _.each(daysOfTheWeek, function(day) { %>
+          &lt;th class="header-day">&lt;%= day %>&lt;/th>
+        &lt;% }); %>
+      &lt;/tr>
+      &lt;/thead>
+      &lt;tbody class="days">
+        &lt;% _.each(cal.days, function(day,index) { %>
+          &lt;% if((index+1)%7 == 1) { %>
+            &lt;tr>
+          &lt;% } %>
+          &lt;td class="&lt;%= day.classes %>" id="&lt;%= day.id %>">&lt;span class="day-number">&lt;%= day.day %>&lt;/span>
+          &lt;% if(day.events.length && day.events[0].price ){ %>
+              &lt;span class="dya-price">￥&lt;%= day.events[0].price %> &lt;/span>
+            &lt;% } %>
+          &lt;/td>
+          &lt;% if((index+1)%7 == 0) { %>
+            &lt;/tr>
+          &lt;% } %>
+        &lt;% }); %>
+      &lt;/div>
+      &lt;/tbody>
+    &lt;/table>
+  &lt;/div>
+    &lt;% }); %>
+  &lt;/script>
+&lt;/div>
+</code></pre>
+
+<pre>
+  <code class="language-javascript">
+$('#my-multi-clndr').clndr({
+  template: $('#template-calendar-months').html(),
+  events: events,
+  forceSixRows: true,
+  lengthOfTime: {
+      months: 3,
+      interval: 1
+  },
+  constraints: {
+      startDate: currentMonth + '-' + '5',
+      endDate: next2Month + '-' + '20'
+  },
+  clickEvents: {
+      click: function(target) {
+          dayClick(target,event);
+      }
+  }
+});
+
+function dayClick(target, event) {
+  var elem = $(target.element);
+  if (!elem.hasClass('adjacent-month') && !elem.hasClass('inactive')) {
+      //如果shift键按下
+      if (event && event.shiftKey) {
+          var days = elem.closest('.clndr').find('td:not(.adjacent-month)','td:not(.inactive)');
+          console.log(days);
+          var selectedDays = days.filter('.selected');
+          if (selectedDays.length) {
+              var dayFirstSelected = selectedDays.first();
+              days.removeClass('selected');
+              //当前只有一个日期被选中
+              if (selectedDays.length == 1) {
+                  var curIndex = days.index(elem);
+                  var firstIndex = days.index(dayFirstSelected);
+
+                  var daysRegion = curIndex > firstIndex ? days.slice(firstIndex, curIndex + 1) : days.slice(curIndex, firstIndex + 1);
+                  daysRegion.addClass('selected');
+              } else {
+                  var curIndex = days.index(elem);
+                  var dayLastSelected = selectedDays.last();
+                  var firstIndex = days.index(dayFirstSelected);
+                  var lastIndex = days.index(dayLastSelected);
+
+                  if (curIndex &lt; firstIndex) {
+                      days.slice(curIndex, lastIndex + 1).addClass('selected');
+                  } else {
+                      days.slice(firstIndex, curIndex + 1).addClass('selected');
+                  }
+              }
+          } else {
+              elem.toggleClass('selected');
+          }
+      } else {
+          elem.toggleClass('selected');
+      }
+  }
+}
+  </code>
+</pre>
+
+
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="dropzone" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">文件上传控件 dropzone</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="http://www.dropzonejs.com/">http://www.dropzonejs.com/</a><p>
+	            		    	
+	            				
+
+
+<div class="dz-wrapper clearfix">
+	<div class="dz-notice">
+		<p>图片格式只能为.jpg,.jpeg,.png</p>
+	</div>
+	<div id="photo-list1" class="dz-photo-list dropzone"></div>
+	<div id="myDropzone" class="dropzone">
+	    <div class="dz-default dz-message">
+	        <div class="dz-btn-wrap">
+	        	<a class="dz-btn" href="javascript:;" title="">
+	        		<i class="mdi-content-add"></i>
+	        	</a>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+
+
+<pre>
+	<code class="language-html">
+&lt;div class="dz-wrapper clearfix">
+	&lt;div class="dz-notice">
+		&lt;p>图片格式只能为.jpg,.jpeg,.png&lt;/p>
+	&lt;/div>
+	&lt;div id="photo-list1" class="dz-photo-list dropzone">&lt;/div>
+	&lt;div id="myDropzone" class="dropzone">
+	    &lt;div class="dz-default dz-message">
+	        &lt;div class="dz-btn-wrap">
+	        	&lt;a class="dz-btn" href="javascript:;" title="">
+	        		&lt;i class="mdi-content-add">&lt;/i>
+	        	&lt;/a>
+	        &lt;/div>
+	    &lt;/div>
+	&lt;/div>
+&lt;/div>
+    </code>
+</pre>
+
+<pre>
+	<code class="language-javascript">
+$('#myDropzone').dropzone({
+    url: '/api/common/upload/',
+    previewsContainer: $('#photo-list1')[0],
+    maxFiles: 4,
+    addRemoveLinks: true,
+    acceptedFiles: "image/*",
+    maxfilesreached: function() {
+        $('#myDropzone').addClass('hide');
+    },
+    reset: function() {
+        $('#myDropzone').removeClass('hide');
+    },
+    error: function(file, errorMessage) {
+
+        this.removeFile(file);
+
+        alertify.log(errorMessage, "");
+    },
+    removedfile: function(a) {
+    	$('#myDropzone').removeClass('hide');
+        if (a.status == 'success') {
+            $("#Cover").val('');
+        }
+        var b;
+        return a.previewElement && null != (b = a.previewElement) && b.parentNode.removeChild(a.previewElement),
+            this._updateMaxFilesReachedClass()
+    },
+    success: function(obj, Response) {
+        Response = $.parseJSON(Response);
+        if (Response.code == -1) {
+            swal("错误!", Response.message, "error");
+        } else {
+            $("#Cover").val(Response.message);
+        }
+    }
+});
+	</code>
+</pre>
+
+<h6>其他类型文件上传，不需要缩略图预览</h6>
+
+
+
+
+<div class="dz-wrapper clearfix no-padding no-float">
+    <div id="myDropzone2" class="dropzone">
+        <div class="dz-default dz-message">
+            <a class="waves-effect waves-light btn cyan btn-small" href="javascript:void(0);">文件上传</a>
+        </div>
+    </div>
+</div>
+
+
+<pre><code class="language-html">
+&lt;div class="dz-wrapper clearfix no-padding no-float">
+  &lt;div id="myDropzone2" class="dropzone">
+    &lt;div class="dz-default dz-message">
+      &lt;a class="btn btn-small">文件上传&lt;/a>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+  </code>
+</pre>
+
+<pre><code class="language-javascript">
+$('#myDropzone2').dropzone({
+  url: '/api/common/upload/',
+  maxFiles: 1,
+  acceptedFiles: "image/*",
+  createImageThumbnails:'false',
+  previewsContainer:false,
+  maxfilesreached: function() {
+      
+  },
+  reset: function() {
+      
+  },
+  error: function(file, errorMessage) {
+      this.removeFile(file);
+      alertify.log(errorMessage, "");
+  },
+  success: function(obj, Response) {
+      Response = $.parseJSON(Response);
+      if (Response.code == -1) {
+          swal("错误!", Response.message, "error");
+      } else {
+          swal("成功!", Response.message, "success");
+      }
+  }
+});
+  </code>
+</pre>
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="webuploader" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">文件上传控件 webuploader</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="http://fex.baidu.com/webuploader/">http://fex.baidu.com/webuploader/</a><p>
+	            		    	
+	            				<div id="uploader">
+    <div class="queueList">
+        <div id="dndArea" class="placeholder">
+            <div id="filePicker"></div>
+            <p class="notice">或将照片拖到这里，单次最多可选300张</p>
+        </div>
+    </div>
+    <div class="statusBar" style="display:none;">
+        <div class="progress">
+            <span class="text">0%</span>
+            <span class="percentage"></span>
+        </div><div class="info"></div>
+        <div class="btns">
+            <div id="filePicker2"></div><div class="uploadBtn">开始上传</div>
+        </div>
+    </div>
+</div>
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="pagination" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">分页控件 pagination</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="http://paginationjs.com/">http://paginationjs.com/</a><p>
+	            		    	
+	            				<div class="pag-wrap align-left">
+    
+</div>
+
+<pre>
+	<code class="language-html">
+&lt;div class="pag-wrap align-left">
+    
+&lt;/div>
+    </code>
+</pre>
+
+<pre>
+	<code class="language-javascript">
+$('.pag-wrap').pagination({
+    dataSource: generateData(50),
+    pageSize: 10,
+    showGoInput: true,
+    showGoButton: true,
+    header:'&lt;div class="pagination-info">共&lt;%= totalNumber %>条记录，&lt;%= currentPage %>/&lt;%= totalPage %>页&lt;/div>',
+    formatGoButton:"&lt;button class='waves-effect waves-light btn btn-small cyan J-paginationjs-go-button'>Go&lt;/button>",
+    callback: function(data, pagination) {
+        // template method of yourself
+        // var html = template(data);
+        // dataContainer.html(html);
+    }
+});
+    </code>
+</pre>
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="slider" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">轮播控件1 slider</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="materialize自带">materialize自带</a><p>
+	            		    	
+	            				
+<div class="slider">
+    <ul class="slides">
+        
+        <li>
+            <img src="asserts/images/slider-demo1.jpeg">
+            <!-- random image -->
+            <div class="caption center-align">
+                <h3>线路1标题</h3>
+                <h5 class="light grey-text text-lighten-3">线路1副标题</h5>
+            </div>
+        </li>
+        
+        <li>
+            <img src="asserts/images/slider-demo2.jpeg">
+            <!-- random image -->
+            <div class="caption left-align">
+                <h3>线路2标题</h3>
+                <h5 class="light grey-text text-lighten-3">线路2副标题</h5>
+            </div>
+        </li>
+        
+        <li>
+            <img src="asserts/images/slider-demo3.jpeg">
+            <!-- random image -->
+            <div class="caption right-align">
+                <h3>线路3标题</h3>
+                <h5 class="light grey-text text-lighten-3">线路3副标题</h5>
+            </div>
+        </li>
+        
+        <li>
+            <img src="asserts/images/slider-demo4.jpeg">
+            <!-- random image -->
+            <div class="caption center-align">
+                <h3>线路4标题</h3>
+                <h5 class="light grey-text text-lighten-3">线路4副标题</h5>
+            </div>
+        </li>
+        
+    </ul>
+</div>
+
+
+<pre>
+  <code class="language-html">
+&lt;div class="slider">
+    &lt;ul class="slides">
+        &lt;li>
+            &lt;img src="http://lorempixel.com/580/250/nature/1">
+            &lt;!-- random image -->
+            &lt;div class="caption center-align">
+                &lt;h3>This is our big Tagline!&lt;/h3>
+                &lt;h5 class="light grey-text text-lighten-3">Here's our small slogan.&lt;/h5>
+            &lt;/div>
+        &lt;/li>
+        &lt;li>
+            &lt;img src="http://lorempixel.com/580/250/nature/2">
+            &lt;!-- random image -->
+            &lt;div class="caption left-align">
+                &lt;h3>Left Aligned Caption&lt;/h3>
+                &lt;h5 class="light grey-text text-lighten-3">Here's our small slogan.&lt;/h5>
+            &lt;/div>
+        &lt;/li>
+        &lt;li>
+            &lt;img src="http://lorempixel.com/580/250/nature/3">
+            &lt;!-- random image -->
+            &lt;div class="caption right-align">
+                &lt;h3>Right Aligned Caption&lt;/h3>
+                &lt;h5 class="light grey-text text-lighten-3">Here's our small slogan.&lt;/h5>
+            &lt;/div>
+        &lt;/li>
+        &lt;li>
+            &lt;img src="http://lorempixel.com/580/250/nature/4">
+            &lt;!-- random image -->
+            &lt;div class="caption center-align">
+                &lt;h3>This is our big Tagline!&lt;/h3>
+                &lt;h5 class="light grey-text text-lighten-3">Here's our small slogan.&lt;/h5>
+            &lt;/div>
+        &lt;/li>
+    &lt;/ul>
+&lt;/div>
+  </code>
+</pre>
+
+<pre>
+  <code class="language-javascript">
+$('.slider').slider({full_width: true});
+  </code>
+</pre>
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="slick" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">轮播控件2 slick</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="http://kenwheeler.github.io/slick/">http://kenwheeler.github.io/slick/</a><p>
+	            		    	
+	            				
+<div class="row">
+    <div class="col s12 slick-demo">
+        
+        	<div>
+	            <div class="image">
+	            	<a href="#">
+	                <img src="asserts/images/slider-demo1.jpeg" alt="">
+	            	</a>
+	            </div>
+        	</div>
+        
+        	<div>
+	            <div class="image">
+	            	<a href="#">
+	                <img src="asserts/images/slider-demo2.jpeg" alt="">
+	            	</a>
+	            </div>
+        	</div>
+        
+        	<div>
+	            <div class="image">
+	            	<a href="#">
+	                <img src="asserts/images/slider-demo3.jpeg" alt="">
+	            	</a>
+	            </div>
+        	</div>
+        
+        	<div>
+	            <div class="image">
+	            	<a href="#">
+	                <img src="asserts/images/slider-demo4.jpeg" alt="">
+	            	</a>
+	            </div>
+        	</div>
+        
+    </div>
+</div>
+
+<pre>
+    <code class="language-html">
+&lt;div class="row">
+    &lt;div class="col s6 slick-demo">
+        &lt;div>&lt;img src="asserts/images/slider-demo1.jpg" alt="">&lt;/div>
+        &lt;div>&lt;img src="asserts/images/slider-demo2.jpg" alt="">&lt;/div>
+        &lt;div>&lt;img src="asserts/images/slider-demo3.jpg" alt="">&lt;/div>
+        &lt;div>&lt;img src="asserts/images/slider-demo4.jpg" alt="">&lt;/div>
+    &lt;/div>
+&lt;/div>
+    </code>
+</pre>
+<pre>
+    <code class="language-javascript">
+$('.slick-demo').slick({
+    infinite: true,
+    speed: 500,
+    cssEase: 'linear',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    variableWidth: true,
+    autoplay:true
+});
+    </code>
+</pre>
+
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="sweatalert" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">对话框 sweatalert</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="http://t4t5.github.io/sweetalert/">http://t4t5.github.io/sweetalert/</a><p>
+	            		    	
+	            				
+
+<div class="row ">
+  <div class="col s12">
+	
+
+	<a class="wave-effect wave-light btn cyan" id="alert-basic">basic</a>
+
+	<a class="wave-effect wave-light btn cyan" id="alert-success">success</a>
+
+	<a class="wave-effect wave-light btn cyan" id="alert-warning">warning</a>
+
+	<a class="wave-effect wave-light btn cyan" id="alert-error">error</a>
+
+	<a class="wave-effect wave-light btn cyan" id="alert-slide">slide</a>
+
+
+	</div>
+</div>
+
+<pre>
+	<code class="language-javascript">
+//basic
+$('#alert-basic').click(function() {
+    swal("Here's a message!", "It's pretty, isn't it?");
+});
+
+//success
+$('#alert-success').click(function() {
+    swal("Good job!", "You clicked the button!", "success");
+});
+
+//warning
+$('#alert-warning').click(function() {
+    swal({
+        title: "Are you sure?",
+        text: "You will not be able to recover this imaginary file!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Yes, delete it!",
+        closeOnConfirm: false
+    }, function() {
+        swal("Deleted!", "Your imaginary file has been deleted.", "success");
+    });
+});
+
+//error
+$('#alert-error').click(function() {
+    swal("Oops...", "Something went wrong!", "error");
+});
+
+//slide from top
+$('#alert-slide').click(function() {
+    swal({
+        title: "An input!",
+        text: "Write something interesting:",
+        type: "input",
+        showCancelButton: true,
+        closeOnConfirm: false,
+        animation: "slide-from-top",
+        inputPlaceholder: "Write something"
+    }, function(inputValue) {
+        if (inputValue === false) return false;
+        if (inputValue === "") {
+            swal.showInputError("You need to write something!");
+            return false
+        }
+        swal("Nice!", "You wrote: " + inputValue, "success");
+    });
+});
+	</code>
+</pre>
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="alertify_docs" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">对话框和通知 alertify</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="http://fabien-d.github.io/alertify.js/">http://fabien-d.github.io/alertify.js/</a><p>
+	            		    	
+	            				
+
+<div class="row">
+	<div class="col s12">
+	<h6>Dialogs</h6>
+	
+		<a class="wave-effect wave-light btn cyan" id="dialog-alert">alert Dialog</a>
+	
+		<a class="wave-effect wave-light btn cyan" id="dialog-confirm">confirm Dialog</a>
+	
+		<a class="wave-effect wave-light btn cyan" id="dialog-prompt">prompt Dialog</a>
+	
+	</div>
+
+</div>
+
+<pre><code class="language-javascript">
+// Standard Dialogs
+$("#dialog-alert").on( 'click', function () {
+    alertify.alert("This is an alert dialog");
+    return false;
+});
+
+$("#dialog-confirm").on( 'click', function () {
+    alertify.confirm("This is a confirm dialog", function (e) {
+        if (e) {
+            alertify.success("You've clicked OK");
+        } else {
+            alertify.error("You've clicked Cancel");
+        }
+    });
+    return false;
+});
+
+$("#dialog-prompt").on( 'click', function () {
+    alertify.prompt("This is a prompt dialog", function (e, str) {
+        if (e) {
+            alertify.success("You've clicked OK and typed: " + str);
+        } else {
+            alertify.error("You've clicked Cancel");
+        }
+    }, "Default Value");
+    return false;
+});
+
+</code></pre>
+
+
+<div class="row">
+	<div class="col s12">
+	<h6>Notification</h6>
+	
+		<a class="wave-effect wave-light btn cyan" id="log-standard">standard notice</a>
+	
+		<a class="wave-effect wave-light btn cyan" id="log-success">success notice</a>
+	
+		<a class="wave-effect wave-light btn cyan" id="log-error">error notice</a>
+	
+		<a class="wave-effect wave-light btn cyan" id="log-persistent">persistent notice</a>
+	
+	</div>
+</div>
+
+<pre><code class="language-javascript">
+// Standard Notifications
+$("#log-standard").on( 'click', function () {
+    alertify.log("Standard log message");
+    return false;
+});
+
+$("#log-success").on( 'click', function () {
+    alertify.success("Success log message");
+    return false;
+});
+
+$("#log-error").on( 'click', function () {
+    alertify.error("Error log message");
+    return false;
+});
+
+$("#log-persistent").on( 'click', function () {
+    alertify.log("Will stay until clicked", "", 0);
+    return false;
+});
+</code>
+</pre>
+
+
+
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="popover" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">popover控件</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="https://github.com/sandywalker/webui-popover">https://github.com/sandywalker/webui-popover</a><p>
+	            		    	
+	            				<a class="waves-effect waves-light btn popover">点击弹出popover</a>
+
+<pre>
+    <code class="language-html">
+&lt;a class="waves-effect waves-light btn popover">点击弹出popover&lt;/a>
+    </code>
+</pre>
+<pre>
+<code class="language-javascript">
+$('.popover').webuiPopover({
+    placement:'auto',//values: auto,top,right,bottom,left,top-right,top-left,bottom-right,bottom-left,auto-top,auto-right,auto-bottom,auto-left
+    width:'auto',//can be set with  number
+    height:'auto',//can be set with  number
+    trigger:'click',//values:  click,hover,manual
+    style:'',//values:'',inverse
+    constrains:null, // constrains the direction when placement is  auto,  values: horizontal,vertical
+    animation:null, //pop with animation,values: pop,fade (only take effect in the browser which support css3 transition)
+    delay: {//show and hide delay time of the popover, works only when trigger is 'hover',the value can be number or object
+        show: null,
+        hide: 300
+    },
+    async: {
+        before: function(that, xhr) {},//executed before ajax request
+        success: function(that, data) {}//executed after successful ajax request
+    },
+    cache:true,//if cache is set to false,popover will destroy and recreate
+    multi:false,//allow other popovers in page at same time
+    arrow:true,//show arrow or not
+    title:'WebUI Popover',//the popover title ,if title is set to empty string,title bar will auto hide
+    content:'<p>This is webui popover demo.</p><p>just enjoy it and have fun !</p>',//content of the popover,content can be function
+    closeable:false,//display close button or not
+    padding:true,//content padding
+    type:'html',//content type, values:'html','iframe','async'
+    url:'',//if not empty ,plugin will load content by url
+    backdrop:false,//if backdrop is set to true, popover will use backdrop on open
+    dismissible:true // if popover can be dismissed by  outside click or escape key
+});
+</code>
+</pre>
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="jstree" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">树状结构 jstree</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="https://www.jstree.com/">https://www.jstree.com/</a><p>
+	            		    	
+	            				<div id="jstree-1"></div>
+
+<pre>
+	<code class="language-html">
+&lt;div id="jstree">&lt;/div>
+    </code>
+</pre>
+
+<pre>
+	<code class="language-javascript">
+var jstreeData = [{
+        "text": "文字内容文字内容文字内容",
+        "children": [{
+            "text": "文字内容文字内容文字内容",
+            "state": {
+                "selected": true
+            }
+        }, {
+            "text": "文字内容文字内容文字内容"
+        }, {
+            "text": "文字内容文字内容文字内容",
+            "state": {
+                "opened": true
+            },
+            "children": ["文字内容"]
+        }, {
+            "text": "文字内容",
+        }]
+    },
+    "And wholerow selection"
+];
+
+$('#jstree-1').jstree({
+    'core': {
+        'data': jstreeData
+    },
+    'types':{
+        "default":{
+            "icon" : "mdi-action-visibility teal-text text-darken-2"
+        }
+    },
+    "plugins": ["checkbox","types"]
+});
+    </code>
+</pre>
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="validation_engine" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">表单提交验证 validation-engine</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="https://github.com/posabsolute/jQuery-Validation-Engine">https://github.com/posabsolute/jQuery-Validation-Engine</a><p>
+	            		    	
+	            				<form id="validate-form">
+    <div class="row hh-add-edit">
+          <dl class="col s12">
+            <dt><b>线路名称</b></dt>
+            <dd>
+                <div class="col s8 m6">
+                    <input class="validate[required]" type="text">
+                </div>
+            </dd>
+        </dl>
+        <dl class="col s12">
+            <dt><b>时间范围</b></dt>
+            <dd>
+                <div class="col m2">
+                    <input id="dsPicker1" placeholder="最早日期" type="text" class="datepicker validate[dateRange[dategrp1]]">
+                </div>
+                <div class="col m2">
+                    <input id="dePicker1" placeholder="早晚日期" type="text" class="datepicker validate[dateRange[dategrp1]]">
+                </div>
+            </dd>
+        </dl>
+        <dl class="col s12">
+            <dt><b>金额范围</b></dt>
+            <dd>
+                <div class="col m2">
+                    <input id="minSum" placeholder="最小金额" type="text" class="validate[numRange[numgrp1]]">
+                </div>
+                <div class="col m2">
+                    <input id="maxSum" placeholder="最大金额" type="text" class="validate[numRange[numgrp1]]">
+                </div>
+            </dd>
+        </dl>
+        <dl class="col s12">
+            <dt><b>出游天数</b></dt>
+            <dd>
+                <div class="col s8 m6">
+                    <input class="inline-block w-50 hh-mr-10 center-align validate[required,custom[number],min[1],max[10]]" type="text">
+                </div>
+            </dd>
+        </dl>
+
+        <dl class="col s12">
+            <dt><b>邮箱</b></dt>
+            <dd>
+                <div class="col s8 m6">
+                    <input type="email" name="email" class="validate[required,custom[email]]">
+                </div>
+            </dd>
+        </dl>
+
+        <dl class="col s12">
+            <dt><b>身份证</b></dt>
+            <dd>
+                <div class="col s8 m6">
+                    <input class="validate[required,custom[checkIdCard]]" type="text" name="idcard">
+                </div>
+            </dd>
+        </dl>
+        <dl class="col s12">
+            <dt><b>手机号码</b></dt>
+            <dd>
+                <div class="col s8 m6">
+                    <input class="validate[required,custom[phone]]" type="text" name="phone">
+                </div>
+            </dd>
+        </dl>
+        <dl class="col s12">
+            <dt><b>密码</b></dt>
+            <dd>
+                <div class="col s8 m6">
+                    <input class="validate[required,minSize[6],maxSize[10]]" type="password" name="password">
+                </div>
+            </dd>
+        </dl>
+        <dl class="col s12">
+            <dt><b>网址</b></dt>
+            <dd>
+                <div class="col s8 m6">
+                    <input value="http://" class="validate[required,custom[url]]" type="text" name="url">
+                </div>
+            </dd>
+        </dl>
+        <dl class="col s12">
+            <dt><b>选择</b></dt>
+            <dd>
+                <div class="col s4">
+                    <div class="hh-select">
+                        <select name="sport" class="chosen-select validate[required]">
+                            <option value="">Choose a sport</option>
+                            <option value="option1">Tennis</option>
+                            <option value="option2">Football</option>
+                            <option value="option3">Golf</option>
+                        </select>
+                    </div>
+                </div>
+            </dd>
+        </dl> 
+
+        <dl class="col s12">
+            <dt><b>选择</b></dt>
+            <dd>
+                <input class="filled-in validate[required]" name="line_theme" id="line_theme-1" type="checkbox">
+                <label for="line_theme-1">古镇游</label>
+            
+                <input class="filled-in validate[required]" name="line_theme" id="line_theme-2" type="checkbox">
+                <label for="line_theme-2">山水游</label>
+            
+                <input class="filled-in validate[required]" name="line_theme" id="line_theme-3" type="checkbox">
+                <label for="line_theme-3">海岛游</label>
+            
+                <input class="filled-in validate[required]" name="line_theme" id="line_theme-4" type="checkbox">
+                <label for="line_theme-4">海岛游</label>
+            </dd>
+        </dl> 
+
+        <dl class="col s12">
+            <dt><b>线路类型</b></dt>
+            <dd>
+                <input class="with-gap " id="line_type-1" type="radio" name="line_type">
+                <label for="line_type-1">周边旅游</label>
+                <input class="with-gap " id="line_type-2" type="radio" name="line_type">
+                <label for="line_type-2">国内旅游</label>
+                <input class="with-gap validate[required]" id="line_type-3" type="radio" name="line_type">
+                <label for="line_type-3">出境旅游</label>
+            </dd>
+        </dl>
+        <dl class="col s12">
+            <dt><b>备注</b></dt>
+            <dd>
+                <div class="col s12">
+                    
+                    <script type="text/plain" id="myEditor1" style=" width:90%;  height:240px; " class=" validate[required] " name="myeditor">
+</script>
+                </div>
+            </dd>
+        </dl>
+        
+        <dl class="col s12">
+            <dt></dt>
+            <dd>
+                <a id="validation-btn" class="btn cyan">提交</a>
+            </dd>
+        </dl>
+    </div>
+</form>
+
+<pre>
+  <code class="language-html">
+&lt;form id="validate-form">
+    &lt;div class="row hh-add-edit">
+        &lt;dl class="col s12">
+            &lt;dt>&lt;b>线路名称&lt;/b>&lt;/dt>
+            &lt;dd>
+                &lt;div class="col s8 m6">
+                    &lt;input class="validate[required]" type="text">
+                &lt;/div>
+            &lt;/dd>
+        &lt;/dl>
+        &lt;dl class="col s12">
+            &lt;dt>&lt;b>出游天数&lt;/b>&lt;/dt>
+            &lt;dd>
+                &lt;div class="col s8 m6">
+                    &lt;input class="inline-block w-50 hh-mr-10 center-align validate[required,custom[number],min[1],max[10]]" type="text">
+                &lt;/div>
+            &lt;/dd>
+        &lt;/dl>
+        &lt;dl class="col s12">
+            &lt;dt>&lt;b>时间范围&lt;/b>&lt;/dt>
+            &lt;dd>
+                &lt;div class="col m2">
+                    &lt;input id="dsPicker1" placeholder="最早日期" type="text" class="datepicker validate[dateRange[dategrp1]]">
+                &lt;/div>
+                &lt;div class="col m2">
+                    &lt;input id="dePicker1" placeholder="早晚日期" type="text" class="datepicker validate[dateRange[dategrp1]]">
+                &lt;/div>
+            &lt;/dd>
+        &lt;/dl>
+        &lt;dl class="col s12">
+            &lt;dt>&lt;b>金额范围&lt;/b>&lt;/dt>
+            &lt;dd>
+                &lt;div class="col m2">
+                    &lt;input id="minSum" placeholder="最小金额" type="text" class="validate[numRange[numgrp1]]">
+                &lt;/div>
+                &lt;div class="col m2">
+                    &lt;input id="maxSum" placeholder="最大金额" type="text" class="validate[numRange[numgrp1]]">
+                &lt;/div>
+            &lt;/dd>
+        &lt;/dl>
+
+        &lt;dl class="col s12">
+            &lt;dt>&lt;b>邮箱&lt;/b>&lt;/dt>
+            &lt;dd>
+                &lt;div class="col s8 m6">
+                    &lt;input type="email" name="email" class="validate[required,custom[email]]">
+                &lt;/div>
+            &lt;/dd>
+        &lt;/dl>
+        &lt;dl class="col s12">
+            &lt;dt>&lt;b>身份证&lt;/b>&lt;/dt>
+            &lt;dd>
+                &lt;div class="col s8 m6">
+                    &lt;input class="validate[required,custom[checkIdCard]]" type="text" name="idcard">
+                &lt;/div>
+            &lt;/dd>
+        &lt;/dl>
+        &lt;dl class="col s12">
+            &lt;dt>&lt;b>手机号码&lt;/b>&lt;/dt>
+            &lt;dd>
+                &lt;div class="col s8 m6">
+                    &lt;input class="validate[required,custom[phone]]" type="text" name="phone">
+                &lt;/div>
+            &lt;/dd>
+        &lt;/dl>
+        &lt;dl class="col s12">
+            &lt;dt>&lt;b>密码&lt;/b>&lt;/dt>
+            &lt;dd>
+                &lt;div class="col s8 m6">
+                    &lt;input class="validate[required,minSize[6],maxSize[10]]" type="password" name="password">
+                &lt;/div>
+            &lt;/dd>
+        &lt;/dl>
+        &lt;dl class="col s12">
+            &lt;dt>&lt;b>网址&lt;/b>&lt;/dt>
+            &lt;dd>
+                &lt;div class="col s8 m6">
+                    &lt;input value="http://" class="validate[required,custom[url]]" type="text" name="url">
+                &lt;/div>
+            &lt;/dd>
+        &lt;/dl>
+        &lt;dl class="col s12">
+            &lt;dt>&lt;b>选择&lt;/b>&lt;/dt>
+            &lt;dd>
+                &lt;div class="col s8 m6">
+                    &lt;select name="sport" class="chosen-select validate[required]">
+                        &lt;option value="">Choose a sport&lt;/option>
+                        &lt;option value="option1">Tennis&lt;/option>
+                        &lt;option value="option2">Football&lt;/option>
+                        &lt;option value="option3">Golf&lt;/option>
+                    &lt;/select>
+                &lt;/div>
+            &lt;/dd>
+        &lt;/dl>
+        &lt;dl class="col s12">
+            &lt;dt>&lt;b>选择&lt;/b>&lt;/dt>
+            &lt;dd>
+                &lt;input class="filled-in validate[required]" name="line_theme" id="line_theme-1" type="checkbox">
+                &lt;label for="line_theme-1">古镇游&lt;/label>
+            
+                &lt;input class="filled-in validate[required]" name="line_theme" id="line_theme-2" type="checkbox">
+                &lt;label for="line_theme-2">山水游&lt;/label>
+            
+                &lt;input class="filled-in validate[required]" name="line_theme" id="line_theme-3" type="checkbox">
+                &lt;label for="line_theme-3">海岛游&lt;/label>
+            
+                &lt;input class="filled-in validate[required]" name="line_theme" id="line_theme-4" type="checkbox">
+                &lt;label for="line_theme-4">海岛游&lt;/label>
+            &lt;/dd>
+        &lt;/dl>
+        &lt;dl class="col s12">
+            &lt;dt>&lt;b>线路类型&lt;/b>&lt;/dt>
+            &lt;dd>
+                &lt;input class="with-gap validate[required]" id="line_type-1" type="radio" name="line_type">
+                &lt;label for="line_type-1">周边旅游&lt;/label>
+                &lt;input class="with-gap validate[required]" id="line_type-2" type="radio" name="line_type">
+                &lt;label for="line_type-2">国内旅游&lt;/label>
+                &lt;input class="with-gap validate[required]" id="line_type-3" type="radio" name="line_type">
+                &lt;label for="line_type-3">出境旅游&lt;/label>
+            &lt;/dd>
+        &lt;/dl>
+        &lt;dl class="col s12">
+            &lt;dt>&lt;/dt>
+            &lt;dd>
+                &lt;a id="validation-btn" class="btn cyan">提交&lt;/a>
+            &lt;/dd>
+        &lt;/dl>
+    &lt;/div>
+&lt;/form>
+  </code>
+</pre>
+
+<pre>
+  <code class="language-javascript">
+$('#validate-form').validationEngine();
+$('#validation-btn').on('click', function() {
+    if ($('#validate-form').validationEngine('validate')) {
+        swal("Good job!", "表单验证通过!", "success");
+    } else {
+        swal("错误!", "表单验证不通过!", "error");
+    }
+});
+  </code>
+</pre>
+
+
+
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="art_template" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">js模板引擎 artTemplate</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="https://github.com/aui/artTemplate">https://github.com/aui/artTemplate</a><p>
+	            		    	
+	            				<div class="row">
+    <div class="col s12">
+        <h6>编写模板</h6>
+        <pre>
+            <code class="language-html">
+&lt;!-- 使用一个type="text/html"的script标签存放模板： -->
+
+&lt;script id="test" type="text/html">
+    &lt;h1>{{title}}&lt;/h1>
+    &lt;ul>
+        {{each list as value i}}
+            &lt;li>索引 {{i + 1}} ：{{value}}&lt;/li>
+        {{/each}}
+    &lt;/ul>
+&lt;/script>
+            </code>
+        </pre>
+
+        <h6>渲染模板</h6>
+        <pre>
+        <code class="language-javascript">
+var data = {
+    title: '标签',
+    list: ['文艺', '博客', '摄影', '电影', '民谣', '旅行', '吉他']
+};
+var html = template('test', data);
+document.getElementById('content').innerHTML = html;
+        </code>
+        </pre>
+        <h6>模板语法--简洁语法</h6>
+        <pre>
+        <code class="language-javascript">
+{{if admin}}
+    {{include 'admin_content'}}
+
+    {{each list}}
+        <div>{{$index}}. {{$value.user}}</div>
+    {{/each}}
+{{/if}}
+        </code>
+        </pre>
+    </div>
+</div>
+
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="listjs" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">表格搜索及排序list.js</span>
+	            		    	
+	            		    		<p class="sub-title">文档链接：<a href="http://www.listjs.com/">http://www.listjs.com/</a><p>
+	            		    	
+	            				
+<div class="card table-form hh-listjs" id="table-from1">
+     <div class="card-heading">
+    <h4>订单列表</h4>
+    <ul class="actions">
+        
+            <li class="hh-operate">
+                <input class="search" type="text" placeholder="Search" />
+            </li>
+        
+        
+        
+        
+        
+        
+        <li>
+            <a class="waves-effect waves-block waves-light collapse-btn card-a" href="javascript:void(0);">
+                <i class="mdi-hardware-keyboard-arrow-down"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="card-content">
+        <table class="highlight hh-table-bordered ">
+    <thead>
+        <tr>
+            
+            <th   class="sort" data-sort="ls-orderno" >订单号</th>
+            
+            <th   class="sort" data-sort="ls-linename" >线路名称</th>
+            
+            <th   class="sort" data-sort="ls-shopname" >门店</th>
+            
+            <th   class="sort" data-sort="ls-preorder" >预订人</th>
+            
+            <th   class="sort" data-sort="ls-touristno" >游客人数</th>
+            
+            <th   class="sort" data-sort="ls-shouldsum" >应收金额</th>
+            
+            <th   class="sort" data-sort="ls-indeedsum" >实收金额</th>
+            
+            <th   class="sort" data-sort="ls-preordertime" >预订时间</th>
+            
+            <th   class="sort" data-sort="ls-startdate" >出游日期</th>
+            
+            <th  >付款方式</th>
+            
+            <th  >使用状态</th>
+            
+            <th class="width-130" >管理操作</th>
+            
+        </tr>
+    </thead>
+
+    <tbody  class="list" >
+        
+            
+                
+                    <tr>
+                    
+                        <td class="ls-orderno" >6207</td>
+                    
+                        <td class="ls-linename text-left" >a山南测试线路2013</td>
+                    
+                        <td class="ls-shopname text-left" ><small class="pink lighten-1 hh-small">实时</small>长沙门店001</td>
+                    
+                        <td class="ls-preorder" >哈哈哈</td>
+                    
+                        <td class="ls-touristno" >8</td>
+                    
+                        <td class="ls-shouldsum" >3000.0</td>
+                    
+                        <td class="ls-indeedsum" >1500.0</td>
+                    
+                        <td class="ls-preordertime" >2015-05-21</td>
+                    
+                        <td class="ls-startdate" >2015-06-01</td>
+                    
+                        <td  >预付</td>
+                    
+                        <td  >待付款</td>
+                    
+                        <td  ><button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true">管理操作</button></td>
+                    
+                    </tr>
+                
+                    <tr>
+                    
+                        <td class="ls-orderno" >6208</td>
+                    
+                        <td class="ls-linename text-left" >b山南测试线路2014</td>
+                    
+                        <td class="ls-shopname text-left" ><small class="pink lighten-1 hh-small">实时</small>邵阳门店001</td>
+                    
+                        <td class="ls-preorder" >嘻嘻嘻</td>
+                    
+                        <td class="ls-touristno" >10</td>
+                    
+                        <td class="ls-shouldsum" >6000.0</td>
+                    
+                        <td class="ls-indeedsum" >3500.0</td>
+                    
+                        <td class="ls-preordertime" >2015-05-21</td>
+                    
+                        <td class="ls-startdate" >2015-06-01</td>
+                    
+                        <td  >预付</td>
+                    
+                        <td  >待付款</td>
+                    
+                        <td  ><button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true">管理操作</button></td>
+                    
+                    </tr>
+                
+                    <tr>
+                    
+                        <td class="ls-orderno" >6209</td>
+                    
+                        <td class="ls-linename text-left" >c山南测试线路2015</td>
+                    
+                        <td class="ls-shopname text-left" ><small class="pink lighten-1 hh-small">实时</small>湘潭门店001</td>
+                    
+                        <td class="ls-preorder" >呵呵呵</td>
+                    
+                        <td class="ls-touristno" >25</td>
+                    
+                        <td class="ls-shouldsum" >19800.0</td>
+                    
+                        <td class="ls-indeedsum" >15555.0</td>
+                    
+                        <td class="ls-preordertime" >2015-06-10</td>
+                    
+                        <td class="ls-startdate" >2015-06-15</td>
+                    
+                        <td  >预付</td>
+                    
+                        <td  >待付款</td>
+                    
+                        <td  ><button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true">管理操作</button></td>
+                    
+                    </tr>
+                
+                    <tr>
+                    
+                        <td class="ls-orderno" >6210</td>
+                    
+                        <td class="ls-linename text-left" >d山南测试线路2016</td>
+                    
+                        <td class="ls-shopname text-left" ><small class="pink lighten-1 hh-small">实时</small>株洲门店001</td>
+                    
+                        <td class="ls-preorder" >嘿嘿嘿</td>
+                    
+                        <td class="ls-touristno" >100</td>
+                    
+                        <td class="ls-shouldsum" >24999.0</td>
+                    
+                        <td class="ls-indeedsum" >16834.0</td>
+                    
+                        <td class="ls-preordertime" >2015-07-20</td>
+                    
+                        <td class="ls-startdate" >2015-07-30</td>
+                    
+                        <td  >预付</td>
+                    
+                        <td  >待付款</td>
+                    
+                        <td  ><button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true">管理操作</button></td>
+                    
+                    </tr>
+                
+            
+        
+    </tbody>
+</table>
+
+
+    </div>
+</div>
+<pre>
+<code class="language-html">
+&lt;div class="card table-form" id="table-from1">
+    &lt;div class="card-heading">
+        &lt;h4>订单列表&lt;/h4>
+        &lt;ul class="actions">
+            &lt;li class="hh-operate ms-hover">
+                &lt;input class="search" type="text" placeholder="Search">
+            &lt;/li>
+            &lt;li class="hh-operate ms-hover">
+                &lt;button class="waves-effect waves-light btn cyan sort" data-sort="preordertime">预定时间排序&lt;/button>
+            &lt;/li>
+            &lt;li>
+                &lt;a class="waves-effect waves-block waves-light collapse-btn card-a" href="javascript:void(0);">
+                    &lt;i class="mdi-hardware-keyboard-arrow-down">&lt;/i>
+                &lt;/a>
+            &lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="card-content">
+        &lt;table class="highlight hh-table-bordered ">
+            &lt;thead>
+                &lt;tr>
+                    &lt;th class="sort" data-sort="ls-orderno">订单号&lt;/th>
+                    &lt;th class="sort" data-sort="ls-linename">线路名称&lt;/th>
+                    &lt;th class="sort" data-sort="ls-shopname">门店&lt;/th>
+                    &lt;th class="sort" data-sort="ls-preorder">预订人&lt;/th>
+                    &lt;th class="sort" data-sort="ls-touristno">游客人数&lt;/th>
+                    &lt;th class="sort desc" data-sort="ls-shouldsum">应收金额&lt;/th>
+                    &lt;th class="sort" data-sort="ls-indeedsum">实收金额&lt;/th>
+                    &lt;th class="sort" data-sort="ls-preordertime">预订时间&lt;/th>
+                    &lt;th class="sort" data-sort="ls-startdate">出游日期&lt;/th>
+                    &lt;th class="sort" data-sort="">付款方式&lt;/th>
+                    &lt;th class="sort" data-sort="">使用状态&lt;/th>
+                    &lt;th class="width-130" data-sort="">管理操作&lt;/th>
+                &lt;/tr>
+            &lt;/thead>
+            &lt;tbody class="list">
+                &lt;tr>
+                    &lt;td class="ls-orderno">6210&lt;/td>
+                    &lt;td class="ls-linename text-left">d山南测试线路2016&lt;/td>
+                    &lt;td class="ls-shopname text-left">&lt;small class="pink lighten-1 hh-small">实时&lt;/small>株洲门店001&lt;/td>
+                    &lt;td class="ls-preorder">嘿嘿嘿&lt;/td>
+                    &lt;td class="ls-touristno">100&lt;/td>
+                    &lt;td class="ls-shouldsum">24999.0&lt;/td>
+                    &lt;td class="ls-indeedsum">16834.0&lt;/td>
+                    &lt;td class="ls-preordertime">2015-07-20&lt;/td>
+                    &lt;td class="ls-startdate">2015-07-30&lt;/td>
+                    &lt;td>预付&lt;/td>
+                    &lt;td>待付款&lt;/td>
+                    &lt;td>
+                        &lt;button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true">管理操作&lt;/button>
+                    &lt;/td>
+                &lt;/tr>
+                &lt;tr>
+                    &lt;td class="ls-orderno">6209&lt;/td>
+                    &lt;td class="ls-linename text-left">c山南测试线路2015&lt;/td>
+                    &lt;td class="ls-shopname text-left">&lt;small class="pink lighten-1 hh-small">实时&lt;/small>湘潭门店001&lt;/td>
+                    &lt;td class="ls-preorder">呵呵呵&lt;/td>
+                    &lt;td class="ls-touristno">25&lt;/td>
+                    &lt;td class="ls-shouldsum">19800.0&lt;/td>
+                    &lt;td class="ls-indeedsum">15555.0&lt;/td>
+                    &lt;td class="ls-preordertime">2015-06-10&lt;/td>
+                    &lt;td class="ls-startdate">2015-06-15&lt;/td>
+                    &lt;td>预付&lt;/td>
+                    &lt;td>待付款&lt;/td>
+                    &lt;td>
+                        &lt;button class="dropdown-button waves-effect waves-light btn btn-small cyan" data-beloworigin="true">管理操作&lt;/button>
+                    &lt;/td>
+                &lt;/tr>
+            &lt;/tbody>
+        &lt;/table>
+    &lt;/div>
+&lt;/div>
+
+</code>
+</pre>
+<pre>
+<code class="language-javascript">
+var listOptions = {
+	valueNames: ['ls-orderno','ls-linename', 'ls-shopname','ls-preorder','ls-touristno','ls-shouldsum','ls-indeedsum','ls-preordertime','ls-startdate']
+};
+
+var userList = new List('table-from1', listOptions);
+</code>
+</pre>
+
+<div class="card table-form hh-listjs" id="table-from2">
+     
+    <div class="card-heading">
+    <h4>搜索列表为空Demo</h4>
+    <ul class="actions">
+        
+            <li class="hh-operate">
+                <input class="search" type="text" placeholder="Search" />
+            </li>
+        
+        
+        
+        
+        
+        
+        <li>
+            <a class="waves-effect waves-block waves-light collapse-btn card-a" href="javascript:void(0);">
+                <i class="mdi-hardware-keyboard-arrow-down"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="card-content">
+        <table class="highlight hh-table-bordered ">
+    <thead>
+        <tr>
+            
+            <th   class="sort" data-sort="ls-orderno" >订单号</th>
+            
+            <th   class="sort" data-sort="ls-linename" >线路名称</th>
+            
+            <th   class="sort" data-sort="ls-shopname" >门店</th>
+            
+            <th   class="sort" data-sort="ls-preorder" >预订人</th>
+            
+            <th   class="sort" data-sort="ls-touristno" >游客人数</th>
+            
+            <th   class="sort" data-sort="ls-shouldsum" >应收金额</th>
+            
+            <th   class="sort" data-sort="ls-indeedsum" >实收金额</th>
+            
+            <th   class="sort" data-sort="ls-preordertime" >预订时间</th>
+            
+            <th   class="sort" data-sort="ls-startdate" >出游日期</th>
+            
+            <th  >付款方式</th>
+            
+            <th  >使用状态</th>
+            
+            <th class="width-130" >管理操作</th>
+            
+        </tr>
+    </thead>
+
+    <tbody  class="list" >
+        
+
+        
+    </tbody>
+</table>
+
+<div class="search-empty-wrap">
+    <p><i class="fa fa-frown-o"></i><span>搜索结果为空</span></p>
+</div>
+
+
+    </div>
+</div>
+
+	            			</div>
+            			</div>
+            		</div>
+            	
+            		<div id="preloader" class="section scrollspy col  s12 ">
+            			<div class="card ">
+	            			<div class="card-content">
+	            		    	<span class="card-title green-text text-darken-4">loading效果</span>
+	            		    	
+	            				<h6>第一种loading效果</h6>
+<div class="row">
+    <div class="col s12 m4 center-align">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m4 center-align">
+        <div class="preloader-wrapper active">
+            <div class="spinner-layer spinner-red-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m4 center-align">
+        <div class="preloader-wrapper small active">
+            <div class="spinner-layer spinner-green-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<pre>
+    <code class="language-html">
+&lt;div class="row">
+    &lt;div class="col s12 m4 center-align">
+        &lt;div class="preloader-wrapper big active">
+            &lt;div class="spinner-layer spinner-blue-only">
+                &lt;div class="circle-clipper left">
+                    &lt;div class="circle">&lt;/div>
+                &lt;/div>
+                &lt;div class="gap-patch">
+                    &lt;div class="circle">&lt;/div>
+                &lt;/div>
+                &lt;div class="circle-clipper right">
+                    &lt;div class="circle">&lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+    &lt;div class="col s12 m4 center-align">
+        &lt;div class="preloader-wrapper active">
+            &lt;div class="spinner-layer spinner-red-only">
+                &lt;div class="circle-clipper left">
+                    &lt;div class="circle">&lt;/div>
+                &lt;/div>
+                &lt;div class="gap-patch">
+                    &lt;div class="circle">&lt;/div>
+                &lt;/div>
+                &lt;div class="circle-clipper right">
+                    &lt;div class="circle">&lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+    &lt;div class="col s12 m4 center-align">
+        &lt;div class="preloader-wrapper small active">
+            &lt;div class="spinner-layer spinner-green-only">
+                &lt;div class="circle-clipper left">
+                    &lt;div class="circle">&lt;/div>
+                &lt;/div>
+                &lt;div class="gap-patch">
+                    &lt;div class="circle">&lt;/div>
+                &lt;/div>
+                &lt;div class="circle-clipper right">
+                    &lt;div class="circle">&lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+    </code>
+</pre>
+
+<h6>第二种loading效果</h6>
+
+<div class="row">
+    <div class="col s12 m4 center-align">
+        <div class="loader-outer">
+            <div class="loader-wrapper">
+                <div class="loader"></div>        
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+&lt;div class="loader-outer">
+    &lt;div class="loader-wrapper">
+        &lt;div class="loader">&lt;/div>        
+    &lt;/div>
+&lt;/div>
+            </code>
+        </pre>
+    </div>
+    <div class="col s12 m4 center-align">
+        <div class="loader-outer">
+            <div class="loader-wrapper">
+                <div class="loader md-loader"></div>        
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+&lt;div class="loader-outer">
+    &lt;div class="loader-wrapper">
+        &lt;div class="loader md-loader">&lt;/div>        
+    &lt;/div>
+&lt;/div>
+            </code>
+        </pre>
+    </div>
+    <div class="col s12 m4 center-align">
+        <div class="loader-outer">
+            <div class="loader-wrapper">
+                <div class="loader sm-loader"></div>        
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+&lt;div class="loader-outer">
+    &lt;div class="loader-wrapper">
+        &lt;div class="loader sm-loader">&lt;/div>        
+    &lt;/div>
+&lt;/div>
+            </code>
+        </pre>
+    </div>
+</div>
+	            			</div>
+            			</div>
+            		</div>
+            	
+            	</div>
+        </div>
+    </div>
+    <div class="col hide-on-small-only m3 l2">
+        <div class="toc-wrapper">
+            <div class="buysellads hide-on-small-only">
+            </div>
+            <div style="height: 1px;">
+                <ul class="section table-of-contents">
+                	
+            		 <li><a href="#pickdate"> 日期选择控件 pickdate</a></li>
+            		
+            		 <li><a href="#jquery_timepicker"> 时间选择控件 jquery timepicker</a></li>
+            		
+            		 <li><a href="#select2"> 下拉菜单select2</a></li>
+            		
+            		 <li><a href="#tags_input"> 标签输入框 tagsinput</a></li>
+            		
+            		 <li><a href="#typeahead"> 自动完成 typeahead.js</a></li>
+            		
+            		 <li><a href="#multiselect"> 双向多选控件 multiselect</a></li>
+            		
+            		 <li><a href="#umeditor"> 百度编辑框UMeditor</a></li>
+            		
+            		 <li><a href="#clndr"> 日历控件 clndr</a></li>
+            		
+            		 <li><a href="#dropzone"> 文件上传控件 dropzone</a></li>
+            		
+            		 <li><a href="#webuploader"> 文件上传控件 webuploader</a></li>
+            		
+            		 <li><a href="#pagination"> 分页控件 pagination</a></li>
+            		
+            		 <li><a href="#slider"> 轮播控件1 slider</a></li>
+            		
+            		 <li><a href="#slick"> 轮播控件2 slick</a></li>
+            		
+            		 <li><a href="#sweatalert"> 对话框 sweatalert</a></li>
+            		
+            		 <li><a href="#alertify_docs"> 对话框和通知 alertify</a></li>
+            		
+            		 <li><a href="#popover"> popover控件</a></li>
+            		
+            		 <li><a href="#jstree"> 树状结构 jstree</a></li>
+            		
+            		 <li><a href="#validation_engine"> 表单提交验证 validation-engine</a></li>
+            		
+            		 <li><a href="#art_template"> js模板引擎 artTemplate</a></li>
+            		
+            		 <li><a href="#listjs"> 表格搜索及排序list.js</a></li>
+            		
+            		 <li><a href="#preloader"> loading效果</a></li>
+            		
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+            </section>
+        </div>
+    </div>
+    <script type="text/javascript" src=" asserts/scripts/vendor.js "></script>
+
+
+
+
+	<script type="text/javascript" src=" asserts/scripts/main.js "></script>
+
+
+
+	<script type="text/javascript" src=" asserts/scripts/prism.js "></script>
+	<script type="text/javascript" src=" asserts/scripts/ui_components.js "></script>
+	
+
+		<script type="text/javascript" src=" asserts/scripts/umeditor.js "></script>
+
+	
+		<script type="text/javascript" src=" asserts/scripts/jstree.js "></script>
+	
+		<script type="text/javascript" src=" asserts/scripts/webuploader/webuploader.min.js "></script>
+		<script type="text/javascript" src=" asserts/scripts/my_uploader.js "></script>
+
+
+<script type="text/javascript">
+$(function() {
+	
+
+		var generateData = function(number) {
+	        var result = [];
+
+	        for (var i = 1; i < number + 1; i++) {
+	            result.push(i);
+	        }
+	        return result;
+
+	    };
+
+	    if ($('.pag-wrap').length) {
+	        $('.pag-wrap').pagination({
+	            dataSource: generateData(50),
+	            pageSize: 10,
+	            showGoInput: true,
+	            showGoButton: true,
+	            header:'<div class="pagination-info">共<%= totalNumber %>条记录，<%= currentPage %>/<%= totalPage %>页</div>',
+	            formatGoButton:"<button class='waves-effect waves-light btn btn-small cyan J-paginationjs-go-button'>Go</button>",
+	            callback: function(data, pagination) {
+	                // template method of yourself
+	                // var html = template(data);
+	                // dataContainer.html(html);
+	            }
+	        });
+	    }
+
+	
+
+		$('#myDropzone').dropzone({
+	        url: '/api/common/upload/',
+	        previewsContainer: $('#photo-list1')[0],
+	        maxFiles: 4,
+	        addRemoveLinks: true,
+	        acceptedFiles: "image/*",
+	        init:function(){
+	        	var imgUrl = 'asserts/images/slick-demo.jpg';
+	        	var file = {};
+	        	var preTemplate = "<div class=\"dz-preview dz-image-preview dz-inited-preview\"><div class=\"dz-image\"><img data-dz-thumbnail /></div></div>";
+	        	file.previewElement =  Dropzone.createElement(preTemplate);
+	        	file.previewTemplate = file.previewElement;
+          		this.previewsContainer.appendChild(file.previewElement);
+          		this.createThumbnailFromUrl(file,imgUrl);
+	        },
+	        maxfilesreached: function() {
+	            $('#myDropzone').addClass('hide');
+	        },
+	        reset: function() {
+	            $('#myDropzone').removeClass('hide');
+	        },
+	        error: function(file, errorMessage) {
+
+	            // this.removeFile(file);
+	            alertify.log(errorMessage, "");
+	        },
+	        removedfile: function(a) {
+	        	$('#myDropzone').removeClass('hide');
+	            if (a.status == 'success') {
+	                $("#Cover").val('');
+	            }
+	            var b;
+	            return a.previewElement && null != (b = a.previewElement) && b.parentNode.removeChild(a.previewElement),
+	                this._updateMaxFilesReachedClass()
+	        },
+	        success: function(obj, Response) {
+	            Response = $.parseJSON(Response);
+	            if (Response.code == -1) {
+	                swal("错误!", Response.message, "error");
+	            } else {
+	                $("#Cover").val(Response.message);
+	            }
+	        }
+	    });
+
+	
+		$('#myDropzone2').dropzone({
+	        url: '/api/common/upload/',
+	        maxFiles: 1,
+	        acceptedFiles: "image/*",
+	        createImageThumbnails:'false',
+	        previewsContainer:false,
+	        maxfilesreached: function() {
+
+	        },
+	        reset: function() {
+
+	        },
+	        error: function(file, errorMessage) {
+	            this.removeFile(file);
+	            alertify.log(errorMessage, "");
+	        },
+	        success: function(obj, Response) {
+	            Response = $.parseJSON(Response);
+	            if (Response.code == -1) {
+	                swal("错误!", Response.message, "error");
+	            } else {
+	                swal("成功!", Response.message, "success");
+	            }
+	        }
+	    });
+	
+
+	var jstreeData = [{
+            "text": "文字内容文字内容文字内容",
+            "children": [{
+                "text": "文字内容文字内容文字内容",
+                "state": {
+                    "selected": true
+                }
+            }, {
+                "text": "文字内容文字内容文字内容"
+            }, {
+                "text": "文字内容文字内容文字内容",
+                "state": {
+                    "opened": true
+                },
+                "children": ["文字内容"]
+            }, {
+                "text": "文字内容",
+            }]
+        },
+        "And wholerow selection"
+    ];
+
+    $('#jstree-1').jstree({
+        'core': {
+            'data': jstreeData
+        },
+        'types':{
+        	"default":{
+        		"icon" : "mdi-action-visibility teal-text text-darken-2"
+        	}
+        },
+        "plugins": ["checkbox","types"]
+    });
+
+    
+
+    	// PARDON ME while I do a little magic to keep these events relevant for the rest of time...
+	    var currentMonth = moment().format('YYYY-MM');
+	    var nextMonth = moment().add('month', 1).format('YYYY-MM');
+	    var next2Month = moment().add('month', 2).format('YYYY-MM');
+
+	    var events = [{
+	        date: currentMonth + '-' + '10',
+	        title: 'Persian Kitten Auction',
+	        location: 'Center for Beautiful Cats',
+	        price: '400'
+	    }, {
+	        date: currentMonth + '-' + '19',
+	        title: 'Cat Frisbee',
+	        location: 'Jefferson Park',
+	        price: '600'
+	    }, {
+	        date: currentMonth + '-' + '23',
+	        title: 'Kitten Demonstration',
+	        location: 'Center for Beautiful Cats',
+	        price: '500'
+	    }, {
+	        date: nextMonth + '-' + '07',
+	        title: 'Small Cat Photo Session',
+	        location: 'Center for Cat Photography',
+	        price: '350'
+	    }, {
+	        date: nextMonth + '-' + '20',
+	        title: 'Small Cat Photo Session',
+	        location: 'Center for Cat Photography',
+	        price: '350'
+	    }, {
+	        date: next2Month + '-' + '07',
+	        title: 'Small Cat Photo Session',
+	        location: 'Center for Cat Photography',
+	        price: '350'
+	    }, {
+	        date: next2Month + '-' + '15',
+	        title: 'Small Cat Photo Session',
+	        location: 'Center for Cat Photography',
+	        price: '350'
+	    }];
+
+    	 $('#my-multi-clndr').clndr({
+	        template: $('#template-calendar-months').html(),
+	        events: events,
+	        forceSixRows: true,
+	        // multiDayEvents: {
+	        //     startDate: 'startDate',
+	        //     endDate: 'endDate'
+	        // },
+	        lengthOfTime: {
+	            months: 3,
+	            interval: 1
+	        },
+	        constraints: {
+	            startDate: currentMonth + '-' + '05',
+	            endDate: next2Month + '-' + '20'
+	        },
+	        clickEvents: {
+	            click: function(target,ev) {
+	                dayClick(target, ev);
+	            }
+	        }
+	    });
+
+	    function dayClick(target, ev) {
+	        var elem = $(target.element);
+	        if (!elem.hasClass('adjacent-month') && !elem.hasClass('inactive')) {
+	            //如果shift键按下
+	            if (ev && ev.shiftKey) {
+	                var days = elem.closest('.clndr').find('td:not(.adjacent-month)', 'td:not(.inactive)');
+	                console.log(days);
+	                var selectedDays = days.filter('.selected');
+	                if (selectedDays.length) {
+	                    var dayFirstSelected = selectedDays.first();
+	                    days.removeClass('selected');
+	                    //当前只有一个日期被选中
+	                    if (selectedDays.length == 1) {
+	                        var curIndex = days.index(elem);
+	                        var firstIndex = days.index(dayFirstSelected);
+
+	                        var daysRegion = curIndex > firstIndex ? days.slice(firstIndex, curIndex + 1) : days.slice(curIndex, firstIndex + 1);
+	                        daysRegion.addClass('selected');
+	                    } else {
+	                        var curIndex = days.index(elem);
+	                        var dayLastSelected = selectedDays.last();
+	                        var firstIndex = days.index(dayFirstSelected);
+	                        var lastIndex = days.index(dayLastSelected);
+
+	                        if (curIndex < firstIndex) {
+	                            days.slice(curIndex, lastIndex + 1).addClass('selected');
+	                        } else {
+	                            days.slice(firstIndex, curIndex + 1).addClass('selected');
+	                        }
+	                    }
+	                } else {
+	                    elem.toggleClass('selected');
+	                }
+	            } else {
+	                elem.toggleClass('selected');
+	            }
+	        }
+	    }
+
+    
+
+    	var clndr = $('.full-clndr').clndr({
+	        template: $('#full-clndr-template').html(),
+	        events: events,
+	        forceSixRows: true,
+	        clickEvents: {
+	            click: function(target) {
+	                console.log(target);
+	            },
+	            onMonthChange: function(month) {
+	                console.log('you just went to ' + month.format('MMMM, YYYY'));
+	            }
+	        },
+	        doneRendering: function() {
+	            console.log('this would be a fine place to attach custom event handlers.');
+	        }
+	    });
+
+	    $('.my-clndr').clndr({
+	        template: $('#my-clndr-template').html(),
+	        events: events,
+	        forceSixRows: true
+	    });
+
+			var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+			  'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+			  'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+			  'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+			  'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+			  'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+			  'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+			  'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+			  'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+			];
+
+			// constructs the suggestion engine
+			var states = new Bloodhound({
+			  datumTokenizer: Bloodhound.tokenizers.whitespace,
+			  queryTokenizer: Bloodhound.tokenizers.whitespace,
+			  // `states` is an array of state names defined in "The Basics"
+			  local: states
+			});
+
+			$('#bloodhound .typeahead').typeahead({
+			  hint: true,
+			  highlight: true,
+			  minLength: 1
+			},
+			{
+			  name: 'states',
+			  source: states
+			});
+	
+
+});
+</script>
+
+</body>
+
+</html>
